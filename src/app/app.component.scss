@@ -4,6 +4,8 @@
 :host {
   display: block;
   min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 main {
@@ -14,11 +16,13 @@ main {
   padding: 0;
   position: relative;
   overflow-x: hidden;
+  max-width: 100vw;
   
   section {
     display: block;
     width: 100%;
     position: relative;
+    overflow-x: hidden;
   }
 }
 
@@ -37,4 +41,5 @@ main {
   margin: 0;
   position: relative;
   z-index: 2;
+  max-width: 100%;
 }

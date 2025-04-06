@@ -12,6 +12,8 @@
   box-shadow: $shadow-sm;
   z-index: $z-index-fixed;
   transition: $transition-base;
+  max-width: 100vw;
+  overflow-x: hidden;
 
   &.scrolled {
     padding: $spacing-sm 0;
@@ -23,6 +25,8 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 $spacing-md;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .header-content {
@@ -67,6 +71,8 @@
     z-index: $z-index-fixed;
     animation: slideDown 0.3s ease-in-out;
     overflow-y: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
   }
 }
 
