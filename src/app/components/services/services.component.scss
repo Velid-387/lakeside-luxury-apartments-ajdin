@@ -8,8 +8,8 @@
   background-position: center;
   background-attachment: fixed;
   position: relative;
-  overflow: hidden;
-  padding: $spacing-xxl 0 $spacing-xxl;
+  overflow: visible;
+  padding: 0;
   width: 100%;
   z-index: 2;
   
@@ -27,9 +27,10 @@
 
 .section-header {
   text-align: center;
-  margin-bottom: $spacing-xl;
+  padding: $spacing-xxl 0;
   position: relative;
   z-index: 1;
+  background-color: rgba($white, 0.9);
   
   h2 {
     color: $deep-blue;
@@ -62,15 +63,11 @@
 .services-list {
   position: relative;
   z-index: 1;
-  margin: $spacing-xl auto;
-  max-width: 1200px;
   display: flex;
   flex-direction: column;
-  gap: $spacing-xl;
-  
-  @include respond-to(md) {
-    margin: $spacing-xxl auto;
-  }
+  gap: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .services-cta {
@@ -79,7 +76,7 @@
   border-radius: $border-radius-lg;
   box-shadow: $shadow-lg;
   max-width: 800px;
-  margin: $spacing-xl auto 0;
+  margin: 0 auto;
   position: relative;
   z-index: 1;
   text-align: center;
