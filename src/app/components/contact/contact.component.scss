@@ -207,3 +207,34 @@
     margin-top: $spacing-lg;
   }
 }
+
+// RTL support
+:host-context(html[dir="rtl"]) {
+  .contact-item {
+    flex-direction: row-reverse;
+    text-align: right;
+  }
+  
+  .contact-form {
+    text-align: right;
+  }
+
+  .error-message {
+    text-align: right;
+  }
+  
+  .form-group {
+    label {
+      text-align: right;
+    }
+    
+    input, textarea {
+      text-align: right;
+      direction: rtl;
+    }
+  }
+  
+  .contact-map {
+    text-align: right;
+  }
+}

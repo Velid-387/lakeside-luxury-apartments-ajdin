@@ -79,3 +79,30 @@
     font-size: $font-size-base;
   }
 }
+
+// RTL support
+:host-context(html[dir="rtl"]) {
+  .service-content {
+    text-align: right;
+    
+    h3 {
+      &::after {
+        left: auto;
+        right: 0;
+        background: linear-gradient(to left, $primary-blue, $accent-teal);
+      }
+    }
+  }
+  
+  .service-item {
+    &.reverse {
+      @include respond-to(md) {
+        direction: ltr;
+        
+        .service-content {
+          direction: rtl;
+        }
+      }
+    }
+  }
+}

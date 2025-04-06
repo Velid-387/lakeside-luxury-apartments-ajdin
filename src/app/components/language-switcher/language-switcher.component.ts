@@ -23,6 +23,13 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
         aria-label="Switch to Bosnian">
         BS
       </button>
+      <button 
+        class="lang-btn" 
+        [class.active]="isActive('ar')" 
+        (click)="setLanguage('ar')" 
+        aria-label="Switch to Arabic">
+        AR
+      </button>
     </div>
   `,
   styles: [`

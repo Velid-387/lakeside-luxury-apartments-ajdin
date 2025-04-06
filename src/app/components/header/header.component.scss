@@ -197,3 +197,21 @@ body.no-scroll {
     display: block;
   }
 }
+
+// RTL support for Arabic
+:host-context(html[dir="rtl"]) {
+  .nav-list {
+    li {
+      a {
+        &::after {
+          left: auto;
+          right: 0;
+        }
+      }
+    }
+  }
+  
+  .nav {
+    // Remove the order: 1 property
+  }
+}
