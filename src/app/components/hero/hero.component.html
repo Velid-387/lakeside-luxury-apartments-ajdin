@@ -1,4 +1,13 @@
 <section class="hero">
+  <div class="hero-slides">
+    @for (image of images; track image.url; let i = $index) {
+      <div 
+        class="hero-slide" 
+        [class.active]="i === currentImageIndex" 
+        [style.background-image]="getBackgroundStyle(image)"
+      ></div>
+    }
+  </div>
   <div class="hero-overlay"></div>
   <div class="container">
     <div class="hero-content">
