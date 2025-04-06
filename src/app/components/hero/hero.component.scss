@@ -74,3 +74,20 @@
     flex-direction: row;
   }
 }
+
+// RTL support
+:host-context(html[dir="rtl"]) {
+  .hero {
+    justify-content: flex-end;
+  }
+  
+  .hero-content {
+    text-align: right;
+  }
+  
+  .hero-buttons {
+    @include respond-to(md) {
+      flex-direction: row-reverse;
+    }
+  }
+}

@@ -2,7 +2,7 @@ import { Injectable, signal, PLATFORM_ID, inject } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { isPlatformBrowser } from '@angular/common';
 
-export type Language = 'en' | 'bs';
+export type Language = 'en' | 'bs' | 'ar';
 
 @Injectable({
   providedIn: 'root'
@@ -36,6 +36,13 @@ export class TranslationService {
     if (this.isBrowser) {
       localStorage.setItem('language', lang);
       document.documentElement.lang = lang;
+      
+      // Set direction based on language
+      if (lang === 'ar') {
+        document.documentElement.dir = 'rtl';
+      } else {
+        document.documentElement.dir = 'ltr';
+      }
     }
   }
 
