@@ -149,6 +149,8 @@
   color: $deep-blue;
   cursor: pointer;
   transition: $transition-base;
+  padding: $spacing-xs;
+  z-index: $z-index-fixed + 1;
   
   &:hover, &:focus {
     color: $primary-blue;
@@ -157,6 +159,14 @@
   @include respond-to(lg) {
     display: none;
   }
+}
+
+html.no-scroll,
+body.no-scroll {
+  overflow: hidden;
+  height: 100%;
+  position: fixed;
+  width: 100%;
 }
 
 @keyframes slideDown {

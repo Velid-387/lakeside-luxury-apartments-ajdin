@@ -1,5 +1,5 @@
-import { Component, HostListener } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, HostListener, PLATFORM_ID, inject } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { TranslateDirective } from '../../shared/directives/translate.directive';
 import { TranslatePipe } from '../../shared/pipes/translate.pipe';
 import { LanguageSwitcherComponent } from '../language-switcher/language-switcher.component';
@@ -19,21 +19,28 @@ import { LanguageSwitcherComponent } from '../language-switcher/language-switche
 export class HeaderComponent {
   isMenuOpen = false;
   isScrolled = false;
+  private isBrowser = isPlatformBrowser(inject(PLATFORM_ID));
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    this.isScrolled = window.scrollY > 50;
+    if (this.isBrowser) {
+      this.isScrolled = window.scrollY > 50;
+    }
   }
 
   toggleMenu(): void {
     this.isMenuOpen = !this.isMenuOpen;
-    document.body.classList.toggle('no-scroll', this.isMenuOpen);
+    if (this.isBrowser) {
+      document.body.classList.toggle('no-scroll', this.isMenuOpen);
+    }
   }
 
   closeMenu(): void {
     if (this.isMenuOpen) {
       this.isMenuOpen = false;
-      document.body.classList.remove('no-scroll');
+      if (this.isBrowser) {
+        document.body.classList.remove('no-scroll');
+      }
     }
   }
 }
