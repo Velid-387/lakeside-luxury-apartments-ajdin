@@ -1,5 +1,5 @@
-@import './variables';
-@import './mixins';
+@use './variables' as v;
+@use './mixins' as m;
 
 // Reset
 *, *::before, *::after {
@@ -17,11 +17,11 @@ html {
 }
 
 body {
-  font-family: $font-family-primary;
-  font-size: $font-size-base;
+  font-family: v.$font-family-primary;
+  font-size: v.$font-size-base;
   line-height: 1.6;
-  color: $black;
-  background-color: $white;
+  color: v.$black;
+  background-color: v.$white;
   overflow-x: hidden;
   width: 100%;
   max-width: 100vw;
@@ -29,33 +29,33 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin-bottom: $spacing-md;
+  margin-bottom: v.$spacing-md;
   line-height: 1.3;
 }
 
 h1 {
-  @include heading-1;
+  @include m.heading-1;
 }
 
 h2 {
-  @include heading-2;
+  @include m.heading-2;
 }
 
 h3 {
-  @include heading-3;
+  @include m.heading-3;
 }
 
 p {
-  margin-bottom: $spacing-md;
+  margin-bottom: v.$spacing-md;
 }
 
 a {
-  color: $primary-blue;
+  color: v.$primary-blue;
   text-decoration: none;
-  transition: $transition-base;
+  transition: v.$transition-base;
   
   &:hover {
-    color: $deep-blue;
+    color: v.$deep-blue;
   }
 }
 
@@ -67,12 +67,12 @@ img {
 
 button {
   cursor: pointer;
-  font-family: $font-family-primary;
+  font-family: v.$font-family-primary;
 }
 
 ul, ol {
   list-style-position: inside;
-  margin-bottom: $spacing-md;
+  margin-bottom: v.$spacing-md;
 }
 
 // Ensure sections have proper spacing

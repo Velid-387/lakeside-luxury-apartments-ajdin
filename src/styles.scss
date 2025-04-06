@@ -1,11 +1,11 @@
-/* Google Fonts Import */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
-
 /* Import shared styles using modern Sass module system */
 @use './app/shared/styles/variables' as v;
 @use './app/shared/styles/mixins' as m;
-@forward './app/shared/styles/base';
-@forward './app/shared/styles/utilities';
+@use './app/shared/styles/base' as *;
+@use './app/shared/styles/utilities' as *;
+
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
 
 /* You can add global styles to this file, and also import other style files */
 
