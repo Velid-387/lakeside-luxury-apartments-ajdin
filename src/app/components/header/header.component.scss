@@ -211,25 +211,7 @@ body.no-scroll {
     }
   }
   
-  .logo {
-    order: 2;
-  }
-  
   .nav {
-    order: 1;
-  }
-  
-  .language-switcher {
-    order: 0;
-    margin-left: 0;
-    margin-right: $spacing-md;
-  }
-  
-  .mobile-menu-btn {
-    order: 3;
-  }
-  
-  .header-content {
-    flex-direction: row-reverse;
+    // Remove the order: 1 property
   }
 }

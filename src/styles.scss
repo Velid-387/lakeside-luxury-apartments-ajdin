@@ -86,4 +86,9 @@ html[lang="ar"] {
   .service-item.reverse {
     flex-direction: row;
   }
+  
+  /* Preserve header layout regardless of RTL */
+  .header-content {
+    direction: ltr;
+  }
 }
