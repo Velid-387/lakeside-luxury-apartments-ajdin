@@ -1,17 +1,17 @@
-@import './variables';
-@import './mixins';
+@use './variables' as v;
+@use './mixins' as m;
 
 // Containers
 .container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 $spacing-md;
+  padding: 0 v.$spacing-md;
   box-sizing: border-box;
   overflow-x: hidden;
   
-  @include respond-to(md) {
-    padding: 0 $spacing-lg;
+  @include m.respond-to(md) {
+    padding: 0 v.$spacing-lg;
   }
 }
 
@@ -67,12 +67,12 @@
 
 // Spacing utilities
 @each $name, $size in (
-  'xs': $spacing-xs,
-  'sm': $spacing-sm,
-  'md': $spacing-md,
-  'lg': $spacing-lg,
-  'xl': $spacing-xl,
-  'xxl': $spacing-xxl
+  'xs': v.$spacing-xs,
+  'sm': v.$spacing-sm,
+  'md': v.$spacing-md,
+  'lg': v.$spacing-lg,
+  'xl': v.$spacing-xl,
+  'xxl': v.$spacing-xxl
 ) {
   .mt-#{$name} {
     margin-top: $size;
@@ -103,43 +103,43 @@
 
 // Buttons
 .btn {
-  @include button-primary;
+  @include m.button-primary;
   display: inline-block;
 }
 
 .btn-secondary {
-  @include button-secondary;
+  @include m.button-secondary;
   display: inline-block;
 }
 
 // Sections
 .section {
-  padding: $spacing-xxl 0;
+  padding: v.$spacing-xxl 0;
   width: 100%;
   position: relative;
 }
 
 .section-light {
-  background-color: $light-gray;
+  background-color: v.$light-gray;
 }
 
 .section-dark {
-  background-color: $deep-blue;
-  color: $white;
+  background-color: v.$deep-blue;
+  color: v.$white;
 }
 
 .section-accent {
-  background-color: $accent-teal;
-  color: $white;
+  background-color: v.$accent-teal;
+  color: v.$white;
 }
 
 // Animations
 .fade-in {
-  @include fade-in;
+  @include m.fade-in;
 }
 
 .slide-up {
-  @include slide-up;
+  @include m.slide-up;
 }
 
 // Images
@@ -150,7 +150,7 @@
 }
 
 .img-rounded {
-  border-radius: $border-radius;
+  border-radius: v.$border-radius;
 }
 
 // Responsive utilities
@@ -160,21 +160,21 @@
 
 @each $breakpoint in (sm, md, lg, xl) {
   .d-#{$breakpoint}-none {
-    @include respond-to($breakpoint) {
+    @include m.respond-to($breakpoint) {
       display: none;
     }
   }
   
   .d-#{$breakpoint}-block {
     display: none;
-    @include respond-to($breakpoint) {
+    @include m.respond-to($breakpoint) {
       display: block;
     }
   }
   
   .d-#{$breakpoint}-flex {
     display: none;
-    @include respond-to($breakpoint) {
+    @include m.respond-to($breakpoint) {
       display: flex;
     }
   }
@@ -207,10 +207,10 @@
 }
 
 // Mobile-specific fixes
-@media (max-width: $breakpoint-sm) {
+@media (max-width: v.$breakpoint-sm) {
   .container, .row, [class^="col-"] {
-    padding-left: $spacing-sm;
-    padding-right: $spacing-sm;
+    padding-left: v.$spacing-sm;
+    padding-right: v.$spacing-sm;
     max-width: 100%;
     box-sizing: border-box;
   }

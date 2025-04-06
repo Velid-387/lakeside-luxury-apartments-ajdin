@@ -5,4 +5,6 @@ export interface Service {
   imageUrl: string;
   altText: string;
   isImageOnLeft?: boolean;
+  titleTranslateKey?: string;
+  descriptionTranslateKey?: string;
 } 

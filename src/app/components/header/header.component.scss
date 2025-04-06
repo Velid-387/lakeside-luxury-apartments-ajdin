@@ -53,11 +53,11 @@
 }
 
 .nav {
+  display: none;
+  
   @include respond-to(lg) {
     display: block;
   }
-  
-  display: none;
   
   &.nav-active {
     display: block;
@@ -73,6 +73,15 @@
     overflow-y: auto;
     overflow-x: hidden;
     box-sizing: border-box;
+    
+    @include respond-to(lg) {
+      position: static;
+      height: auto;
+      padding: 0;
+      width: auto;
+      animation: none;
+      overflow: visible;
+    }
   }
 }
 
@@ -149,6 +158,8 @@
   color: $deep-blue;
   cursor: pointer;
   transition: $transition-base;
+  padding: $spacing-xs;
+  z-index: $z-index-fixed + 1;
   
   &:hover, &:focus {
     color: $primary-blue;
@@ -159,6 +170,14 @@
   }
 }
 
+html.no-scroll,
+body.no-scroll {
+  overflow: hidden;
+  height: 100%;
+  position: fixed;
+  width: 100%;
+}
+
 @keyframes slideDown {
   from {
     opacity: 0;
@@ -167,5 +186,14 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+.language-switcher {
+  margin-left: $spacing-md;
+  display: none;
+  
+  @include respond-to(lg) {
+    display: block;
   }
 }

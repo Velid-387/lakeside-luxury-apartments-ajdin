@@ -1,8 +1,8 @@
 <section class="contact section">
   <div class="container">
     <div class="section-header text-center">
-      <h2 class="slide-up">Contact Us</h2>
-      <p class="slide-up">Get in touch for inquiries, special requests, or to learn more</p>
+      <h2 class="slide-up" appTranslate="contact_us">Contact Us</h2>
+      <p class="slide-up" appTranslate="contact_subtitle">Get in touch for inquiries, special requests, or to learn more</p>
     </div>
     
     <div class="contact-content">
@@ -12,7 +12,7 @@
             <i class="fas fa-map-marker-alt"></i>
           </div>
           <div class="contact-details">
-            <h3>Our Location</h3>
+            <h3 appTranslate="our_location">Our Location</h3>
             <p>Lakeside Avenue 123<br>Lake District, Country</p>
           </div>
         </div>
@@ -22,7 +22,7 @@
             <i class="fas fa-phone-alt"></i>
           </div>
           <div class="contact-details">
-            <h3>Phone</h3>
+            <h3 appTranslate="phone">Phone</h3>
             <p>+1 (234) 567-8900</p>
             <p>+1 (234) 567-8901</p>
           </div>
@@ -33,27 +33,27 @@
             <i class="fas fa-envelope"></i>
           </div>
           <div class="contact-details">
-            <h3>Email</h3>
+            <h3 appTranslate="email">Email</h3>
             <p>info&#64;lakesideluxury.com</p>
             <p>bookings&#64;lakesideluxury.com</p>
           </div>
         </div>
         
         <div class="contact-map">
-          <h3>Find Us</h3>
+          <h3 appTranslate="find_us">Find Us</h3>
           <div class="map-placeholder">
             <!-- In a real application, you would embed a Google Map here -->
-            <p>Map Embed Goes Here</p>
-            <p><small>Google Maps or other map service would be embedded in the final version</small></p>
+            <p appTranslate="map_placeholder">Map Embed Goes Here</p>
+            <p><small appTranslate="map_notice">Google Maps or other map service would be embedded in the final version</small></p>
           </div>
         </div>
       </div>
       
       <div class="contact-form slide-up">
-        <h3>Send Us a Message</h3>
+        <h3 appTranslate="send_message">Send Us a Message</h3>
         <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
           <div class="form-group">
-            <label for="name">Name</label>
+            <label for="name" appTranslate="name">Name</label>
             <input 
               type="text" 
               id="name" 
@@ -63,16 +63,16 @@
             @if (submitted && f['name'].errors) {
               <div class="error-message">
                 @if (f['name'].errors['required']) {
-                  <span>Name is required</span>
+                  <span appTranslate="name_required">Name is required</span>
                 } @else if (f['name'].errors['minlength']) {
-                  <span>Name must be at least 2 characters</span>
+                  <span appTranslate="name_minlength">Name must be at least 2 characters</span>
                 }
               </div>
             }
           </div>
           
           <div class="form-group">
-            <label for="email">Email</label>
+            <label for="email" appTranslate="email">Email</label>
             <input 
               type="email" 
               id="email" 
@@ -82,16 +82,16 @@
             @if (submitted && f['email'].errors) {
               <div class="error-message">
                 @if (f['email'].errors['required']) {
-                  <span>Email is required</span>
+                  <span appTranslate="email_required">Email is required</span>
                 } @else if (f['email'].errors['email']) {
-                  <span>Enter a valid email address</span>
+                  <span appTranslate="email_invalid">Enter a valid email address</span>
                 }
               </div>
             }
           </div>
           
           <div class="form-group">
-            <label for="subject">Subject</label>
+            <label for="subject" appTranslate="subject">Subject</label>
             <input 
               type="text" 
               id="subject" 
@@ -100,13 +100,13 @@
             >
             @if (submitted && f['subject'].errors?.['required']) {
               <div class="error-message">
-                <span>Subject is required</span>
+                <span appTranslate="subject_required">Subject is required</span>
               </div>
             }
           </div>
           
           <div class="form-group">
-            <label for="message">Message</label>
+            <label for="message" appTranslate="message">Message</label>
             <textarea 
               id="message" 
               rows="6" 
@@ -116,15 +116,15 @@
             @if (submitted && f['message'].errors) {
               <div class="error-message">
                 @if (f['message'].errors['required']) {
-                  <span>Message is required</span>
+                  <span appTranslate="message_required">Message is required</span>
                 } @else if (f['message'].errors['minlength']) {
-                  <span>Message must be at least 10 characters</span>
+                  <span appTranslate="message_minlength">Message must be at least 10 characters</span>
                 }
               </div>
             }
           </div>
           
-          <button type="submit" class="btn">Send Message</button>
+          <button type="submit" class="btn" appTranslate="submit">Send Message</button>
         </form>
       </div>
     </div>

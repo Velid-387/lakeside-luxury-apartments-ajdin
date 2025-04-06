@@ -3,7 +3,7 @@
     <img [src]="service.imageUrl" [alt]="service.altText" class="img-rounded img-cover">
   </div>
   <div class="service-content slide-up">
-    <h3>{{ service.title }}</h3>
-    <p>{{ service.description }}</p>
+    <h3 [appTranslate]="service.titleTranslateKey || ''">{{ service.title }}</h3>
+    <p [appTranslate]="service.descriptionTranslateKey || ''">{{ service.description }}</p>
   </div>
 </div>

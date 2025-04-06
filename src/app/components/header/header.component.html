@@ -13,15 +13,17 @@
       
       <nav class="nav" [ngClass]="{'nav-active': isMenuOpen}">
         <ul class="nav-list">
-          <li><a href="#home" (click)="closeMenu()">Home</a></li>
-          <li><a href="#about" (click)="closeMenu()">About</a></li>
-          <li><a href="#services" (click)="closeMenu()">Services</a></li>
-          <li><a href="#contact" (click)="closeMenu()">Contact</a></li>
+          <li><a href="#home" (click)="closeMenu()" appTranslate="home">Home</a></li>
+          <li><a href="#about" (click)="closeMenu()" appTranslate="about">About</a></li>
+          <li><a href="#services" (click)="closeMenu()" appTranslate="services">Services</a></li>
+          <li><a href="#contact" (click)="closeMenu()" appTranslate="contact">Contact</a></li>
           <li class="nav-cta">
-            <a href="https://www.booking.com" target="_blank" class="btn-sm">Book Now</a>
+            <a href="https://www.booking.com" target="_blank" class="btn-sm" appTranslate="book_now">Book Now</a>
           </li>
         </ul>
       </nav>
+      
+      <app-language-switcher class="language-switcher"></app-language-switcher>
     </div>
   </div>
 </header>
