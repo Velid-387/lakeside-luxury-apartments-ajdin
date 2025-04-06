@@ -1,0 +1,27 @@
+<header class="header" [ngClass]="{'scrolled': isScrolled}">
+  <div class="container">
+    <div class="header-content">
+      <div class="logo">
+        <a href="#home">
+          <h1>Lakeside<span>Luxury</span></h1>
+        </a>
+      </div>
+      
+      <button class="mobile-menu-btn" (click)="toggleMenu()" aria-label="Toggle menu">
+        <i class="fas" [ngClass]="isMenuOpen ? 'fa-times' : 'fa-bars'"></i>
+      </button>
+      
+      <nav class="nav" [ngClass]="{'nav-active': isMenuOpen}">
+        <ul class="nav-list">
+          <li><a href="#home" (click)="closeMenu()">Home</a></li>
+          <li><a href="#about" (click)="closeMenu()">About</a></li>
+          <li><a href="#services" (click)="closeMenu()">Services</a></li>
+          <li><a href="#contact" (click)="closeMenu()">Contact</a></li>
+          <li class="nav-cta">
+            <a href="https://www.booking.com" target="_blank" class="btn-sm">Book Now</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>

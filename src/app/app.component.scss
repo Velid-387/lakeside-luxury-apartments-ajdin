@@ -1,0 +1,45 @@
+@import '../app/shared/styles/variables';
+@import '../app/shared/styles/mixins';
+
+:host {
+  display: block;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 0;
+  padding: 0;
+  position: relative;
+  overflow-x: hidden;
+  max-width: 100vw;
+  
+  section {
+    display: block;
+    width: 100%;
+    position: relative;
+    overflow-x: hidden;
+  }
+}
+
+#home {
+  height: 100vh;
+  min-height: 600px;
+  max-height: 800px;
+  position: relative;
+  z-index: 1;
+}
+
+#about,
+#services,
+#contact {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  z-index: 2;
+  max-width: 100%;
+}

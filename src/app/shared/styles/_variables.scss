@@ -1,0 +1,68 @@
+// Color palette inspired by lakeside scenery
+$primary-blue: #2a5b8c;
+$secondary-blue: #438bb6;
+$accent-teal: #4aafab;
+$light-blue: #d9edf7;
+$deep-blue: #1d3557;
+
+$soft-green: #7eb77f;
+$deep-green: #2c6e49;
+
+$sand: #f2e8cf;
+$white: #ffffff;
+$light-gray: #f5f5f5;
+$medium-gray: #e0e0e0;
+$dark-gray: #6c757d;
+$black: #212529;
+
+// Typography
+$font-family-primary: 'Poppins', sans-serif;
+$font-family-secondary: 'Playfair Display', serif;
+
+$font-size-base: 1rem;
+$font-size-sm: 0.875rem;
+$font-size-lg: 1.25rem;
+$font-size-xl: 1.5rem;
+$font-size-xxl: 2rem;
+$font-size-display: 3.5rem;
+
+// Spacing
+$spacing-xs: 0.25rem; // 4px
+$spacing-sm: 0.5rem;  // 8px
+$spacing-md: 1rem;    // 16px
+$spacing-lg: 1.5rem;  // 24px
+$spacing-xl: 2rem;    // 32px
+$spacing-xxl: 3rem;   // 48px
+
+// Breakpoints
+$breakpoint-xs: 0;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1400px;
+
+// Border radius
+$border-radius-sm: 0.25rem;
+$border-radius: 0.5rem;
+$border-radius-lg: 1rem;
+$border-radius-pill: 50rem;
+
+// Shadows
+$shadow-sm: 0 0.125rem 0.25rem rgba($black, 0.075);
+$shadow: 0 0.5rem 1rem rgba($black, 0.1);
+$shadow-lg: 0 1rem 3rem rgba($black, 0.15);
+
+// Z-index
+$z-index-dropdown: 1000;
+$z-index-sticky: 1020;
+$z-index-fixed: 1030;
+$z-index-modal-backdrop: 1040;
+$z-index-modal: 1050;
+$z-index-popover: 1060;
+$z-index-tooltip: 1070;
+
+// Transitions
+$transition-base: all 0.2s ease-in-out;
+$transition-slow: all 0.4s ease-in-out;
+$transition-fast: all 0.1s ease-in-out; 

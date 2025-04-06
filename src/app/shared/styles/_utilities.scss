@@ -1,0 +1,222 @@
+@import './variables';
+@import './mixins';
+
+// Containers
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $spacing-md;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  
+  @include respond-to(md) {
+    padding: 0 $spacing-lg;
+  }
+}
+
+// Text alignment
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+// Flex utilities
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.justify-content-end {
+  justify-content: flex-end;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.align-items-start {
+  align-items: flex-start;
+}
+
+.align-items-end {
+  align-items: flex-end;
+}
+
+// Spacing utilities
+@each $name, $size in (
+  'xs': $spacing-xs,
+  'sm': $spacing-sm,
+  'md': $spacing-md,
+  'lg': $spacing-lg,
+  'xl': $spacing-xl,
+  'xxl': $spacing-xxl
+) {
+  .mt-#{$name} {
+    margin-top: $size;
+  }
+  
+  .mb-#{$name} {
+    margin-bottom: $size;
+  }
+  
+  .my-#{$name} {
+    margin-top: $size;
+    margin-bottom: $size;
+  }
+  
+  .pt-#{$name} {
+    padding-top: $size;
+  }
+  
+  .pb-#{$name} {
+    padding-bottom: $size;
+  }
+  
+  .py-#{$name} {
+    padding-top: $size;
+    padding-bottom: $size;
+  }
+}
+
+// Buttons
+.btn {
+  @include button-primary;
+  display: inline-block;
+}
+
+.btn-secondary {
+  @include button-secondary;
+  display: inline-block;
+}
+
+// Sections
+.section {
+  padding: $spacing-xxl 0;
+  width: 100%;
+  position: relative;
+}
+
+.section-light {
+  background-color: $light-gray;
+}
+
+.section-dark {
+  background-color: $deep-blue;
+  color: $white;
+}
+
+.section-accent {
+  background-color: $accent-teal;
+  color: $white;
+}
+
+// Animations
+.fade-in {
+  @include fade-in;
+}
+
+.slide-up {
+  @include slide-up;
+}
+
+// Images
+.img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.img-rounded {
+  border-radius: $border-radius;
+}
+
+// Responsive utilities
+.d-none {
+  display: none;
+}
+
+@each $breakpoint in (sm, md, lg, xl) {
+  .d-#{$breakpoint}-none {
+    @include respond-to($breakpoint) {
+      display: none;
+    }
+  }
+  
+  .d-#{$breakpoint}-block {
+    display: none;
+    @include respond-to($breakpoint) {
+      display: block;
+    }
+  }
+  
+  .d-#{$breakpoint}-flex {
+    display: none;
+    @include respond-to($breakpoint) {
+      display: flex;
+    }
+  }
+}
+
+// Responsive overflow fixes
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+
+.overflow-y-hidden {
+  overflow-y: hidden;
+}
+
+// Responsive width fixes
+.w-100 {
+  width: 100%;
+}
+
+.w-auto {
+  width: auto;
+}
+
+.mw-100 {
+  max-width: 100%;
+}
+
+// Mobile-specific fixes
+@media (max-width: $breakpoint-sm) {
+  .container, .row, [class^="col-"] {
+    padding-left: $spacing-sm;
+    padding-right: $spacing-sm;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .mobile-scroll-fix {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+} 

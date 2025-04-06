@@ -1,0 +1,9 @@
+<div class="service-item" [ngClass]="{'reverse': !service.isImageOnLeft}">
+  <div class="service-image slide-up">
+    <img [src]="service.imageUrl" [alt]="service.altText" class="img-rounded img-cover">
+  </div>
+  <div class="service-content slide-up">
+    <h3>{{ service.title }}</h3>
+    <p>{{ service.description }}</p>
+  </div>
+</div>
