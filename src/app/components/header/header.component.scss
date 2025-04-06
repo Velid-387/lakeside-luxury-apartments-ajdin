@@ -53,11 +53,11 @@
 }
 
 .nav {
+  display: none;
+  
   @include respond-to(lg) {
     display: block;
   }
-  
-  display: none;
   
   &.nav-active {
     display: block;
@@ -73,6 +73,15 @@
     overflow-y: auto;
     overflow-x: hidden;
     box-sizing: border-box;
+    
+    @include respond-to(lg) {
+      position: static;
+      height: auto;
+      padding: 0;
+      width: auto;
+      animation: none;
+      overflow: visible;
+    }
   }
 }
 
