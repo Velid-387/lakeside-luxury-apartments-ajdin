@@ -17,7 +17,7 @@ export class ServicesComponent {
       id: 'apartments',
       title: 'Luxury Apartments',
       description: "Experience ultimate comfort in our modern, well-appointed apartments. Each unit features floor-to-ceiling windows with breathtaking lake views, fully equipped kitchens, luxurious bedding, and spacious living areas. Whether you're booking a cozy studio or a spacious family suite, you'll enjoy the perfect blend of luxury and comfort. All apartments include high-speed WiFi, smart TVs, and premium amenities to ensure your stay is as convenient as it is relaxing.",
-      imageUrl: '/assets/images/high-quality/apartment1.jpg',
+      imageUrl: '/assets/images/high-quality/apartments.jpg',
       altText: 'Luxury apartment interior with lake view',
       isImageOnLeft: true,
       titleTranslateKey: 'service_apartments_title',
