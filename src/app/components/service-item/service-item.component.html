@@ -1,6 +1,6 @@
 <div class="service-item" [ngClass]="{'reverse': !service.isImageOnLeft}">
   <div class="service-image slide-up">
-    <img [ngSrc]="service.imageUrl" [alt]="service.altText" class="img-rounded img-cover" priority fill>
+    <img [ngSrc]="service.imageUrl" [alt]="service.altText" class="img-rounded img-cover" width="600" height="400" priority>
   </div>
   <div class="service-content slide-up">
     <h3 [appTranslate]="service.titleTranslateKey || ''">{{ service.title }}</h3>
