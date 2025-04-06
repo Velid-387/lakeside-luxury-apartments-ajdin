@@ -1,0 +1,10 @@
+<button 
+  *ngIf="isVisible()"
+  [@fadeInOut]
+  (click)="scrollToTop()" 
+  class="scroll-to-top-btn" 
+  aria-label="Scroll to top">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+    <path d="M12 4l-8 8h5v8h6v-8h5z"></path>
+  </svg>
+</button> 

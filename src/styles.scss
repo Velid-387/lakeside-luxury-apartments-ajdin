@@ -1,1 +1,10 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Import shared styles */
+@import './app/shared/styles/variables';
+@import './app/shared/styles/mixins';
+@import './app/shared/styles/base';
+@import './app/shared/styles/utilities';
+
 /* You can add global styles to this file, and also import other style files */

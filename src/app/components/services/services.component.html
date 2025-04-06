@@ -1,0 +1,19 @@
+<section class="services section section-light">
+  <div class="container">
+    <div class="section-header text-center">
+      <h2 class="slide-up">Our Services</h2>
+      <p class="slide-up">Discover the complete experience we offer</p>
+    </div>
+    
+    <div class="services-list">
+      @for (service of services; track service.id) {
+        <app-service-item [service]="service"></app-service-item>
+      }
+    </div>
+    
+    <div class="services-cta text-center fade-in">
+      <h3>Ready to experience the lakeside luxury?</h3>
+      <a href="https://www.booking.com" target="_blank" class="btn mt-md">Book Your Stay Now</a>
+    </div>
+  </div>
+</section>
