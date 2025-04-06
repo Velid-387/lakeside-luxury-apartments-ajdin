@@ -105,7 +105,7 @@
 @mixin button-secondary {
   display: inline-block;
   padding: v.$spacing-sm v.$spacing-lg;
-  background-color: transparent;
+  background-color: v.$white;
   color: v.$primary-blue;
   border: 2px solid v.$primary-blue;
   border-radius: v.$border-radius;

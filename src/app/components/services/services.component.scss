@@ -3,13 +3,13 @@
 
 .services {
   background-color: $light-gray;
-  background-image: url('/assets/images/backgrounds/services-bg.jpg');
+  background-image: url('/assets/images/high-quality/hero-lake.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   position: relative;
-  overflow: hidden;
-  padding: $spacing-xxl 0 $spacing-xxl;
+  overflow: visible;
+  padding: 0;
   width: 100%;
   z-index: 2;
   
@@ -20,27 +20,17 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba($white, 0.9);
-    z-index: 0;
-  }
-  
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba($white, 0.85) 0%, rgba($light-gray, 0.9) 100%);
+    background-color: rgba($white, 0.95);
     z-index: 0;
   }
 }
 
 .section-header {
   text-align: center;
-  margin-bottom: $spacing-xl;
+  padding: $spacing-xxl 0;
   position: relative;
   z-index: 1;
+  background-color: rgba($white, 0.9);
   
   h2 {
     color: $deep-blue;
@@ -73,27 +63,78 @@
 .services-list {
   position: relative;
   z-index: 1;
-  margin: $spacing-xl auto $spacing-xxl;
-  max-width: 1200px;
-  
-  @include respond-to(md) {
-    margin: $spacing-xxl auto $spacing-xxl;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .services-cta {
-  background-color: $white;
-  padding: $spacing-xl;
+  background: linear-gradient(135deg, $primary-blue, $deep-blue);
+  padding: $spacing-xxl $spacing-xl;
   border-radius: $border-radius-lg;
   box-shadow: $shadow-lg;
-  max-width: 800px;
-  margin: 0 auto;
+  max-width: 900px;
+  margin: $spacing-xxl auto;
   position: relative;
   z-index: 1;
+  text-align: center;
+  transform: translateY(20px);
+  animation: float 3s ease-in-out infinite;
+  
+  @include respond-to(md) {
+    margin: ($spacing-xxl * 2) auto;
+    padding: $spacing-xxl;
+  }
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: linear-gradient(135deg, rgba($primary-blue, 0.2), rgba($accent-teal, 0.2));
+    border-radius: $border-radius-lg;
+    z-index: -1;
+    filter: blur(10px);
+  }
   
   h3 {
-    color: $deep-blue;
+    color: $white;
     margin-bottom: $spacing-lg;
-    font-size: $font-size-xl;
+    font-size: $font-size-xxl;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba($black, 0.2);
+  }
+  
+  .btn {
+    font-size: $font-size-lg;
+    padding: $spacing-md $spacing-xl;
+    background-color: $white;
+    color: $primary-blue;
+    border: none;
+    transform: translateY(0);
+    transition: all 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: $shadow-lg;
+      background-color: $accent-teal;
+      color: $white;
+    }
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(20px);
+  }
+  50% {
+    transform: translateY(30px);
+  }
+  100% {
+    transform: translateY(20px);
   }
 }
