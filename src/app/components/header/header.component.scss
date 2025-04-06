@@ -169,3 +169,12 @@
     transform: translateY(0);
   }
 }
+
+.language-switcher {
+  margin-left: $spacing-md;
+  display: none;
+  
+  @include respond-to(lg) {
+    display: block;
+  }
+}

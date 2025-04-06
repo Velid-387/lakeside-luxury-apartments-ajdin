@@ -1,10 +1,18 @@
 import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslateDirective } from '../../shared/directives/translate.directive';
+import { TranslatePipe } from '../../shared/pipes/translate.pipe';
+import { LanguageSwitcherComponent } from '../language-switcher/language-switcher.component';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule],
+  imports: [
+    CommonModule,
+    TranslateDirective,
+    TranslatePipe,
+    LanguageSwitcherComponent
+  ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
