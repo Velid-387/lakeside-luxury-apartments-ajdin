@@ -316,4 +316,36 @@ export const translations: Record<string, Record<Language, string>> = {
     'bs': 'Uslovi korištenja',
     'ar': 'شروط الخدمة'
   },
+
+  // Reviews section
+  'reviews_title': {
+    'en': 'Guest Reviews',
+    'bs': 'Recenzije gostiju',
+    'ar': 'آراء الضيوف'
+  },
+  'reviews_subtitle': {
+    'en': 'What our guests say about their stay',
+    'bs': 'Šta naši gosti kažu o svom boravku',
+    'ar': 'ما يقوله ضيوفنا عن إقامتهم'
+  },
+  'guest_from': {
+    'en': 'Guest from',
+    'bs': 'Gost iz',
+    'ar': 'ضيف من'
+  },
+  'review_1_text': {
+    'en': 'The apartment exceeded our expectations! The lake view was breathtaking, and the amenities were top-notch. We especially loved the morning coffee on the terrace.',
+    'bs': 'Apartman je premašio naša očekivanja! Pogled na jezero je bio nevjerovatan, a sadržaji prvoklasni. Posebno smo uživali u jutarnjoj kafi na terasi.',
+    'ar': 'تجاوزت الشقة توقعاتنا! كان المنظر على البحيرة خلاباً، والمرافق من الدرجة الأولى. استمتعنا بشكل خاص بقهوة الصباح على الشرفة.'
+  },
+  'review_2_text': {
+    'en': 'Perfect location for a peaceful getaway. The staff was incredibly helpful, and the apartment was immaculate. The lake activities made our stay even more special.',
+    'bs': 'Savršena lokacija za miran odmor. Osoblje je bilo izuzetno ljubazno, a apartman besprijekoran. Aktivnosti na jezeru učinile su naš boravak još posebnijim.',
+    'ar': 'موقع مثالي للاسترخاء والهدوء. كان الموظفون متعاونين للغاية، والشقة نظيفة تماماً. جعلت الأنشطة على البحيرة إقامتنا أكثر تميزاً.'
+  },
+  'review_3_text': {
+    'en': 'An unforgettable experience! The apartment was beautifully designed, and the lakeside café served delicious local cuisine. We will definitely return!',
+    'bs': 'Nezaboravno iskustvo! Apartman je prelijepo uređen, a kafić pored jezera služi ukusnu lokalnu kuhinju. Sigurno ćemo se vratiti!',
+    'ar': 'تجربة لا تُنسى! الشقة مصممة بشكل جميل، والمقهى بجانب البحيرة يقدم مأكولات محلية لذيذة. سنعود بالتأكيد!'
+  },
 }; 
