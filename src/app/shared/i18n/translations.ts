@@ -98,12 +98,12 @@ export const translations: Record<string, Record<Language, string>> = {
   },
   'raft_rentals': {
     'en': 'Raft Rentals',
-    'bs': 'Iznajmljivanje splavi',
+    'bs': 'Iznajmljivanje splavova',
     'ar': 'تأجير الطوافات'
   },
   'raft_rentals_desc': {
     'en': 'Explore the lake at your own pace with our comfortable and easy-to-navigate raft rentals.',
-    'bs': 'Istražite jezero svojim tempom s našim udobnim iznajmljenim splavima.',
+    'bs': 'Istražite jezero svojim tempom s našim udobnim iznajmljenim splavovima.',
     'ar': 'استكشف البحيرة بوتيرتك الخاصة مع قواربنا المريحة وسهلة التنقل.'
   },
   
