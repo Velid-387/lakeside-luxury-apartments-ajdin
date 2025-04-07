@@ -121,19 +121,22 @@
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background-color: rgba($primary-blue, 0.3);
+    background: linear-gradient(135deg, rgba($primary-blue, 0.3), rgba($deep-blue, 0.3));
     border: none;
     padding: 0;
     cursor: pointer;
     transition: all 0.3s ease;
     
     &.active {
-      background-color: $primary-blue;
+      background: linear-gradient(135deg, $accent-teal, $primary-blue);
       transform: scale(1.2);
+      box-shadow: $shadow;
     }
     
     &:hover {
-      background-color: rgba($primary-blue, 0.6);
+      background: linear-gradient(135deg, rgba($accent-teal, 0.6), rgba($primary-blue, 0.6));
+      transform: translateY(-2px);
+      box-shadow: $shadow;
     }
   }
 }
