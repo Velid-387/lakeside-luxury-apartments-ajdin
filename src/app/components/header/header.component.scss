@@ -291,8 +291,26 @@ body.no-scroll {
 // RTL support for Arabic
 :host-context(html[dir="rtl"]) {
   .nav-list {
+    flex-direction: column;
+    
+    @include respond-to(lg) {
+      flex-direction: row-reverse;
+    }
+    
     li {
+      width: 100%;
+      
+      @include respond-to(lg) {
+        width: auto;
+      }
+      
       a {
+        width: 100%;
+        
+        @include respond-to(lg) {
+          width: auto;
+        }
+        
         &::after {
           left: auto;
           right: 0;
@@ -301,7 +319,14 @@ body.no-scroll {
     }
   }
   
-  .nav {
-    // Remove the order: 1 property
+  .language-switcher {
+    margin-left: 0;
+    margin-right: $spacing-md;
+  }
+  
+  .mobile-contact {
+    .mobile-contact-link {
+      flex-direction: row-reverse;
+    }
   }
 }
