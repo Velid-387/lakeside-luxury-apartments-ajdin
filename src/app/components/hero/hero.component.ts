@@ -75,7 +75,7 @@ export class HeroComponent implements OnInit, OnDestroy {
       this.currentImageIndex = (this.currentImageIndex + 1) % this.images.length;
       // Ensure view is updated after index change
       this.cdr.detectChanges();
-    }, 5000); // Changed to 5 seconds
+    }, 3000);
   }
 
   getBackgroundStyle(image: SlideImage): string {
