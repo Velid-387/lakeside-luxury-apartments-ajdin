@@ -49,14 +49,7 @@ export class TranslateDirective implements OnInit, OnDestroy {
     if (!this.key) return;
 
     try {
-      let translatedText = this.translationService.translate(this.key);
-      
-      // Replace any parameters in the translation
-      if (this.translateParams && Object.keys(this.translateParams).length > 0) {
-        Object.keys(this.translateParams).forEach(param => {
-          translatedText = translatedText.replace(`{{${param}}}`, this.translateParams[param]);
-        });
-      }
+      let translatedText = this.translationService.translate(this.key, this.translateParams);
       
       // Preserve HTML elements by replacing only text nodes
       const tempDiv = document.createElement('div');
