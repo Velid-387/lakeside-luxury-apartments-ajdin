@@ -25,14 +25,18 @@ export class TranslateDirective implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    // Store original HTML content
-    this.originalHtml = this.el.nativeElement.innerHTML;
-    
-    if (!this.key) {
-      // If no key provided, use the element's text content as the key
-      this.key = this.el.nativeElement.textContent.trim();
+    try {
+      // Store original HTML content
+      this.originalHtml = this.el.nativeElement.innerHTML;
+      
+      if (!this.key) {
+        // If no key provided, use the element's text content as the key
+        this.key = this.el.nativeElement.textContent.trim();
+      }
+      this.updateTranslation();
+    } catch (error) {
+      // Silently handle SSR errors
     }
-    this.updateTranslation();
   }
 
   ngOnDestroy(): void {
@@ -42,7 +46,9 @@ export class TranslateDirective implements OnInit, OnDestroy {
   }
 
   private updateTranslation(): void {
-    if (this.key) {
+    if (!this.key) return;
+
+    try {
       let translatedText = this.translationService.translate(this.key);
       
       // Replace any parameters in the translation
@@ -65,6 +71,8 @@ export class TranslateDirective implements OnInit, OnDestroy {
       }
       
       this.el.nativeElement.innerHTML = tempDiv.innerHTML;
+    } catch (error) {
+      // Silently handle SSR errors
     }
   }
 } 
