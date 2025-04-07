@@ -33,29 +33,33 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
     </div>
   `,
   styles: [`
+    @import '../../../app/shared/styles/variables';
+    @import '../../../app/shared/styles/mixins';
+
     .language-switcher {
       display: flex;
       gap: 0.5rem;
     }
     
     .lang-btn {
+      @include button-small;
       background: transparent;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      padding: 0.25rem 0.5rem;
-      cursor: pointer;
+      border: 1px solid $medium-gray;
+      padding: 0.25rem 0.75rem;
       font-size: 0.875rem;
-      transition: all 0.2s ease;
-    }
-    
-    .lang-btn.active {
-      background-color: #2a5b8c;
-      color: white;
-      border-color: #2a5b8c;
-    }
-    
-    .lang-btn:hover:not(.active) {
-      background-color: #f5f5f5;
+      font-weight: 500;
+      
+      &.active {
+        background: linear-gradient(135deg, $primary-blue, $deep-blue);
+        color: $white;
+        border-color: transparent;
+      }
+      
+      &:hover:not(.active) {
+        background: linear-gradient(135deg, rgba($accent-teal, 0.1), rgba($primary-blue, 0.1));
+        border-color: $accent-teal;
+        color: $accent-teal;
+      }
     }
   `]
 })

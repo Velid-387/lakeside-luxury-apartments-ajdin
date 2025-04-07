@@ -6,6 +6,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { AboutComponent } from './components/about/about.component';
 import { ServicesComponent } from './components/services/services.component';
+import { ReviewsComponent } from './components/reviews/reviews.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ScrollToTopComponent } from './components/scroll-to-top/scroll-to-top.component';
@@ -20,6 +21,7 @@ import { ScrollToTopComponent } from './components/scroll-to-top/scroll-to-top.c
     HeroComponent,
     AboutComponent,
     ServicesComponent,
+    ReviewsComponent,
     ContactComponent,
     FooterComponent,
     ScrollToTopComponent

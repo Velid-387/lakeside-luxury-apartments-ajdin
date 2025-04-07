@@ -77,55 +77,56 @@
 }
 
 // Button mixins
-@mixin button-primary {
+@mixin button-base {
   display: inline-block;
   padding: v.$spacing-sm v.$spacing-lg;
-  background-color: v.$primary-blue;
-  color: v.$white;
-  border: none;
   border-radius: v.$border-radius;
   font-family: v.$font-family-primary;
   font-weight: 600;
   text-align: center;
   text-decoration: none;
   cursor: pointer;
-  transition: v.$transition-base;
+  transition: all 0.3s ease;
+  border: none;
   
   &:hover, &:focus {
-    background-color: color.adjust(v.$primary-blue, $lightness: -10%);
-    transform: translateY(-2px);
-    box-shadow: v.$shadow;
+    transform: translateY(-3px);
+    box-shadow: v.$shadow-lg;
   }
   
   &:active {
-    transform: translateY(0);
+    transform: translateY(-1px);
+  }
+}
+
+@mixin button-primary {
+  @include button-base;
+  background: linear-gradient(135deg, v.$primary-blue, v.$deep-blue);
+  color: v.$white;
+  
+  &:hover, &:focus {
+    background: linear-gradient(135deg, v.$accent-teal, v.$primary-blue);
+    color: v.$white;
   }
 }
 
 @mixin button-secondary {
-  display: inline-block;
-  padding: v.$spacing-sm v.$spacing-lg;
-  background-color: v.$white;
+  @include button-base;
+  background: v.$white;
   color: v.$primary-blue;
   border: 2px solid v.$primary-blue;
-  border-radius: v.$border-radius;
-  font-family: v.$font-family-primary;
-  font-weight: 600;
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-  transition: v.$transition-base;
   
   &:hover, &:focus {
-    background-color: v.$primary-blue;
+    background: v.$accent-teal;
     color: v.$white;
-    transform: translateY(-2px);
-    box-shadow: v.$shadow;
+    border-color: v.$accent-teal;
   }
-  
-  &:active {
-    transform: translateY(0);
-  }
+}
+
+@mixin button-small {
+  @include button-base;
+  padding: v.$spacing-xs v.$spacing-md;
+  font-size: v.$font-size-sm;
 }
 
 // Animation mixins

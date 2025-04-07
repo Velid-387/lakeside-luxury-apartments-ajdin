@@ -3,7 +3,7 @@
 
 .services {
   background-color: $light-gray;
-  background-image: url('/assets/images/high-quality/hero-lake.jpg');
+  background-image: url('/assets/images/ajdin/cover.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -113,7 +113,6 @@
     font-size: $font-size-lg;
     padding: $spacing-md $spacing-xl;
     background-color: $white;
-    color: $primary-blue;
     border: none;
     transform: translateY(0);
     transition: all 0.3s ease;

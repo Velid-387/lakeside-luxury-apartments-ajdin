@@ -1,0 +1,42 @@
+<section class="reviews section section-light">
+  <div class="container">
+    <div class="section-header text-center">
+      <h2 class="slide-up" appTranslate="reviews_title">Guest Reviews</h2>
+      <p class="slide-up" appTranslate="reviews_subtitle">What our guests say about their stay</p>
+    </div>
+
+    <div class="reviews-carousel">
+      <div class="reviews-track" [style.transform]="'translateX(-' + (currentReviewIndex * 100) + '%)'">
+        @for (review of reviews; track review.id) {
+          <div class="review-card" [class.active]="reviews[currentReviewIndex].id === review.id">
+            <div class="review-content">
+              <div class="review-text">
+                <i class="fas fa-quote-left quote-icon"></i>
+                <p [appTranslate]="review.textTranslateKey">{{ review.text }}</p>
+                <i class="fas fa-quote-right quote-icon"></i>
+              </div>
+              <div class="review-author">
+                <div class="country-flag">{{ review.countryFlag }}</div>
+                <div class="author-details">
+                  <h4>{{ review.guestName }}</h4>
+                  <p>{{ review.country }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+
+      <div class="reviews-navigation">
+        @for (review of reviews; track review.id; let i = $index) {
+          <button 
+            class="nav-dot" 
+            [class.active]="currentReviewIndex === i"
+            (click)="selectReview(i)"
+            [attr.aria-label]="'Show review ' + (i + 1)"
+          ></button>
+        }
+      </div>
+    </div>
+  </div>
+</section> 
