@@ -32,6 +32,11 @@ export const translations: Record<string, Record<Language, string>> = {
     'bs': 'Rezerviši',
     'ar': 'احجز الآن'
   },
+  'call_us': {
+    'en': 'Call Us',
+    'bs': 'Nazovite nas',
+    'ar': 'اتصل بنا'
+  },
   
   // Hero section
   'hero_title': {

@@ -13,7 +13,7 @@
   z-index: $z-index-fixed;
   transition: $transition-base;
   max-width: 100vw;
-  overflow-x: hidden;
+  overflow: visible;
 
   &.scrolled {
     padding: $spacing-sm 0;
@@ -32,6 +32,8 @@
 .header-content {
   @include flex-between;
   width: 100%;
+  height: 100%;
+  align-items: center;
 }
 
 .logo {
@@ -60,19 +62,21 @@
   }
   
   &.nav-active {
-    display: block;
+    display: flex;
+    flex-direction: column;
     position: fixed;
     top: 60px;
     left: 0;
     width: 100%;
     height: calc(100vh - 60px);
     background-color: $white;
-    padding: $spacing-lg;
+    padding: $spacing-lg $spacing-lg 0 $spacing-lg;
     z-index: $z-index-fixed;
     animation: slideDown 0.3s ease-in-out;
     overflow-y: auto;
     overflow-x: hidden;
     box-sizing: border-box;
+    justify-content: space-between;
     
     @include respond-to(lg) {
       position: static;
@@ -81,6 +85,7 @@
       width: auto;
       animation: none;
       overflow: visible;
+      flex-direction: row;
     }
   }
 }
@@ -91,17 +96,26 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  width: 100%;
   
   @include respond-to(lg) {
     flex-direction: row;
     gap: $spacing-lg;
+    height: 100%;
+    align-items: center;
   }
   
   li {
     margin-bottom: $spacing-lg;
+    width: 100%;
+    text-align: center;
     
     @include respond-to(lg) {
       margin-bottom: 0;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      width: auto;
     }
     
     a {
@@ -111,6 +125,12 @@
       position: relative;
       transition: $transition-base;
       padding: $spacing-xs $spacing-sm;
+      display: inline-block;
+      width: 100%;
+      
+      @include respond-to(lg) {
+        width: auto;
+      }
       
       &::after {
         content: '';
@@ -120,7 +140,8 @@
         background-color: $primary-blue;
         bottom: -4px;
         left: 0;
-        transition: $transition-base;
+        transition: width 0.3s cubic-bezier(0.65, 0, 0.35, 1);
+        transform-origin: left;
       }
       
       &:hover, &:focus {
@@ -130,21 +151,46 @@
           width: 100%;
         }
       }
+      
+      &.active {
+        color: $primary-blue;
+        font-weight: 600;
+        
+        &::after {
+          width: 100%;
+          height: 3px;
+          animation: underlineAnimation 0.5s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+        }
+      }
     }
   }
   
   .nav-cta {
     @include respond-to(lg) {
       margin-left: $spacing-lg;
+      height: 100%;
+      display: flex;
+      align-items: center;
     }
     
     a.btn-sm {
       @include button-primary;
       padding: $spacing-xs $spacing-md;
       font-size: $font-size-sm;
+      position: relative;
+      transition: all 0.3s ease;
+      transform-origin: center;
       
       &::after {
         display: none;
+      }
+      
+      &:hover, &:focus {
+        transform: scale(1.05);
+      }
+      
+      &:active {
+        transform: scale(1);
       }
     }
   }
@@ -189,29 +235,130 @@ body.no-scroll {
   }
 }
 
+.mobile-contact {
+  display: block;
+  margin-top: auto;
+  padding-top: $spacing-lg;
+  padding-bottom: $spacing-lg;
+  border-top: 1px solid rgba($medium-gray, 0.3);
+  text-align: center;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: $white;
+  box-shadow: 0 -2px 10px rgba($black, 0.05);
+  
+  @include respond-to(lg) {
+    display: none;
+  }
+  
+  .mobile-contact-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $deep-blue;
+    font-size: $font-size-base;
+    font-weight: 500;
+    text-decoration: none;
+    gap: $spacing-sm;
+    transition: $transition-base;
+    padding: $spacing-sm;
+    border-radius: $border-radius;
+    background-color: rgba($light-blue, 0.3);
+    
+    i {
+      color: $primary-blue;
+      font-size: $font-size-base;
+      padding: $spacing-xs;
+      background: $primary-blue;
+      color: $white;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    &:hover, &:focus {
+      color: $primary-blue;
+      background-color: rgba($light-blue, 0.5);
+    }
+  }
+}
+
 .language-switcher {
   margin-left: $spacing-md;
   display: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
   
   @include respond-to(lg) {
-    display: block;
+    display: flex;
   }
 }
 
 // RTL support for Arabic
 :host-context(html[dir="rtl"]) {
   .nav-list {
+    flex-direction: column;
+    
+    @include respond-to(lg) {
+      flex-direction: row-reverse;
+    }
+    
     li {
+      width: 100%;
+      
+      @include respond-to(lg) {
+        width: auto;
+      }
+      
       a {
+        width: 100%;
+        
+        @include respond-to(lg) {
+          width: auto;
+        }
+        
         &::after {
           left: auto;
           right: 0;
+          transform-origin: right;
+        }
+        
+        &.active::after {
+          animation: underlineAnimationRTL 0.5s cubic-bezier(0.65, 0, 0.35, 1) forwards;
         }
       }
     }
   }
   
-  .nav {
-    // Remove the order: 1 property
+  .language-switcher {
+    margin-left: 0;
+    margin-right: $spacing-md;
+  }
+  
+  .mobile-contact {
+    .mobile-contact-link {
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+@keyframes underlineAnimationRTL {
+  0% {
+    width: 0;
+    opacity: 0.8;
+    right: 0;
+    left: auto;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+    right: 0;
+    left: auto;
   }
 }
