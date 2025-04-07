@@ -1,5 +1,5 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, OnInit, OnDestroy, PLATFORM_ID, inject } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { TranslateDirective } from '../../shared/directives/translate.directive';
 
 interface SlideImage {
@@ -15,6 +15,7 @@ interface SlideImage {
   styleUrl: './hero.component.scss'
 })
 export class HeroComponent implements OnInit, OnDestroy {
+  private platformId = inject(PLATFORM_ID);
   private slideInterval?: ReturnType<typeof setInterval>;
   currentImageIndex = 0;
   
@@ -26,7 +27,13 @@ export class HeroComponent implements OnInit, OnDestroy {
   ];
 
   ngOnInit(): void {
-    this.preloadImages();
+    if (isPlatformBrowser(this.platformId)) {
+      this.preloadImages();
+    } else {
+      // Mark all images as loaded in SSR to avoid issues
+      this.images = this.images.map(img => ({ ...img, loaded: true }));
+      this.startSlideshow();
+    }
   }
 
   ngOnDestroy(): void {
@@ -36,6 +43,8 @@ export class HeroComponent implements OnInit, OnDestroy {
   }
 
   private preloadImages(): void {
+    if (!isPlatformBrowser(this.platformId)) return;
+    
     let loadedCount = 0;
     this.images.forEach((image, index) => {
       const img = new Image();
@@ -51,6 +60,8 @@ export class HeroComponent implements OnInit, OnDestroy {
   }
 
   private startSlideshow(): void {
+    if (!isPlatformBrowser(this.platformId)) return;
+    
     this.slideInterval = setInterval(() => {
       this.currentImageIndex = (this.currentImageIndex + 1) % this.images.length;
     }, 3000);
