@@ -39,6 +39,9 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
     .language-switcher {
       display: flex;
       gap: 0.5rem;
+      align-items: center;
+      height: 100%;
+      position: relative;
     }
     
     .lang-btn {
@@ -48,17 +51,22 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
       padding: 0.25rem 0.75rem;
       font-size: 0.875rem;
       font-weight: 500;
+      position: relative;
+      transition: all 0.3s ease;
+      transform-origin: center;
       
       &.active {
         background: linear-gradient(135deg, $primary-blue, $deep-blue);
         color: $white;
         border-color: transparent;
+        transform: none;
       }
       
       &:hover:not(.active) {
         background: linear-gradient(135deg, rgba($accent-teal, 0.1), rgba($primary-blue, 0.1));
         border-color: $accent-teal;
         color: $accent-teal;
+        transform: none;
       }
     }
   `]
