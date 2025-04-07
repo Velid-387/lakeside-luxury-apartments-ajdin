@@ -333,11 +333,6 @@ export const translations: Record<string, Record<Language, string>> = {
     'bs': 'Šta naši gosti kažu o svom boravku',
     'ar': 'ما يقوله ضيوفنا عن إقامتهم'
   },
-  'guest_from': {
-    'en': 'Guest from',
-    'bs': 'Gost iz',
-    'ar': 'ضيف من'
-  },
   'review_1_text': {
     'en': 'The apartment exceeded our expectations! The lake view was breathtaking, and the amenities were top-notch. We especially loved the morning coffee on the terrace.',
     'bs': 'Apartman je premašio naša očekivanja! Pogled na jezero je bio nevjerovatan, a sadržaji prvoklasni. Posebno smo uživali u jutarnjoj kafi na terasi.',
