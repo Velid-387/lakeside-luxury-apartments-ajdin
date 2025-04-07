@@ -13,11 +13,11 @@
       
       <nav class="nav" [ngClass]="{'nav-active': isMenuOpen}">
         <ul class="nav-list">
-          <li><a href="#home" (click)="closeMenu()" appTranslate="home">Home</a></li>
-          <li><a href="#about" (click)="closeMenu()" appTranslate="about">About</a></li>
-          <li><a href="#services" (click)="closeMenu()" appTranslate="services">Services</a></li>
-          <li><a href="#reviews" (click)="closeMenu()" appTranslate="reviews">Reviews</a></li>
-          <li><a href="#contact" (click)="closeMenu()" appTranslate="contact">Contact</a></li>
+          <li><a href="#home" [class.active]="activeSection === 'home'" (click)="setActiveSection('home')" appTranslate="home">Home</a></li>
+          <li><a href="#about" [class.active]="activeSection === 'about'" (click)="setActiveSection('about')" appTranslate="about">About</a></li>
+          <li><a href="#services" [class.active]="activeSection === 'services'" (click)="setActiveSection('services')" appTranslate="services">Services</a></li>
+          <li><a href="#reviews" [class.active]="activeSection === 'reviews'" (click)="setActiveSection('reviews')" appTranslate="reviews">Reviews</a></li>
+          <li><a href="#contact" [class.active]="activeSection === 'contact'" (click)="setActiveSection('contact')" appTranslate="contact">Contact</a></li>
           <li class="nav-cta">
             <a href="https://www.booking.com/Share-IUhAIK" target="_blank" class="btn-sm" appTranslate="book_now">Book Now</a>
           </li>
@@ -26,7 +26,7 @@
         <div class="mobile-contact">
           <a href="tel:+387603090567" class="mobile-contact-link">
             <i class="fas fa-phone-alt"></i>
-            <span appTranslate="call_us">Call Us</span> +387 60 309 0567
+            <span appTranslate="call_us">Call Us</span>: +387 60 309 0567
           </a>
         </div>
       </nav>
