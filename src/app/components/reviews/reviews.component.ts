@@ -48,6 +48,38 @@ export class ReviewsComponent implements OnInit, OnDestroy {
       guestName: 'Ahmed & Fatima',
       country: 'UAE',
       countryFlag: '🇦🇪'
+    },
+    {
+      id: '4',
+      text: 'The raft rental experience was amazing! We spent a whole day exploring the lake, finding quiet spots for swimming and picnicking. The staff was very professional and helpful.',
+      textTranslateKey: 'review_4_text',
+      guestName: 'Marco & Sofia',
+      country: 'Italy',
+      countryFlag: '🇮🇹'
+    },
+    {
+      id: '5',
+      text: 'Exceptional hospitality! From the moment we arrived, we felt like VIP guests. The attention to detail in the apartment and the stunning sunrise views made our honeymoon perfect.',
+      textTranslateKey: 'review_5_text',
+      guestName: 'Pierre & Marie',
+      country: 'France',
+      countryFlag: '🇫🇷'
+    },
+    {
+      id: '6',
+      text: 'A perfect family vacation spot! The kids loved the lake activities, and we enjoyed the spacious apartment. The café\'s family-friendly menu was a big plus.',
+      textTranslateKey: 'review_6_text',
+      guestName: 'Lars & Anna',
+      country: 'Sweden',
+      countryFlag: '🇸🇪'
+    },
+    {
+      id: '7',
+      text: 'The tranquility of this place is unmatched! We spent evenings on the terrace watching the sunset over the lake. The apartment\'s modern amenities combined with the natural setting created a perfect balance.',
+      textTranslateKey: 'review_7_text',
+      guestName: 'Yuki & Akiko',
+      country: 'Japan',
+      countryFlag: '🇯🇵'
     }
   ];
 

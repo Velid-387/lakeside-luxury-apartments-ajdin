@@ -17,6 +17,11 @@ export const translations: Record<string, Record<Language, string>> = {
     'bs': 'Usluge',
     'ar': 'الخدمات'
   },
+  'reviews': {
+    'en': 'Reviews',
+    'bs': 'Recenzije',
+    'ar': 'التقييمات'
+  },
   'contact': {
     'en': 'Contact',
     'bs': 'Kontakt',
@@ -98,7 +103,7 @@ export const translations: Record<string, Record<Language, string>> = {
   },
   'raft_rentals_desc': {
     'en': 'Explore the lake at your own pace with our comfortable and easy-to-navigate raft rentals.',
-    'bs': 'Istražite jezero svojim tempom s našim udobnim i jednostavnim za navigaciju iznajmljenim splavima.',
+    'bs': 'Istražite jezero svojim tempom s našim udobnim iznajmljenim splavima.',
     'ar': 'استكشف البحيرة بوتيرتك الخاصة مع قواربنا المريحة وسهلة التنقل.'
   },
   
@@ -347,5 +352,25 @@ export const translations: Record<string, Record<Language, string>> = {
     'en': 'An unforgettable experience! The apartment was beautifully designed, and the lakeside café served delicious local cuisine. We will definitely return!',
     'bs': 'Nezaboravno iskustvo! Apartman je prelijepo uređen, a kafić pored jezera služi ukusnu lokalnu kuhinju. Sigurno ćemo se vratiti!',
     'ar': 'تجربة لا تُنسى! الشقة مصممة بشكل جميل، والمقهى بجانب البحيرة يقدم مأكولات محلية لذيذة. سنعود بالتأكيد!'
+  },
+  'review_4_text': {
+    'en': 'The raft rental experience was amazing! We spent a whole day exploring the lake, finding quiet spots for swimming and picnicking. The staff was very professional and helpful.',
+    'bs': 'Iskustvo iznajmljivanja splavi je bilo nevjerovatno! Proveli smo cijeli dan istražujući jezero, pronalazeći mirna mjesta za kupanje i piknik. Osoblje je bilo vrlo profesionalno i od pomoći.',
+    'ar': 'كانت تجربة استئجار الطوافة مذهلة! قضينا يوماً كاملاً في استكشاف البحيرة، ووجدنا أماكن هادئة للسباحة والنزهات. كان الموظفون محترفين جداً ومتعاونين.'
+  },
+  'review_5_text': {
+    'en': 'Exceptional hospitality! From the moment we arrived, we felt like VIP guests. The attention to detail in the apartment and the stunning sunrise views made our honeymoon perfect.',
+    'bs': 'Izuzetno gostoprimstvo! Od trenutka kada smo stigli, osjećali smo se kao VIP gosti. Pažnja posvećena detaljima u apartmanu i prekrasan pogled na izlazak sunca učinili su naš medeni mjesec savršenim.',
+    'ar': 'ضيافة استثنائية! منذ لحظة وصولنا، شعرنا كأننا ضيوف مميزون. الاهتمام بالتفاصيل في الشقة ومناظر شروق الشمس الخلابة جعلت شهر عسلنا مثالياً.'
+  },
+  'review_6_text': {
+    'en': 'A perfect family vacation spot! The kids loved the lake activities, and we enjoyed the spacious apartment. The cafés family-friendly menu was a big plus.',
+    'bs': 'Savršeno mjesto za porodični odmor! Djeca su voljela aktivnosti na jezeru, a mi smo uživali u prostranom apartmanu. Meni kafića prilagođen porodici bio je veliki plus.',
+    'ar': 'مكان مثالي لقضاء عطلة عائلية! أحب الأطفال الأنشطة على البحيرة، واستمتعنا بالشقة الواسعة. كانت قائمة الطعام المناسبة للعائلة في المقهى ميزة كبيرة.'
+  },
+  'review_7_text': {
+    'en': 'The tranquility of this place is unmatched! We spent evenings on the terrace watching the sunset over the lake. The apartments modern amenities combined with the natural setting created a perfect balance.',
+    'bs': 'Mir ovog mjesta je nenadmašan! Provodili smo večeri na terasi gledajući zalazak sunca nad jezerom. Moderni sadržaji apartmana u kombinaciji s prirodnim okruženjem stvorili su savršenu ravnotežu.',
+    'ar': 'هدوء هذا المكان لا مثيل له! قضينا الأمسيات في الشرفة نشاهد غروب الشمس فوق البحيرة. المرافق الحديثة للشقة مع الموقع الطبيعي خلقت توازناً مثالياً.'
   },
 }; 

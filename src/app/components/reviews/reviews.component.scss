@@ -13,6 +13,7 @@
   max-width: 1000px;
   margin: $spacing-xl auto;
   overflow: hidden;
+  direction: ltr;
 }
 
 .reviews-track {
@@ -43,6 +44,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  min-height: 300px;
 }
 
 .review-text {
@@ -74,6 +76,9 @@
     color: $dark-gray;
     margin: $spacing-md 0;
     font-style: italic;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -135,6 +140,10 @@
 
 // RTL support
 :host-context(html[dir="rtl"]) {
+  .review-content {
+    direction: rtl;
+  }
+
   .review-author {
     .author-details {
       text-align: right;
