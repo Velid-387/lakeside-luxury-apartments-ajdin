@@ -274,4 +274,46 @@ export const translations: Record<string, Record<Language, string>> = {
     'bs': "Istražite kristalno čiste vode jezera svojim tempom s našim udobnim iznajmljenim splavima. Naši jednostavni za navigaciju splavi savršeni su za porodice, parove ili samostalne avanturiste koji žele doživjeti ljepotu jezera iz druge perspektive. Spakirajte piknik, pronađite skrivenu uvalu ili jednostavno plutajte i uživajte u zadivljujućem okruženju. Sva potrebna sigurnosna oprema je osigurana, a naše osoblje će se pobrinuti da se osjećate ugodno prije nego što krenete na svoju vodenu avanturu.",
     'ar': "استكشف المياه البلورية للبحيرة بوتيرتك الخاصة مع قواربنا المريحة للإيجار. طوافاتنا سهلة التنقل مثالية للعائلات، والأزواج، أو المغامرين المنفردين الذين يتطلعون إلى تجربة جمال البحيرة من منظور مختلف. قم بتجهيز نزهة، واعثر على خليج منعزل، أو ببساطة انجرف واستمتع بالمناظر المذهلة المحيطة بك. يتم توفير جميع معدات السلامة اللازمة، وسيتأكد فريق العمل لدينا من راحتك قبل الانطلاق في مغامرتك المائية."
   },
+  
+  // Footer sections
+  'quick_links': {
+    'en': 'Quick Links',
+    'bs': 'Brzi linkovi',
+    'ar': 'روابط سريعة'
+  },
+  'our_services': {
+    'en': 'Our Services',
+    'bs': 'Naše usluge',
+    'ar': 'خدماتنا'
+  },
+  'follow_us': {
+    'en': 'Follow Us',
+    'bs': 'Pratite nas',
+    'ar': 'تابعنا'
+  },
+  'address': {
+    'en': 'Lakeside Avenue 123',
+    'bs': 'Lakeside Avenija 123',
+    'ar': 'شارع ليكسايد 123'
+  },
+  'phone_number': {
+    'en': '+1 (234) 567-8900',
+    'bs': '+1 (234) 567-8900',
+    'ar': '+1 (234) 567-8900'
+  },
+  'copyright': {
+    'en': '© {currentYear} Lakeside Luxury. All rights reserved.',
+    'bs': '© {currentYear} Lakeside Luxury. Sva prava zadržana.',
+    'ar': '© {currentYear} ليكسايد لاكشري. جميع الحقوق محفوظة.'
+  },
+  'privacy_policy': {
+    'en': 'Privacy Policy',
+    'bs': 'Politika privatnosti',
+    'ar': 'سياسة الخصوصية'
+  },
+  'terms_of_service': {
+    'en': 'Terms of Service',
+    'bs': 'Uslovi korištenja',
+    'ar': 'شروط الخدمة'
+  },
 }; 

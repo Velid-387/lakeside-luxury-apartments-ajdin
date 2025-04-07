@@ -50,13 +50,22 @@ export class TranslationService {
     return this.currentLangSignal();
   }
 
-  translate(key: string): string {
+  translate(key: string, params?: Record<string, string>): string {
     const translation = this.translations[key];
     if (!translation) {
       console.warn(`Translation key not found: ${key}`);
       return key;
     }
-    return translation[this.currentLangSignal()] || key;
+    let translatedText = translation[this.currentLangSignal()] || key;
+    
+    // Replace parameters if provided
+    if (params) {
+      Object.keys(params).forEach(param => {
+        translatedText = translatedText.replace(`{${param}}`, params[param]);
+      });
+    }
+    
+    return translatedText;
   }
 
   loadTranslations(translations: Record<string, Record<Language, string>>): void {

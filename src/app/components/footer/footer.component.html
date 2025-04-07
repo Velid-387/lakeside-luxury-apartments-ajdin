@@ -3,40 +3,40 @@
     <div class="footer-content">
       <div class="footer-logo">
         <h2>Lakeside<span>Luxury</span></h2>
-        <p>Your perfect lakeside escape awaits</p>
+        <p appTranslate="perfect_escape">Your perfect lakeside escape awaits</p>
       </div>
       
       <div class="footer-links">
         <div class="footer-section">
-          <h3>Quick Links</h3>
+          <h3 appTranslate="quick_links">Quick Links</h3>
           <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#home" appTranslate="home">Home</a></li>
+            <li><a href="#about" appTranslate="about">About</a></li>
+            <li><a href="#services" appTranslate="services">Services</a></li>
+            <li><a href="#contact" appTranslate="contact">Contact</a></li>
           </ul>
         </div>
         
         <div class="footer-section">
-          <h3>Our Services</h3>
+          <h3 appTranslate="our_services">Our Services</h3>
           <ul>
-            <li><a href="#apartments">Luxury Apartments</a></li>
-            <li><a href="#cafe">Lakeside Café</a></li>
-            <li><a href="#rafts">Raft Rentals</a></li>
+            <li><a href="#apartments" appTranslate="luxury_apartments">Luxury Apartments</a></li>
+            <li><a href="#cafe" appTranslate="cozy_cafe">Lakeside Café</a></li>
+            <li><a href="#rafts" appTranslate="raft_rentals">Raft Rentals</a></li>
           </ul>
         </div>
         
         <div class="footer-section">
-          <h3>Contact</h3>
+          <h3 appTranslate="contact">Contact</h3>
           <ul class="contact-list">
-            <li><i class="fas fa-map-marker-alt"></i> Lakeside Avenue 123</li>
-            <li><i class="fas fa-phone-alt"></i> +1 (234) 567-8900</li>
+            <li><i class="fas fa-map-marker-alt"></i> <span appTranslate="address">Lakeside Avenue 123</span></li>
+            <li><i class="fas fa-phone-alt"></i> <span appTranslate="phone_number">+1 (234) 567-8900</span></li>
             <li><i class="fas fa-envelope"></i> info&#64;lakesideluxury.com</li>
           </ul>
         </div>
         
         <div class="footer-section">
-          <h3>Follow Us</h3>
+          <h3 appTranslate="follow_us">Follow Us</h3>
           <div class="social-links">
             <a href="https://www.facebook.com/splavnadan24" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
             <a href="https://www.instagram.com/splavnadan.24/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -47,10 +47,10 @@
     </div>
     
     <div class="footer-bottom">
-      <p>&copy; {{ currentYear }} Lakeside Luxury. All rights reserved.</p>
+      <p><span appTranslate="copyright" [translateParams]="{currentYear: currentYear.toString()}">© 2024 Lakeside Luxury. All rights reserved.</span></p>
       <div class="footer-bottom-links">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
+        <a href="#" appTranslate="privacy_policy">Privacy Policy</a>
+        <a href="#" appTranslate="terms_of_service">Terms of Service</a>
       </div>
     </div>
   </div>

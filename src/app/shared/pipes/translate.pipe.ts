@@ -19,7 +19,7 @@ export class TranslatePipe implements PipeTransform {
     // Replace parameters if provided
     if (params) {
       Object.keys(params).forEach(param => {
-        translatedText = translatedText.replace(`{{${param}}}`, params[param]);
+        translatedText = translatedText.replace(`{${param}}`, params[param]);
       });
     }
     
