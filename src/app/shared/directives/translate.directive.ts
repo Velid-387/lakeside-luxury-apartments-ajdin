@@ -10,6 +10,7 @@ export class TranslateDirective implements OnInit, OnDestroy {
   private el = inject(ElementRef);
   private translationService = inject(TranslationService);
   private subscription: Subscription | null = null;
+  private originalHtml: string = '';
   
   @Input('appTranslate') key: string = '';
   @Input() translateParams: Record<string, string> = {};
@@ -24,9 +25,12 @@ export class TranslateDirective implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
+    // Store original HTML content
+    this.originalHtml = this.el.nativeElement.innerHTML;
+    
     if (!this.key) {
-      // If no key provided, use the element's content as the key
-      this.key = this.el.nativeElement.innerText.trim();
+      // If no key provided, use the element's text content as the key
+      this.key = this.el.nativeElement.textContent.trim();
     }
     this.updateTranslation();
   }
@@ -48,7 +52,19 @@ export class TranslateDirective implements OnInit, OnDestroy {
         });
       }
       
-      this.el.nativeElement.innerText = translatedText;
+      // Preserve HTML elements by replacing only text nodes
+      const tempDiv = document.createElement('div');
+      tempDiv.innerHTML = this.originalHtml;
+      const textNodes = Array.from(tempDiv.childNodes).filter(node => node.nodeType === Node.TEXT_NODE);
+      
+      if (textNodes.length > 0) {
+        textNodes[0].textContent = translatedText;
+      } else {
+        // If no text nodes found, append the translation
+        tempDiv.appendChild(document.createTextNode(translatedText));
+      }
+      
+      this.el.nativeElement.innerHTML = tempDiv.innerHTML;
     }
   }
 } 

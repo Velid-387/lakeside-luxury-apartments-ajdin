@@ -120,29 +120,23 @@
 }
 
 .contact-map {
-  margin-top: $spacing-lg;
+  margin-top: 2rem;
+  width: 100%;
   
   h3 {
-    color: $deep-blue;
-    margin-bottom: $spacing-md;
+    margin-bottom: 1rem;
   }
   
-  .map-placeholder {
-    background-color: $light-gray;
-    border-radius: $border-radius;
-    height: 250px;
-    @include flex-center;
-    flex-direction: column;
-    color: $dark-gray;
-    border: 1px dashed $medium-gray;
+  .map-container {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     
-    p {
-      margin-bottom: $spacing-xs;
-      
-      &:last-child {
-        margin-bottom: 0;
-        font-size: $font-size-sm;
-      }
+    iframe {
+      display: block;
+      width: 100%;
+      border: none;
     }
   }
 }

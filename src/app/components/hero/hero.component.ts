@@ -1,5 +1,5 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, OnInit, OnDestroy, PLATFORM_ID, inject, ChangeDetectorRef } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { TranslateDirective } from '../../shared/directives/translate.directive';
 
 interface SlideImage {
@@ -15,6 +15,8 @@ interface SlideImage {
   styleUrl: './hero.component.scss'
 })
 export class HeroComponent implements OnInit, OnDestroy {
+  private platformId = inject(PLATFORM_ID);
+  private cdr = inject(ChangeDetectorRef);
   private slideInterval?: ReturnType<typeof setInterval>;
   currentImageIndex = 0;
   
@@ -26,7 +28,14 @@ export class HeroComponent implements OnInit, OnDestroy {
   ];
 
   ngOnInit(): void {
-    this.preloadImages();
+    if (isPlatformBrowser(this.platformId)) {
+      this.preloadImages();
+    } else {
+      // Mark all images as loaded in SSR to avoid issues
+      this.images = this.images.map(img => ({ ...img, loaded: true }));
+      // Don't start slideshow in SSR
+      this.currentImageIndex = 0;
+    }
   }
 
   ngOnDestroy(): void {
@@ -36,6 +45,8 @@ export class HeroComponent implements OnInit, OnDestroy {
   }
 
   private preloadImages(): void {
+    if (!isPlatformBrowser(this.platformId)) return;
+    
     let loadedCount = 0;
     this.images.forEach((image, index) => {
       const img = new Image();
@@ -44,6 +55,8 @@ export class HeroComponent implements OnInit, OnDestroy {
         loadedCount++;
         if (loadedCount === this.images.length) {
           this.startSlideshow();
+          // Ensure view is updated after images are loaded
+          this.cdr.detectChanges();
         }
       };
       img.src = image.url;
@@ -51,12 +64,22 @@ export class HeroComponent implements OnInit, OnDestroy {
   }
 
   private startSlideshow(): void {
+    if (!isPlatformBrowser(this.platformId)) return;
+    
+    // Clear any existing interval
+    if (this.slideInterval) {
+      clearInterval(this.slideInterval);
+    }
+    
     this.slideInterval = setInterval(() => {
       this.currentImageIndex = (this.currentImageIndex + 1) % this.images.length;
-    }, 3000);
+      // Ensure view is updated after index change
+      this.cdr.detectChanges();
+    }, 5000); // Changed to 5 seconds
   }
 
   getBackgroundStyle(image: SlideImage): string {
-    return image.loaded ? `url(${image.url})` : 'none';
+    if (!image.loaded) return 'none';
+    return `url(${image.url})`;
   }
 }
