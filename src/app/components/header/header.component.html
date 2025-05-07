@@ -13,11 +13,11 @@
       
       <nav class="nav" [ngClass]="{'nav-active': isMenuOpen}">
         <ul class="nav-list">
-          <li><a href="#home" [class.active]="activeSection === 'home'" (click)="setActiveSection('home')" appTranslate="home">Home</a></li>
-          <li><a href="#about" [class.active]="activeSection === 'about'" (click)="setActiveSection('about')" appTranslate="about">About</a></li>
-          <li><a href="#services" [class.active]="activeSection === 'services'" (click)="setActiveSection('services')" appTranslate="services">Services</a></li>
-          <li><a href="#reviews" [class.active]="activeSection === 'reviews'" (click)="setActiveSection('reviews')" appTranslate="reviews">Reviews</a></li>
-          <li><a href="#contact" [class.active]="activeSection === 'contact'" (click)="setActiveSection('contact')" appTranslate="contact">Contact</a></li>
+          <li><a href="#home" [class.active]="activeSection === 'home'" (click)="setActiveSection('home', $event)" appTranslate="home">Home</a></li>
+          <li><a href="#about" [class.active]="activeSection === 'about'" (click)="setActiveSection('about', $event)" appTranslate="about">About</a></li>
+          <li><a href="#services" [class.active]="activeSection === 'services'" (click)="setActiveSection('services', $event)" appTranslate="services">Services</a></li>
+          <li><a href="#reviews" [class.active]="activeSection === 'reviews'" (click)="setActiveSection('reviews', $event)" appTranslate="reviews">Reviews</a></li>
+          <li><a href="#contact" [class.active]="activeSection === 'contact'" (click)="setActiveSection('contact', $event)" appTranslate="contact">Contact</a></li>
           <li class="nav-cta">
             <a href="https://www.booking.com/Share-IUhAIK" target="_blank" class="btn-sm" appTranslate="book_now">Book Now</a>
           </li>
