@@ -40,6 +40,22 @@
   a {
     text-decoration: none;
     color: $deep-blue;
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+
+    .logo-img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+      transition: $transition-base;
+
+      @include respond-to(lg) {
+        width: 50px;
+        height: 50px;
+      }
+    }
 
     h1 {
       font-family: $font-family-secondary;
@@ -49,6 +65,14 @@
       
       span {
         color: $primary-blue;
+      }
+
+      @include respond-to(sm) {
+        display: none;
+      }
+
+      @include respond-to(lg) {
+        display: block;
       }
     }
   }
