@@ -165,6 +165,16 @@ export const translations: Record<string, Record<Language, string>> = {
     'bs': 'Naša lokacija',
     'ar': 'موقعنا'
   },
+  'our_address': {
+    'en': 'Ostrožac 212',
+    'bs': 'Ostrožac 212',
+    'ar': 'أوستروزاك 212'
+  },
+  'country': {
+    'en': 'Ostrožac, Bosnia and Herzegovina',
+    'bs': 'Ostrožac, Bosna i Hercegovina',
+    'ar': 'أوستروزاك, بوسنة وهرسكوفينا'
+  },
   'phone': {
     'en': 'Phone',
     'bs': 'Telefon',
@@ -304,7 +314,7 @@ export const translations: Record<string, Record<Language, string>> = {
   'address': {
     'en': 'Ostrožac 212',
     'bs': 'Ostrožac 212',
-    'ar': 'Ostrožac 212'
+    'ar': 'أوستروزاك 212'
   },
   'phone_number': {
     'en': '+387 60 33 07 659',
