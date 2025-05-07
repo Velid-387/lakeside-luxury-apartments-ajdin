@@ -21,10 +21,10 @@ export class HeroComponent implements OnInit, OnDestroy {
   currentImageIndex = 0;
   
   images: SlideImage[] = [
-    { url: '/assets/images/ajdin/cover.jpg', loaded: false },
-    { url: '/assets/images/ajdin/apartman-1.jpg', loaded: false },
-    { url: '/assets/images/ajdin/apartman-2.jpg', loaded: false },
-    { url: '/assets/images/ajdin/jezero.jpg', loaded: false }
+    { url: '/assets/images/about/cover.jpg', loaded: false },
+    { url: '/assets/images/apartments/apartman-1.jpg', loaded: false },
+    { url: '/assets/images/apartments/apartman-2.jpg', loaded: false },
+    { url: '/assets/images/about/jezero.jpg', loaded: false }
   ];
 
   ngOnInit(): void {
