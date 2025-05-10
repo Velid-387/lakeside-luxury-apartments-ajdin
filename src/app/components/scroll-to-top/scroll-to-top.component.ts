@@ -1,6 +1,7 @@
-import { Component, HostListener, PLATFORM_ID, inject, signal } from '@angular/core';
+import { Component, HostListener, PLATFORM_ID, inject, signal, computed } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { animate, style, transition, trigger } from '@angular/animations';
+import { MenuStateService } from '../../shared/services/menu-state.service';
 
 @Component({
   selector: 'app-scroll-to-top',
@@ -21,14 +22,18 @@ import { animate, style, transition, trigger } from '@angular/animations';
   ]
 })
 export class ScrollToTopComponent {
-  isVisible = signal(false);
+  private menuState = inject(MenuStateService);
   private isBrowser = isPlatformBrowser(inject(PLATFORM_ID));
+  private scrolledEnough = signal(false);
+  
+  isVisible = computed(() => {
+    return this.scrolledEnough() && !this.menuState.isMenuOpen();
+  });
   
   @HostListener('window:scroll', [])
   onWindowScroll() {
     if (this.isBrowser) {
-      // Show button when page is scrolled more than 500px
-      this.isVisible.set(window.scrollY > 500);
+      this.scrolledEnough.set(window.scrollY > 500);
     }
   }
   

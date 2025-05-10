@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy, PLATFORM_ID, inject, ChangeDetectorRef } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { TranslateDirective } from '../../shared/directives/translate.directive';
+import { ScrollService } from '../../shared/services/scroll.service';
 
 interface SlideImage {
   url: string;
@@ -18,13 +19,14 @@ export class HeroComponent implements OnInit, OnDestroy {
   private platformId = inject(PLATFORM_ID);
   private cdr = inject(ChangeDetectorRef);
   private slideInterval?: ReturnType<typeof setInterval>;
+  private scrollService = inject(ScrollService);
   currentImageIndex = 0;
   
   images: SlideImage[] = [
-    { url: '/assets/images/ajdin/cover.jpg', loaded: false },
-    { url: '/assets/images/ajdin/apartman-1.jpg', loaded: false },
-    { url: '/assets/images/ajdin/apartman-2.jpg', loaded: false },
-    { url: '/assets/images/ajdin/jezero.jpg', loaded: false }
+    { url: '/assets/images/about/cover.jpg', loaded: false },
+    { url: '/assets/images/apartments/apartman-1.jpg', loaded: false },
+    { url: '/assets/images/apartments/apartman-2.jpg', loaded: false },
+    { url: '/assets/images/about/jezero.jpg', loaded: false }
   ];
 
   ngOnInit(): void {
@@ -81,5 +83,10 @@ export class HeroComponent implements OnInit, OnDestroy {
   getBackgroundStyle(image: SlideImage): string {
     if (!image.loaded) return 'none';
     return `url(${image.url})`;
+  }
+
+  scrollToSection(section: string, event: Event): void {
+    event.preventDefault();
+    this.scrollService.scrollToElement(section);
   }
 }

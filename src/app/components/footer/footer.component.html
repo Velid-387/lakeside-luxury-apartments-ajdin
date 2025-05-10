@@ -10,20 +10,20 @@
         <div class="footer-section">
           <h3 appTranslate="quick_links">Quick Links</h3>
           <ul>
-            <li><a href="#home" appTranslate="home">Home</a></li>
-            <li><a href="#about" appTranslate="about">About</a></li>
-            <li><a href="#services" appTranslate="services">Services</a></li>
-            <li><a href="#reviews" appTranslate="reviews">Reviews</a></li>
-            <li><a href="#contact" appTranslate="contact">Contact</a></li>
+            <li><a href="#home" (click)="scrollToSection('home', $event)" appTranslate="home">Home</a></li>
+            <li><a href="#about" (click)="scrollToSection('about', $event)" appTranslate="about">About</a></li>
+            <li><a href="#services" (click)="scrollToSection('services', $event)" appTranslate="services">Services</a></li>
+            <li><a href="#reviews" (click)="scrollToSection('reviews', $event)" appTranslate="reviews">Reviews</a></li>
+            <li><a href="#contact" (click)="scrollToSection('contact', $event)" appTranslate="contact">Contact</a></li>
           </ul>
         </div>
         
         <div class="footer-section">
           <h3 appTranslate="our_services">Our Services</h3>
           <ul>
-            <li><a href="#apartments" appTranslate="luxury_apartments">Luxury Apartments</a></li>
-            <li><a href="#cafe" appTranslate="cozy_cafe">Lakeside Café</a></li>
-            <li><a href="#rafts" appTranslate="raft_rentals">Raft Rentals</a></li>
+            <li><a href="#apartments" (click)="scrollToSection('services', $event)" appTranslate="luxury_apartments">Luxury Apartments</a></li>
+            <li><a href="#cafe" (click)="scrollToSection('services', $event)" appTranslate="cozy_cafe">Lakeside Café</a></li>
+            <li><a href="#rafts" (click)="scrollToSection('services', $event)" appTranslate="raft_rentals">Raft Rentals</a></li>
           </ul>
         </div>
         
@@ -31,7 +31,7 @@
           <h3 appTranslate="contact">Contact</h3>
           <ul class="contact-list">
             <li><i class="fas fa-map-marker-alt"></i> <span appTranslate="address">Lakeside Avenue 123</span></li>
-            <li><i class="fas fa-phone-alt"></i> <span appTranslate="phone_number">+1 (234) 567-8900</span></li>
+            <li><i class="fas fa-phone-alt"></i> <span appTranslate="phone_number">+387 60 33 07 659</span></li>
             <li><i class="fas fa-envelope"></i> info&#64;lakesideluxury.com</li>
           </ul>
         </div>
@@ -50,8 +50,8 @@
     <div class="footer-bottom">
       <p><span appTranslate="copyright" [translateParams]="{currentYear: currentYear.toString()}">© 2024 Lakeside Luxury. All rights reserved.</span></p>
       <div class="footer-bottom-links">
-        <a href="#" appTranslate="privacy_policy">Privacy Policy</a>
-        <a href="#" appTranslate="terms_of_service">Terms of Service</a>
+        <a href="#" (click)="$event.preventDefault()" appTranslate="privacy_policy">Privacy Policy</a>
+        <a href="#" (click)="$event.preventDefault()" appTranslate="terms_of_service">Terms of Service</a>
       </div>
     </div>
   </div>

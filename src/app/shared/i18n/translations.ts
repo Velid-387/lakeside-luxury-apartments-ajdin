@@ -165,6 +165,16 @@ export const translations: Record<string, Record<Language, string>> = {
     'bs': 'Naša lokacija',
     'ar': 'موقعنا'
   },
+  'our_address': {
+    'en': 'Ostrožac 212',
+    'bs': 'Ostrožac 212',
+    'ar': 'أوستروزاك 212'
+  },
+  'country': {
+    'en': 'Ostrožac, Bosnia and Herzegovina',
+    'bs': 'Ostrožac, Bosna i Hercegovina',
+    'ar': 'أوستروزاك, بوسنة وهرسكوفينا'
+  },
   'phone': {
     'en': 'Phone',
     'bs': 'Telefon',
@@ -302,14 +312,14 @@ export const translations: Record<string, Record<Language, string>> = {
     'ar': 'تابعنا'
   },
   'address': {
-    'en': 'Lakeside Avenue 123',
-    'bs': 'Lakeside Avenija 123',
-    'ar': 'شارع ليكسايد 123'
+    'en': 'Ostrožac 212',
+    'bs': 'Ostrožac 212',
+    'ar': 'أوستروزاك 212'
   },
   'phone_number': {
-    'en': '+1 (234) 567-8900',
-    'bs': '+1 (234) 567-8900',
-    'ar': '+1 (234) 567-8900'
+    'en': '+387 60 33 07 659',
+    'bs': '+387 60 33 07 659',
+    'ar': '+387 60 33 07 659'
   },
   'copyright': {
     'en': '© {currentYear} Lakeside Luxury. All rights reserved.',
