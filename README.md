@@ -2,6 +2,8 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.1.
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/33c791fd-7c40-42d5-a391-eaac6fd17d07/deploy-status)](https://app.netlify.com/sites/lakesideluxuryapartments/deploys)
+
 ## Development server
 
 To start a local development server, run:
