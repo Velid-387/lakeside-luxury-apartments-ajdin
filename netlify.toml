@@ -1,6 +1,6 @@
 [build]
   publish = "dist/lakeside-luxury-apartments/browser"
-  command = "ng build"
+  command = "ng build && ng run lakeside-luxury-apartments:server:production"
 
 [[redirects]]
   from = "/*"
