@@ -95,7 +95,7 @@
     height: calc(100vh - 60px);
     background-color: $white;
     padding: $spacing-lg $spacing-lg 0 $spacing-lg;
-    z-index: $z-index-fixed;
+    z-index: 1000;
     animation: slideDown 0.3s ease-in-out;
     overflow-y: auto;
     overflow-x: hidden;
@@ -314,13 +314,14 @@ body.no-scroll {
 
 .language-switcher {
   margin-left: $spacing-md;
-  display: none;
-  height: 100%;
   display: flex;
   align-items: center;
+  height: 100%;
+  position: relative;
+  z-index: 1100;
   
   @include respond-to(lg) {
-    display: flex;
+    margin-left: $spacing-lg;
   }
 }
 
@@ -363,6 +364,10 @@ body.no-scroll {
   .language-switcher {
     margin-left: 0;
     margin-right: $spacing-md;
+    
+    @include respond-to(lg) {
+      margin-right: $spacing-lg;
+    }
   }
   
   .mobile-contact {
