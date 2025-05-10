@@ -51,7 +51,8 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
             [class.active]="isActive(lang.code)"
             (click)="setLanguageAndClose(lang.code)"
             [attr.aria-label]="'Switch to ' + lang.name">
-            {{ lang.display }}
+            <span class="flag" [innerHTML]="lang.flag"></span>
+            <span class="lang-code">{{ lang.display }}</span>
           </button>
         </div>
       </div>
@@ -177,7 +178,7 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
     }
 
     .dropdown-item {
-      display: block;
+      display: flex;
       width: 100%;
       padding: 1rem;
       text-align: center;
@@ -187,11 +188,15 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
       color: $deep-blue;
       cursor: pointer;
       transition: all 0.2s ease;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
       
       @include respond-to(lg) {
         padding: 0.5rem 1rem;
         text-align: left;
         font-size: 0.875rem;
+        justify-content: flex-start;
       }
       
       &:hover {
@@ -202,6 +207,17 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
         background: linear-gradient(135deg, $primary-blue, $deep-blue);
         color: $white;
       }
+
+      .flag {
+        font-size: 1.5rem;
+        line-height: 1;
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      .lang-code {
+        font-weight: 500;
+      }
     }
 
     // RTL Support
@@ -211,6 +227,7 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
         
         @include respond-to(lg) {
           text-align: right;
+          flex-direction: row-reverse;
         }
       }
       
@@ -224,10 +241,29 @@ export class LanguageSwitcherComponent {
   private translationService = inject(TranslationService);
   isDropdownOpen = false;
 
+  // Using Regional Indicator Symbols for better compatibility
   availableLanguages = [
-    { code: 'en' as Language, name: 'English', display: 'EN' },
-    { code: 'bs' as Language, name: 'Bosnian', display: 'BS' },
-    { code: 'ar' as Language, name: 'Arabic', display: 'AR' }
+    { 
+      code: 'en' as Language, 
+      name: 'English', 
+      display: 'EN', 
+      // GB flag using Regional Indicator Symbols
+      flag: '&#x1F1EC;&#x1F1E7;'
+    },
+    { 
+      code: 'bs' as Language, 
+      name: 'Bosnian', 
+      display: 'BS', 
+      // BA flag using Regional Indicator Symbols
+      flag: '&#x1F1E7;&#x1F1E6;'
+    },
+    { 
+      code: 'ar' as Language, 
+      name: 'Arabic', 
+      display: 'AR', 
+      // SA flag using Regional Indicator Symbols
+      flag: '&#x1F1F8;&#x1F1E6;'
+    }
   ];
   
   @HostListener('document:click', ['$event'])
