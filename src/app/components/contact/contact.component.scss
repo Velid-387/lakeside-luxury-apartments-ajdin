@@ -31,7 +31,7 @@
   z-index: 1;
   
   h2 {
-    color: $deep-blue;
+    color: $primary-green;
     margin-bottom: $spacing-md;
     font-size: $font-size-xxl;
     position: relative;
@@ -45,13 +45,13 @@
       transform: translateX(-50%);
       width: 80px;
       height: 3px;
-      background: linear-gradient(to right, $primary-blue, $accent-teal);
+      background: linear-gradient(to right, $primary-green, $accent-green);
     }
   }
   
   p {
     font-size: $font-size-lg;
-    color: $dark-gray;
+    color: $secondary-green;
     max-width: 600px;
     margin: 0 auto;
     padding-top: $spacing-md;
@@ -90,26 +90,26 @@
   .contact-icon {
     width: 50px;
     height: 50px;
-    background: linear-gradient(135deg, $primary-blue, $accent-teal);
+    background: linear-gradient(135deg, $primary-green, $accent-green);
     border-radius: 50%;
     @include flex-center;
     flex-shrink: 0;
     
     i {
-      color: $white;
+      color: $gold;
       font-size: $font-size-lg;
     }
   }
   
   .contact-details {
     h3 {
-      color: $deep-blue;
+      color: $primary-green;
       margin-bottom: $spacing-xs;
       font-size: $font-size-lg;
     }
     
     p {
-      color: $dark-gray;
+      color: $secondary-green;
       margin-bottom: $spacing-xs;
       
       &:last-child {
@@ -148,7 +148,7 @@
   box-shadow: $shadow-lg;
   
   h3 {
-    color: $deep-blue;
+    color: $primary-green;
     margin-bottom: $spacing-lg;
     text-align: center;
   }
@@ -159,7 +159,7 @@
     label {
       display: block;
       margin-bottom: $spacing-xs;
-      color: $deep-blue;
+      color: $primary-green;
       font-weight: 500;
     }
     
@@ -176,8 +176,8 @@
       
       &:focus {
         outline: none;
-        border-color: $primary-blue;
-        box-shadow: 0 0 0 3px rgba($primary-blue, 0.2);
+        border-color: $primary-green;
+        box-shadow: 0 0 0 3px rgba($primary-green, 0.2);
       }
       
       &.is-invalid {

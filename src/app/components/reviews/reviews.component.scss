@@ -53,7 +53,7 @@
   padding: $spacing-md 0;
   
   .quote-icon {
-    color: $primary-blue;
+    color: $primary-green;
     font-size: $font-size-xl;
     opacity: 0.2;
     
@@ -73,7 +73,7 @@
   p {
     font-size: $font-size-lg;
     line-height: 1.8;
-    color: $dark-gray;
+    color: $secondary-green;
     margin: $spacing-md 0;
     font-style: italic;
     max-width: 800px;
@@ -97,14 +97,14 @@
     text-align: left;
     
     h4 {
-      color: $deep-blue;
+      color: $primary-green;
       margin: 0;
       font-size: $font-size-base;
       font-weight: 600;
     }
     
     p {
-      color: $dark-gray;
+      color: $secondary-green;
       margin: 0;
       font-size: $font-size-sm;
     }
@@ -121,20 +121,20 @@
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background: linear-gradient(135deg, rgba($primary-blue, 0.3), rgba($deep-blue, 0.3));
+    background: linear-gradient(135deg, rgba($primary-green, 0.3), rgba($secondary-green, 0.3));
     border: none;
     padding: 0;
     cursor: pointer;
     transition: all 0.3s ease;
     
     &.active {
-      background: linear-gradient(135deg, $accent-teal, $primary-blue);
+      background: linear-gradient(135deg, $accent-green, $primary-green);
       transform: scale(1.2);
       box-shadow: $shadow;
     }
     
     &:hover {
-      background: linear-gradient(135deg, rgba($accent-teal, 0.6), rgba($primary-blue, 0.6));
+      background: linear-gradient(135deg, rgba($accent-green, 0.6), rgba($primary-green, 0.6));
       transform: translateY(-2px);
       box-shadow: $shadow;
     }

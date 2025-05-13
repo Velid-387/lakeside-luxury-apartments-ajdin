@@ -101,25 +101,25 @@
 
 @mixin button-primary {
   @include button-base;
-  background: linear-gradient(135deg, v.$primary-blue, v.$deep-blue);
-  color: v.$white;
+  background: linear-gradient(135deg, v.$primary-green, v.$secondary-green);
+  color: v.$gold;
   
   &:hover, &:focus {
-    background: linear-gradient(135deg, v.$accent-teal, v.$primary-blue);
-    color: v.$white;
+    background: linear-gradient(135deg, v.$accent-green, v.$primary-green);
+    color: v.$light-gold;
   }
 }
 
 @mixin button-secondary {
   @include button-base;
   background: v.$white;
-  color: v.$primary-blue;
-  border: 2px solid v.$primary-blue;
+  color: v.$primary-green;
+  border: 2px solid v.$primary-green;
   
   &:hover, &:focus {
-    background: v.$accent-teal;
-    color: v.$white;
-    border-color: v.$accent-teal;
+    background: v.$primary-green;
+    color: v.$gold;
+    border-color: v.$gold;
   }
 }
 

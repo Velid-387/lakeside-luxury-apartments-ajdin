@@ -39,7 +39,7 @@
 .logo {
   a {
     text-decoration: none;
-    color: $deep-blue;
+    color: $primary-green;
     display: flex;
     align-items: center;
     gap: $spacing-sm;
@@ -64,7 +64,7 @@
       margin-bottom: 0;
       
       span {
-        color: $primary-blue;
+        color: $gold;
       }
 
       @include respond-to(sm) {
@@ -144,7 +144,7 @@
     
     a {
       font-weight: 500;
-      color: $deep-blue;
+      color: $primary-green;
       text-decoration: none;
       position: relative;
       transition: $transition-base;
@@ -161,7 +161,7 @@
         position: absolute;
         width: 0;
         height: 2px;
-        background-color: $primary-blue;
+        background-color: $gold;
         bottom: -4px;
         left: 0;
         transition: width 0.3s cubic-bezier(0.65, 0, 0.35, 1);
@@ -169,7 +169,7 @@
       }
       
       &:hover, &:focus {
-        color: $primary-blue;
+        color: $gold;
         
         &::after {
           width: 100%;
@@ -177,7 +177,7 @@
       }
       
       &.active {
-        color: $primary-blue;
+        color: $gold;
         font-weight: 600;
         
         &::after {
@@ -225,14 +225,14 @@
   background: none;
   border: none;
   font-size: $font-size-lg;
-  color: $deep-blue;
+  color: $primary-green;
   cursor: pointer;
   transition: $transition-base;
   padding: $spacing-xs;
   z-index: $z-index-fixed + 1;
   
   &:hover, &:focus {
-    color: $primary-blue;
+    color: $gold;
   }
   
   @include respond-to(lg) {
@@ -282,7 +282,7 @@ body.no-scroll {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: $deep-blue;
+    color: $primary-green;
     font-size: $font-size-base;
     font-weight: 500;
     text-decoration: none;
@@ -290,14 +290,14 @@ body.no-scroll {
     transition: $transition-base;
     padding: $spacing-sm;
     border-radius: $border-radius;
-    background-color: rgba($light-blue, 0.3);
+    background-color: rgba($light-gray, 0.3);
     
     i {
-      color: $primary-blue;
+      color: $gold;
       font-size: $font-size-base;
       padding: $spacing-xs;
-      background: $primary-blue;
-      color: $white;
+      background: $primary-green;
+      color: $gold;
       border-radius: 50%;
       width: 32px;
       height: 32px;
@@ -307,8 +307,8 @@ body.no-scroll {
     }
     
     &:hover, &:focus {
-      color: $primary-blue;
-      background-color: rgba($light-blue, 0.5);
+      color: $gold;
+      background-color: rgba($light-gray, 0.5);
     }
   }
 }

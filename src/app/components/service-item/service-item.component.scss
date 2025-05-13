@@ -65,7 +65,7 @@
   }
   
   h3 {
-    color: $primary-blue;
+    color: $gold;
     margin-bottom: $spacing-md;
     position: relative;
     padding-bottom: $spacing-sm;
@@ -78,12 +78,12 @@
       bottom: 0;
       width: 70px;
       height: 3px;
-      background: linear-gradient(to right, $primary-blue, $accent-teal);
+      background: linear-gradient(to right, $primary-green, $accent-green);
     }
   }
   
   p {
-    color: $dark-gray;
+    color: $secondary-green;
     margin-bottom: 0;
     line-height: 1.8;
     font-size: $font-size-base;
@@ -100,7 +100,7 @@
       &::after {
         left: auto;
         right: 0;
-        background: linear-gradient(to left, $primary-blue, $accent-teal);
+        background: linear-gradient(to left, $primary-green, $accent-green);
       }
     }
   }

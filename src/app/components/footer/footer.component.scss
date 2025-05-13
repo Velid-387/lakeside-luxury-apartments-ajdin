@@ -2,8 +2,8 @@
 @import '../../../app/shared/styles/mixins';
 
 .footer {
-  background-color: $deep-blue;
-  color: $white;
+  background-color: $primary-green;
+  color: white;
   padding: $spacing-xxl 0 $spacing-xl;
   width: 100%;
   position: relative;
@@ -32,7 +32,7 @@
     margin-bottom: $spacing-sm;
     
     span {
-      color: $accent-teal;
+      color: $terracotta;
     }
   }
   
@@ -56,7 +56,7 @@
   h3 {
     font-size: $font-size-lg;
     margin-bottom: $spacing-md;
-    color: $white;
+    color: white;
     position: relative;
     padding-bottom: $spacing-xs;
     
@@ -67,7 +67,7 @@
       bottom: 0;
       width: 40px;
       height: 2px;
-      background-color: $accent-teal;
+      background-color: $terracotta;
     }
   }
   
@@ -80,18 +80,18 @@
       margin-bottom: $spacing-sm;
       
       a {
-        color: rgba($white, 0.8);
+        color: rgba(white, 0.8);
         text-decoration: none;
         transition: $transition-base;
         
         &:hover {
-          color: $accent-teal;
+          color: $terracotta;
         }
       }
       
       i {
         margin-right: $spacing-sm;
-        color: $accent-teal;
+        color: $terracotta;
       }
     }
   }
@@ -100,7 +100,7 @@
     li {
       display: flex;
       align-items: center;
-      color: rgba($white, 0.8);
+      color: rgba(white, 0.8);
     }
   }
   
@@ -114,13 +114,13 @@
       justify-content: center;
       width: 40px;
       height: 40px;
-      background-color: rgba($white, 0.1);
+      background-color: rgba(white, 0.1);
       border-radius: 50%;
-      color: $white;
+      color: white;
       transition: $transition-base;
       
       &:hover {
-        background-color: $accent-teal;
+        background-color: $terracotta;
         transform: translateY(-3px);
       }
     }
@@ -133,7 +133,7 @@
   align-items: center;
   text-align: center;
   padding-top: $spacing-lg;
-  border-top: 1px solid rgba($white, 0.1);
+  border-top: 1px solid rgba(white, 0.1);
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
@@ -145,7 +145,7 @@
   }
   
   p {
-    color: rgba($white, 0.6);
+    color: rgba(white, 0.6);
     margin-bottom: $spacing-md;
     
     @include respond-to(md) {
@@ -158,12 +158,12 @@
     gap: $spacing-lg;
     
     a {
-      color: rgba($white, 0.6);
+      color: rgba(white, 0.6);
       text-decoration: none;
       transition: $transition-base;
       
       &:hover {
-        color: $accent-teal;
+        color: $terracotta;
       }
     }
   }

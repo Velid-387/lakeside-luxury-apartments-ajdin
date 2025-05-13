@@ -69,7 +69,7 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
 
     .language-switcher {
       position: relative;
-      z-index: 1200;
+      display: inline-block;
     }
 
     // Desktop styles
@@ -95,16 +95,16 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
       transform-origin: center;
       
       &.active {
-        background: linear-gradient(135deg, $primary-blue, $deep-blue);
+        background: linear-gradient(135deg, $primary-green, $secondary-green);
         color: $white;
         border-color: transparent;
         transform: none;
       }
       
       &:hover:not(.active) {
-        background: linear-gradient(135deg, rgba($accent-teal, 0.1), rgba($primary-blue, 0.1));
-        border-color: $accent-teal;
-        color: $accent-teal;
+        background: linear-gradient(135deg, rgba($light-green, 0.1), rgba($primary-green, 0.1));
+        border-color: $light-green;
+        color: $primary-green;
         transform: none;
       }
     }
@@ -138,37 +138,24 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
       }
       
       &:hover {
-        background: rgba($primary-blue, 0.05);
+        background: rgba($primary-green, 0.05);
       }
     }
 
     .lang-dropdown {
-      position: fixed;
-      top: 60px;
-      left: 0;
+      position: absolute;
+      top: 100%;
       right: 0;
+      min-width: 160px;
       background: $white;
-      border-top: 1px solid $medium-gray;
-      border-bottom: 1px solid $medium-gray;
-      min-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      z-index: 1000;
       opacity: 0;
       visibility: hidden;
-      transform: translateY(-10px);
+      transform: translateY(10px);
       transition: all 0.3s ease;
-      box-shadow: $shadow-sm;
-      z-index: 1300;
-      padding: 0.5rem 0;
-      
-      @include respond-to(lg) {
-        position: absolute;
-        top: calc(100% + 5px);
-        left: auto;
-        right: 0;
-        border: 1px solid $medium-gray;
-        border-radius: $border-radius;
-        width: auto;
-        min-width: 120px;
-      }
       
       &.show {
         opacity: 1;
@@ -177,46 +164,44 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
       }
     }
 
-    .dropdown-item {
+    .language-option {
       display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 16px;
       width: 100%;
-      padding: 1rem;
-      text-align: center;
       border: none;
       background: none;
-      font-size: 1rem;
-      color: $deep-blue;
       cursor: pointer;
-      transition: all 0.2s ease;
-      align-items: center;
-      justify-content: center;
-      gap: 1rem;
-      
-      @include respond-to(lg) {
-        padding: 0.5rem 1rem;
-        text-align: left;
-        font-size: 0.875rem;
-        justify-content: flex-start;
-      }
+      transition: all 0.3s ease;
+      color: $primary-green;
       
       &:hover {
-        background: rgba($primary-blue, 0.05);
+        background: rgba($primary-green, 0.05);
       }
       
       &.active {
-        background: linear-gradient(135deg, $primary-blue, $deep-blue);
+        background: linear-gradient(135deg, $primary-green, $secondary-green);
         color: $white;
+        border-color: transparent;
+        transform: none;
       }
-
-      .flag {
-        font-size: 1.5rem;
-        line-height: 1;
-        display: inline-block;
-        vertical-align: middle;
+      
+      &:hover:not(.active) {
+        background: linear-gradient(135deg, rgba($light-green, 0.1), rgba($primary-green, 0.1));
+        border-color: $light-green;
+        color: $primary-green;
+        transform: none;
       }
-
-      .lang-code {
-        font-weight: 500;
+      
+      img {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+      }
+      
+      span {
+        font-size: 14px;
       }
     }
 
