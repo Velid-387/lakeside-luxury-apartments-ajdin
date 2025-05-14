@@ -274,14 +274,11 @@ body.no-scroll {
   margin-top: auto;
   padding-top: $spacing-lg;
   padding-bottom: $spacing-lg;
-  border-top: 1px solid rgba($medium-gray, 0.3);
   text-align: center;
   position: sticky;
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: $white;
-  box-shadow: 0 -2px 10px rgba($black, 0.05);
   
   @include respond-to(lg) {
     display: none;
