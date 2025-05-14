@@ -8,8 +8,8 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: linear-gradient(135deg, $primary-blue, $deep-blue);
-  color: $white;
+  background: linear-gradient(135deg, $primary-green, $secondary-green);
+  color: $gold;
   border: none;
   box-shadow: $shadow;
   cursor: pointer;
@@ -20,7 +20,7 @@
   transition: all 0.3s ease;
   
   &:hover {
-    background: linear-gradient(135deg, $accent-teal, $primary-blue);
+    background: linear-gradient(135deg, $accent-green, $primary-green);
     transform: translateY(-3px);
     box-shadow: $shadow-lg;
   }
@@ -30,7 +30,7 @@
   }
   
   svg {
-    fill: $white;
+    fill: $gold;
     width: 24px;
     height: 24px;
   }

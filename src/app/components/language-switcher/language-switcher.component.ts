@@ -35,7 +35,7 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
       </div>
 
       <!-- Mobile view -->
-      <div class="mobile-switcher" #mobileSwitch>
+      <div class="mobile-switcher">
         <button 
           class="current-lang" 
           (click)="toggleDropdown($event)"
@@ -69,7 +69,7 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
 
     .language-switcher {
       position: relative;
-      z-index: 1200;
+      display: inline-block;
     }
 
     // Desktop styles
@@ -95,16 +95,16 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
       transform-origin: center;
       
       &.active {
-        background: linear-gradient(135deg, $primary-blue, $deep-blue);
+        background: linear-gradient(135deg, $primary-green, $secondary-green);
         color: $white;
         border-color: transparent;
         transform: none;
       }
       
       &:hover:not(.active) {
-        background: linear-gradient(135deg, rgba($accent-teal, 0.1), rgba($primary-blue, 0.1));
-        border-color: $accent-teal;
-        color: $accent-teal;
+        background: linear-gradient(135deg, rgba($light-green, 0.1), rgba($primary-green, 0.1));
+        border-color: $light-green;
+        color: $primary-green;
         transform: none;
       }
     }
@@ -138,83 +138,74 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
       }
       
       &:hover {
-        background: rgba($primary-blue, 0.05);
+        background: rgba($primary-green, 0.05);
       }
     }
 
     .lang-dropdown {
       position: fixed;
-      top: 60px;
-      left: 0;
-      right: 0;
+      top: auto;
+      left: 50%;
+      transform: translateX(-50%) translateY(10px);
+      width: 200px;
       background: $white;
-      border-top: 1px solid $medium-gray;
-      border-bottom: 1px solid $medium-gray;
-      min-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      z-index: 2000;
       opacity: 0;
       visibility: hidden;
-      transform: translateY(-10px);
       transition: all 0.3s ease;
-      box-shadow: $shadow-sm;
-      z-index: 1300;
-      padding: 0.5rem 0;
+      margin-top: 8px;
       
       @include respond-to(lg) {
         position: absolute;
-        top: calc(100% + 5px);
+        top: 100%;
         left: auto;
         right: 0;
-        border: 1px solid $medium-gray;
-        border-radius: $border-radius;
+        transform: translateY(10px);
         width: auto;
-        min-width: 120px;
+        min-width: 160px;
       }
       
       &.show {
         opacity: 1;
         visibility: visible;
-        transform: translateY(0);
+        transform: translateX(-50%) translateY(0);
+        
+        @include respond-to(lg) {
+          transform: translateY(0);
+        }
       }
     }
 
     .dropdown-item {
       display: flex;
+      align-items: center;
+      gap: 8px;
       width: 100%;
-      padding: 1rem;
-      text-align: center;
+      padding: 12px 16px;
       border: none;
       background: none;
-      font-size: 1rem;
-      color: $deep-blue;
       cursor: pointer;
-      transition: all 0.2s ease;
-      align-items: center;
-      justify-content: center;
-      gap: 1rem;
-      
-      @include respond-to(lg) {
-        padding: 0.5rem 1rem;
-        text-align: left;
-        font-size: 0.875rem;
-        justify-content: flex-start;
-      }
+      transition: all 0.3s ease;
+      color: $primary-green;
+      font-size: 0.875rem;
+      text-align: left;
       
       &:hover {
-        background: rgba($primary-blue, 0.05);
+        background: rgba($primary-green, 0.05);
       }
       
       &.active {
-        background: linear-gradient(135deg, $primary-blue, $deep-blue);
+        background: linear-gradient(135deg, $primary-green, $secondary-green);
         color: $white;
       }
-
+      
       .flag {
-        font-size: 1.5rem;
-        line-height: 1;
-        display: inline-block;
-        vertical-align: middle;
+        font-size: 1.25rem;
       }
-
+      
       .lang-code {
         font-weight: 500;
       }
@@ -223,16 +214,19 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
     // RTL Support
     :host-context(html[dir="rtl"]) {
       .dropdown-item {
-        text-align: center;
-        
-        @include respond-to(lg) {
-          text-align: right;
-          flex-direction: row-reverse;
-        }
+        text-align: right;
+        flex-direction: row-reverse;
       }
       
       .current-lang {
         flex-direction: row-reverse;
+      }
+      
+      @include respond-to(lg) {
+        .lang-dropdown {
+          left: 0;
+          right: auto;
+        }
       }
     }
   `]
@@ -247,22 +241,19 @@ export class LanguageSwitcherComponent {
       code: 'en' as Language, 
       name: 'English', 
       display: 'EN', 
-      // GB flag using Regional Indicator Symbols
-      flag: '&#x1F1EC;&#x1F1E7;'
+      flag: '🇬🇧'
     },
     { 
       code: 'bs' as Language, 
       name: 'Bosnian', 
       display: 'BS', 
-      // BA flag using Regional Indicator Symbols
-      flag: '&#x1F1E7;&#x1F1E6;'
+      flag: '🇧🇦'
     },
     { 
       code: 'ar' as Language, 
       name: 'Arabic', 
       display: 'AR', 
-      // SA flag using Regional Indicator Symbols
-      flag: '&#x1F1F8;&#x1F1E6;'
+      flag: '🇸🇦'
     }
   ];
   
