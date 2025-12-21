@@ -1,28 +1,28 @@
-@import '../../../app/shared/styles/variables';
-@import '../../../app/shared/styles/mixins';
+@use '../../../app/shared/styles/variables' as v;
+@use '../../../app/shared/styles/mixins' as m;
 
 .scroll-to-top-btn {
   position: fixed;
-  bottom: $spacing-xl;
-  right: $spacing-xl;
+  bottom: v.$spacing-xl;
+  right: v.$spacing-xl;
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: linear-gradient(135deg, $primary-green, $secondary-green);
-  color: $gold;
+  background: linear-gradient(135deg, v.$primary-green, v.$secondary-green);
+  color: v.$gold;
   border: none;
-  box-shadow: $shadow;
+  box-shadow: v.$shadow;
   cursor: pointer;
-  z-index: $z-index-fixed;
+  z-index: v.$z-index-fixed;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
   
   &:hover {
-    background: linear-gradient(135deg, $accent-green, $primary-green);
+    background: linear-gradient(135deg, v.$accent-green, v.$primary-green);
     transform: translateY(-3px);
-    box-shadow: $shadow-lg;
+    box-shadow: v.$shadow-lg;
   }
   
   &:active {
@@ -30,7 +30,7 @@
   }
   
   svg {
-    fill: $gold;
+    fill: v.$gold;
     width: 24px;
     height: 24px;
   }
@@ -40,6 +40,6 @@
 :host-context(html[dir="rtl"]) {
   .scroll-to-top-btn {
     right: auto;
-    left: $spacing-xl;
+    left: v.$spacing-xl;
   }
 } 

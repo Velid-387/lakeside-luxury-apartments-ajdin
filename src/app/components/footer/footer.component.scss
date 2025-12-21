@@ -1,10 +1,10 @@
-@import '../../../app/shared/styles/variables';
-@import '../../../app/shared/styles/mixins';
+@use '../../../app/shared/styles/variables' as v;
+@use '../../../app/shared/styles/mixins' as m;
 
 .footer {
-  background-color: $primary-green;
+  background-color: v.$primary-green;
   color: white;
-  padding: $spacing-xxl 0 $spacing-xl;
+  padding: v.$spacing-xxl 0 v.$spacing-xl;
   width: 100%;
   position: relative;
   z-index: 2;
@@ -13,13 +13,13 @@
 .footer-content {
   display: grid;
   grid-template-columns: 1fr;
-  gap: $spacing-xl;
-  margin-bottom: $spacing-xl;
+  gap: v.$spacing-xl;
+  margin-bottom: v.$spacing-xl;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   
-  @include respond-to(md) {
+  @include m.respond-to(md) {
     grid-template-columns: 1fr 2fr;
   }
 }
@@ -28,24 +28,24 @@
   .footer-logo-image {
     width: 150px;
     height: auto;
-    margin-bottom: $spacing-md;
+    margin-bottom: v.$spacing-md;
     border-radius: 8px;
     display: block;
   }
 
   h2 {
-    font-family: $font-family-secondary;
-    font-size: $font-size-xl;
+    font-family: v.$font-family-secondary;
+    font-size: v.$font-size-xl;
     font-weight: 700;
-    margin-bottom: $spacing-sm;
-    background: linear-gradient(45deg, white, $terracotta);
+    margin-bottom: v.$spacing-sm;
+    background: linear-gradient(45deg, white, v.$terracotta);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
   
   p {
-    font-size: $font-size-base;
+    font-size: v.$font-size-base;
     color: white;
     opacity: 0.95;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
@@ -55,20 +55,20 @@
 .footer-links {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: $spacing-lg;
+  gap: v.$spacing-lg;
   
-  @include respond-to(md) {
+  @include m.respond-to(md) {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
 .footer-section {
   h3 {
-    font-size: $font-size-lg;
-    margin-bottom: $spacing-md;
+    font-size: v.$font-size-lg;
+    margin-bottom: v.$spacing-md;
     color: white;
     position: relative;
-    padding-bottom: $spacing-xs;
+    padding-bottom: v.$spacing-xs;
     
     &::after {
       content: '';
@@ -77,7 +77,7 @@
       bottom: 0;
       width: 40px;
       height: 2px;
-      background-color: $terracotta;
+      background-color: v.$terracotta;
     }
   }
   
@@ -87,21 +87,21 @@
     margin: 0;
     
     li {
-      margin-bottom: $spacing-sm;
+      margin-bottom: v.$spacing-sm;
       
       a {
         color: rgba(white, 0.8);
         text-decoration: none;
-        transition: $transition-base;
+        transition: v.$transition-base;
         
         &:hover {
-          color: $terracotta;
+          color: v.$terracotta;
         }
       }
       
       i {
-        margin-right: $spacing-sm;
-        color: $terracotta;
+        margin-right: v.$spacing-sm;
+        color: v.$terracotta;
       }
     }
   }
@@ -116,7 +116,7 @@
   
   .social-links {
     display: flex;
-    gap: $spacing-md;
+    gap: v.$spacing-md;
     
     a {
       display: flex;
@@ -127,10 +127,10 @@
       background-color: rgba(white, 0.1);
       border-radius: 50%;
       color: white;
-      transition: $transition-base;
+      transition: v.$transition-base;
       
       &:hover {
-        background-color: $terracotta;
+        background-color: v.$terracotta;
         transform: translateY(-3px);
       }
     }
@@ -142,13 +142,13 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding-top: $spacing-lg;
+  padding-top: v.$spacing-lg;
   border-top: 1px solid rgba(white, 0.1);
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   
-  @include respond-to(md) {
+  @include m.respond-to(md) {
     flex-direction: row;
     justify-content: space-between;
     text-align: left;
@@ -156,24 +156,24 @@
   
   p {
     color: rgba(white, 0.6);
-    margin-bottom: $spacing-md;
+    margin-bottom: v.$spacing-md;
     
-    @include respond-to(md) {
+    @include m.respond-to(md) {
       margin-bottom: 0;
     }
   }
   
   .footer-bottom-links {
     display: flex;
-    gap: $spacing-lg;
+    gap: v.$spacing-lg;
     
     a {
       color: rgba(white, 0.6);
       text-decoration: none;
-      transition: $transition-base;
+      transition: v.$transition-base;
       
       &:hover {
-        color: $terracotta;
+        color: v.$terracotta;
       }
     }
   }

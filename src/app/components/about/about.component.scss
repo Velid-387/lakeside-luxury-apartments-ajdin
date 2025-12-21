@@ -1,13 +1,13 @@
-@import '../../../app/shared/styles/variables';
-@import '../../../app/shared/styles/mixins';
+@use '../../../app/shared/styles/variables' as v;
+@use '../../../app/shared/styles/mixins' as m;
 
 .about {
-  background-color: $white;
+  background-color: v.$white;
   background-image: url('/assets/images/about/about-us.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  padding: $spacing-xxl 0;
+  padding: v.$spacing-xxl 0;
   width: 100%;
   position: relative;
   z-index: 2;
@@ -19,19 +19,19 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba($white, 0.92);
+    background-color: rgba(v.$white, 0.92);
     z-index: -1;
   }
 }
 
 .section-header {
-  margin-bottom: $spacing-xl;
+  margin-bottom: v.$spacing-xl;
   text-align: center;
   
   h2 {
-    color: $primary-green;
-    margin-bottom: $spacing-md;
-    font-size: $font-size-xxl;
+    color: v.$primary-green;
+    margin-bottom: v.$spacing-md;
+    font-size: v.$font-size-xxl;
     position: relative;
     display: inline-block;
     
@@ -43,26 +43,26 @@
       transform: translateX(-50%);
       width: 80px;
       height: 3px;
-      background: linear-gradient(to right, $primary-green, $accent-green);
+      background: linear-gradient(to right, v.$primary-green, v.$accent-green);
     }
   }
   
   p {
-    font-size: $font-size-lg;
-    color: $secondary-green;
+    font-size: v.$font-size-lg;
+    color: v.$secondary-green;
     max-width: 600px;
     margin: 0 auto;
-    padding-top: $spacing-md;
+    padding-top: v.$spacing-md;
   }
 }
 
 .about-content {
   display: flex;
   flex-direction: column;
-  gap: $spacing-xl;
-  margin-bottom: $spacing-xxl;
+  gap: v.$spacing-xl;
+  margin-bottom: v.$spacing-xxl;
   
-  @include respond-to(md) {
+  @include m.respond-to(md) {
     flex-direction: row;
     align-items: center;
   }
@@ -72,10 +72,10 @@
   flex: 1;
   
   h3 {
-    color: $gold;
-    margin-bottom: $spacing-md;
+    color: v.$gold;
+    margin-bottom: v.$spacing-md;
     position: relative;
-    padding-bottom: $spacing-sm;
+    padding-bottom: v.$spacing-sm;
     
     &::after {
       content: '';
@@ -84,85 +84,85 @@
       bottom: 0;
       width: 60px;
       height: 3px;
-      background: linear-gradient(to right, $primary-green, $accent-green);
+      background: linear-gradient(to right, v.$primary-green, v.$accent-green);
     }
   }
   
   p {
-    margin-bottom: $spacing-md;
+    margin-bottom: v.$spacing-md;
     line-height: 1.7;
-    color: $secondary-green;
+    color: v.$secondary-green;
   }
 }
 
 .about-image {
   flex: 1;
-  margin-top: $spacing-md;
+  margin-top: v.$spacing-md;
   
-  @include respond-to(md) {
+  @include m.respond-to(md) {
     margin-top: 0;
   }
   
   img {
     width: 100%;
     height: auto;
-    border-radius: $border-radius;
-    box-shadow: $shadow;
+    border-radius: v.$border-radius;
+    box-shadow: v.$shadow;
   }
 }
 
 .about-features {
   display: grid;
   grid-template-columns: 1fr;
-  gap: $spacing-lg;
+  gap: v.$spacing-lg;
   
-  @include respond-to(sm) {
+  @include m.respond-to(sm) {
     grid-template-columns: repeat(2, 1fr);
   }
   
-  @include respond-to(md) {
+  @include m.respond-to(md) {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
 .feature {
-  background-color: $light-gray;
-  padding: $spacing-lg;
-  border-radius: $border-radius;
+  background-color: v.$light-gray;
+  padding: v.$spacing-lg;
+  border-radius: v.$border-radius;
   text-align: center;
-  transition: $transition-base;
+  transition: v.$transition-base;
   height: 100%;
   
   &:hover {
     transform: translateY(-5px);
-    box-shadow: $shadow;
+    box-shadow: v.$shadow;
   }
   
   .feature-icon {
     width: 70px;
     height: 70px;
-    background-color: rgba($primary-green, 0.1);
+    background-color: rgba(v.$primary-green, 0.1);
     border-radius: 50%;
-    margin: 0 auto $spacing-md;
+    margin: 0 auto v.$spacing-md;
     display: flex;
     align-items: center;
     justify-content: center;
     
     i {
-      font-size: $font-size-xl;
-      color: $primary-green;
+      font-size: v.$font-size-xl;
+      color: v.$primary-green;
     }
   }
   
   h3 {
-    font-size: $font-size-lg;
-    margin-bottom: $spacing-sm;
-    color: $primary-green;
+    font-size: v.$font-size-lg;
+    margin-bottom: v.$spacing-sm;
+    color: v.$primary-green;
   }
   
   p {
-    color: $secondary-green;
-    font-size: $font-size-base;
+    color: v.$secondary-green;
+    font-size: v.$font-size-base;
     line-height: 1.6;
   }
 }
@@ -176,13 +176,13 @@
       &::after {
         left: auto;
         right: 0;
-        background: linear-gradient(to left, $primary-green, $accent-green);
+        background: linear-gradient(to left, v.$primary-green, v.$accent-green);
       }
     }
   }
   
   .about-content {
-    @include respond-to(md) {
+    @include m.respond-to(md) {
       flex-direction: row-reverse;
     }
   }

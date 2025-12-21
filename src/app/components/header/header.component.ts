@@ -1,7 +1,6 @@
 import { Component, HostListener, inject, OnInit, OnDestroy, PLATFORM_ID, Renderer2 } from '@angular/core';
 import { CommonModule, isPlatformBrowser, DOCUMENT } from '@angular/common';
 import { LanguageSwitcherComponent } from '../language-switcher/language-switcher.component';
-import { TranslatePipe } from '../../shared/pipes/translate.pipe';
 import { TranslateDirective } from '../../shared/directives/translate.directive';
 import { ScrollService } from '../../shared/services/scroll.service';
 import { MenuStateService } from '../../shared/services/menu-state.service';
@@ -9,7 +8,7 @@ import { MenuStateService } from '../../shared/services/menu-state.service';
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule, LanguageSwitcherComponent, TranslatePipe, TranslateDirective],
+  imports: [CommonModule, LanguageSwitcherComponent, TranslateDirective],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })

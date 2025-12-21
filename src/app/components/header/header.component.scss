@@ -1,36 +1,36 @@
-@import '../../../app/shared/styles/variables';
-@import '../../../app/shared/styles/mixins';
+@use '../../../app/shared/styles/variables' as v;
+@use '../../../app/shared/styles/mixins' as m;
 
 .header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  padding: $spacing-md 0;
-  background-color: rgba($white, 0.95);
+  padding: v.$spacing-md 0;
+  background-color: rgba(v.$white, 0.95);
   backdrop-filter: blur(5px);
-  box-shadow: $shadow-sm;
-  z-index: $z-index-fixed;
-  transition: $transition-base;
+  box-shadow: v.$shadow-sm;
+  z-index: v.$z-index-fixed;
+  transition: v.$transition-base;
   max-width: 100vw;
   overflow: visible;
 
   &.scrolled {
-    padding: $spacing-sm 0;
-    box-shadow: $shadow;
+    padding: v.$spacing-sm 0;
+    box-shadow: v.$shadow;
   }
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 $spacing-md;
+  padding: 0 v.$spacing-md;
   width: 100%;
   box-sizing: border-box;
 }
 
 .header-content {
-  @include flex-between;
+  @include m.flex-between;
   width: 100%;
   height: 100%;
   align-items: center;
@@ -39,39 +39,39 @@
 .logo {
   a {
     text-decoration: none;
-    color: $primary-green;
+    color: v.$primary-green;
     display: flex;
     align-items: center;
-    gap: $spacing-sm;
+    gap: v.$spacing-sm;
 
     .logo-img {
       width: 40px;
       height: 40px;
       border-radius: 50%;
       object-fit: cover;
-      transition: $transition-base;
+      transition: v.$transition-base;
 
-      @include respond-to(lg) {
+      @include m.respond-to(lg) {
         width: 50px;
         height: 50px;
       }
     }
 
     h1 {
-      font-family: $font-family-secondary;
-      font-size: $font-size-lg;
+      font-family: v.$font-family-secondary;
+      font-size: v.$font-size-lg;
       font-weight: 700;
       margin-bottom: 0;
       
       span {
-        color: $gold;
+        color: v.$gold;
       }
 
-      @include respond-to(sm) {
+      @include m.respond-to(sm) {
         display: none;
       }
 
-      @include respond-to(lg) {
+      @include m.respond-to(lg) {
         display: block;
       }
     }
@@ -81,7 +81,7 @@
 .nav {
   display: none;
   
-  @include respond-to(lg) {
+  @include m.respond-to(lg) {
     display: block;
   }
   
@@ -93,8 +93,8 @@
     left: 0;
     width: 100%;
     height: calc(100vh - 60px);
-    background-color: $white;
-    padding: $spacing-lg $spacing-lg 0 $spacing-lg;
+    background-color: v.$white;
+    padding: v.$spacing-lg v.$spacing-lg 0 v.$spacing-lg;
     z-index: 1000;
     animation: slideDown 0.3s ease-in-out;
     overflow-y: auto;
@@ -105,7 +105,7 @@
     -webkit-overflow-scrolling: touch;
     position: fixed !important;
     
-    @include respond-to(lg) {
+    @include m.respond-to(lg) {
       position: static;
       height: auto;
       padding: 0;
@@ -120,26 +120,26 @@
 }
 
 .nav-list {
-  @include flex-center;
+  @include m.flex-center;
   flex-direction: column;
   list-style: none;
   margin: 0;
   padding: 0;
   width: 100%;
   
-  @include respond-to(lg) {
+  @include m.respond-to(lg) {
     flex-direction: row;
-    gap: $spacing-lg;
+    gap: v.$spacing-lg;
     height: 100%;
     align-items: center;
   }
   
   li {
-    margin-bottom: $spacing-lg;
+    margin-bottom: v.$spacing-lg;
     width: 100%;
     text-align: center;
     
-    @include respond-to(lg) {
+    @include m.respond-to(lg) {
       margin-bottom: 0;
       height: 100%;
       display: flex;
@@ -149,15 +149,15 @@
     
     a {
       font-weight: 500;
-      color: $primary-green;
+      color: v.$primary-green;
       text-decoration: none;
       position: relative;
-      transition: $transition-base;
-      padding: $spacing-xs $spacing-sm;
+      transition: v.$transition-base;
+      padding: v.$spacing-xs v.$spacing-sm;
       display: inline-block;
       width: 100%;
       
-      @include respond-to(lg) {
+      @include m.respond-to(lg) {
         width: auto;
       }
       
@@ -166,7 +166,7 @@
         position: absolute;
         width: 0;
         height: 2px;
-        background-color: $gold;
+        background-color: v.$gold;
         bottom: -4px;
         left: 0;
         transition: width 0.3s cubic-bezier(0.65, 0, 0.35, 1);
@@ -174,7 +174,7 @@
       }
       
       &:hover, &:focus {
-        color: $gold;
+        color: v.$gold;
         
         &::after {
           width: 100%;
@@ -182,7 +182,7 @@
       }
       
       &.active {
-        color: $gold;
+        color: v.$gold;
         font-weight: 600;
         
         &::after {
@@ -195,17 +195,17 @@
   }
   
   .nav-cta {
-    @include respond-to(lg) {
-      margin-left: $spacing-lg;
+    @include m.respond-to(lg) {
+      margin-left: v.$spacing-lg;
       height: 100%;
       display: flex;
       align-items: center;
     }
     
     a.btn-sm {
-      @include button-primary;
-      padding: $spacing-xs $spacing-md;
-      font-size: $font-size-sm;
+      @include m.button-primary;
+      padding: v.$spacing-xs v.$spacing-md;
+      font-size: v.$font-size-sm;
       position: relative;
       transition: all 0.3s ease;
       transform-origin: center;
@@ -229,18 +229,18 @@
   display: block;
   background: none;
   border: none;
-  font-size: $font-size-lg;
-  color: $primary-green;
+  font-size: v.$font-size-lg;
+  color: v.$primary-green;
   cursor: pointer;
-  transition: $transition-base;
-  padding: $spacing-xs;
-  z-index: $z-index-fixed + 1;
+  transition: v.$transition-base;
+  padding: v.$spacing-xs;
+  z-index: v.$z-index-fixed + 1;
   
   &:hover, &:focus {
-    color: $gold;
+    color: v.$gold;
   }
   
-  @include respond-to(lg) {
+  @include m.respond-to(lg) {
     display: none;
   }
 }
@@ -272,15 +272,15 @@ body.no-scroll {
 .mobile-contact {
   display: block;
   margin-top: auto;
-  padding-top: $spacing-lg;
-  padding-bottom: $spacing-lg;
+  padding-top: v.$spacing-lg;
+  padding-bottom: v.$spacing-lg;
   text-align: center;
   position: sticky;
   bottom: 0;
   left: 0;
   width: 100%;
   
-  @include respond-to(lg) {
+  @include m.respond-to(lg) {
     display: none;
   }
   
@@ -288,22 +288,22 @@ body.no-scroll {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: $primary-green;
-    font-size: $font-size-base;
+    color: v.$primary-green;
+    font-size: v.$font-size-base;
     font-weight: 500;
     text-decoration: none;
-    gap: $spacing-sm;
-    transition: $transition-base;
-    padding: $spacing-sm;
-    border-radius: $border-radius;
-    background-color: rgba($light-gray, 0.3);
+    gap: v.$spacing-sm;
+    transition: v.$transition-base;
+    padding: v.$spacing-sm;
+    border-radius: v.$border-radius;
+    background-color: rgba(v.$light-gray, 0.3);
     
     i {
-      color: $gold;
-      font-size: $font-size-base;
-      padding: $spacing-xs;
-      background: $primary-green;
-      color: $gold;
+      color: v.$gold;
+      font-size: v.$font-size-base;
+      padding: v.$spacing-xs;
+      background: v.$primary-green;
+      color: v.$gold;
       border-radius: 50%;
       width: 32px;
       height: 32px;
@@ -313,22 +313,22 @@ body.no-scroll {
     }
     
     &:hover, &:focus {
-      color: $gold;
-      background-color: rgba($light-gray, 0.5);
+      color: v.$gold;
+      background-color: rgba(v.$light-gray, 0.5);
     }
   }
 }
 
 .language-switcher {
-  margin-left: $spacing-md;
+  margin-left: v.$spacing-md;
   display: flex;
   align-items: center;
   height: 100%;
   position: relative;
   z-index: 1100;
   
-  @include respond-to(lg) {
-    margin-left: $spacing-lg;
+  @include m.respond-to(lg) {
+    margin-left: v.$spacing-lg;
   }
 }
 
@@ -337,21 +337,21 @@ body.no-scroll {
   .nav-list {
     flex-direction: column;
     
-    @include respond-to(lg) {
+    @include m.respond-to(lg) {
       flex-direction: row-reverse;
     }
     
     li {
       width: 100%;
       
-      @include respond-to(lg) {
+      @include m.respond-to(lg) {
         width: auto;
       }
       
       a {
         width: 100%;
         
-        @include respond-to(lg) {
+        @include m.respond-to(lg) {
           width: auto;
         }
         
@@ -370,10 +370,10 @@ body.no-scroll {
   
   .language-switcher {
     margin-left: 0;
-    margin-right: $spacing-md;
+    margin-right: v.$spacing-md;
     
-    @include respond-to(lg) {
-      margin-right: $spacing-lg;
+    @include m.respond-to(lg) {
+      margin-right: v.$spacing-lg;
     }
   }
   
