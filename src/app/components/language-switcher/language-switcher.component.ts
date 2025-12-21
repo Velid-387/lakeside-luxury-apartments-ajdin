@@ -1,12 +1,11 @@
 import { Component, inject, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslationService, Language } from '../../shared/services/translation.service';
-import { TranslatePipe } from '../../shared/pipes/translate.pipe';
 
 @Component({
   selector: 'app-language-switcher',
   standalone: true,
-  imports: [CommonModule, TranslatePipe],
+  imports: [CommonModule],
   template: `
     <div class="language-switcher">
       <!-- Desktop view -->
@@ -59,8 +58,8 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
     </div>
   `,
   styles: [`
-    @import '../../../app/shared/styles/variables';
-    @import '../../../app/shared/styles/mixins';
+    @use '../../../app/shared/styles/variables' as v;
+    @use '../../../app/shared/styles/mixins' as m;
 
     :host {
       display: block;
@@ -77,34 +76,34 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
       display: none;
       gap: 0.5rem;
       align-items: center;
-      
-      @include respond-to(lg) {
+
+      @include m.respond-to(lg) {
         display: flex;
       }
     }
-    
+
     .lang-btn {
-      @include button-small;
+      @include m.button-small;
       background: transparent;
-      border: 1px solid $medium-gray;
+      border: 1px solid v.$medium-gray;
       padding: 0.25rem 0.75rem;
       font-size: 0.875rem;
       font-weight: 500;
       position: relative;
       transition: all 0.3s ease;
       transform-origin: center;
-      
+
       &.active {
-        background: linear-gradient(135deg, $primary-green, $secondary-green);
-        color: $white;
+        background: linear-gradient(135deg, v.$primary-green, v.$secondary-green);
+        color: v.$white;
         border-color: transparent;
         transform: none;
       }
-      
+
       &:hover:not(.active) {
-        background: linear-gradient(135deg, rgba($light-green, 0.1), rgba($primary-green, 0.1));
-        border-color: $light-green;
-        color: $primary-green;
+        background: linear-gradient(135deg, rgba(v.$light-green, 0.1), rgba(v.$primary-green, 0.1));
+        border-color: v.$light-green;
+        color: v.$primary-green;
         transform: none;
       }
     }
@@ -113,16 +112,16 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
     .mobile-switcher {
       display: block;
       position: relative;
-      
-      @include respond-to(lg) {
+
+      @include m.respond-to(lg) {
         display: none;
       }
     }
 
     .current-lang {
-      @include button-small;
+      @include m.button-small;
       background: transparent;
-      border: 1px solid $medium-gray;
+      border: 1px solid v.$medium-gray;
       padding: 0.5rem 1rem;
       font-size: 0.875rem;
       font-weight: 500;
@@ -131,14 +130,14 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
       gap: 0.5rem;
       min-width: 80px;
       justify-content: space-between;
-      
+
       i {
         font-size: 0.75rem;
         transition: transform 0.3s ease;
       }
-      
+
       &:hover {
-        background: rgba($primary-green, 0.05);
+        background: rgba(v.$primary-green, 0.05);
       }
     }
 
@@ -148,7 +147,7 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
       left: 50%;
       transform: translateX(-50%) translateY(10px);
       width: 200px;
-      background: $white;
+      background: v.$white;
       border-radius: 8px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       overflow: hidden;
@@ -157,8 +156,8 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
       visibility: hidden;
       transition: all 0.3s ease;
       margin-top: 8px;
-      
-      @include respond-to(lg) {
+
+      @include m.respond-to(lg) {
         position: absolute;
         top: 100%;
         left: auto;
@@ -167,13 +166,13 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
         width: auto;
         min-width: 160px;
       }
-      
+
       &.show {
         opacity: 1;
         visibility: visible;
         transform: translateX(-50%) translateY(0);
-        
-        @include respond-to(lg) {
+
+        @include m.respond-to(lg) {
           transform: translateY(0);
         }
       }
@@ -189,23 +188,23 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
       background: none;
       cursor: pointer;
       transition: all 0.3s ease;
-      color: $primary-green;
+      color: v.$primary-green;
       font-size: 0.875rem;
       text-align: left;
-      
+
       &:hover {
-        background: rgba($primary-green, 0.05);
+        background: rgba(v.$primary-green, 0.05);
       }
-      
+
       &.active {
-        background: linear-gradient(135deg, $primary-green, $secondary-green);
-        color: $white;
+        background: linear-gradient(135deg, v.$primary-green, v.$secondary-green);
+        color: v.$white;
       }
-      
+
       .flag {
         font-size: 1.25rem;
       }
-      
+
       .lang-code {
         font-weight: 500;
       }
@@ -217,12 +216,12 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
         text-align: right;
         flex-direction: row-reverse;
       }
-      
+
       .current-lang {
         flex-direction: row-reverse;
       }
-      
-      @include respond-to(lg) {
+
+      @include m.respond-to(lg) {
         .lang-dropdown {
           left: 0;
           right: auto;

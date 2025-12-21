@@ -1,13 +1,13 @@
-@import '../../../app/shared/styles/variables';
-@import '../../../app/shared/styles/mixins';
+@use '../../../app/shared/styles/variables' as v;
+@use '../../../app/shared/styles/mixins' as m;
 
 .contact {
-  background-color: $white;
+  background-color: v.$white;
   background-image: url('/assets/images/apartments/apartman-2.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  padding: $spacing-xxl 0;
+  padding: v.$spacing-xxl 0;
   width: 100%;
   position: relative;
   z-index: 2;
@@ -19,21 +19,21 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba($white, 0.92);
+    background-color: rgba(v.$white, 0.92);
     z-index: -1;
   }
 }
 
 .section-header {
   text-align: center;
-  margin-bottom: $spacing-xl;
+  margin-bottom: v.$spacing-xl;
   position: relative;
   z-index: 1;
   
   h2 {
-    color: $primary-green;
-    margin-bottom: $spacing-md;
-    font-size: $font-size-xxl;
+    color: v.$primary-green;
+    margin-bottom: v.$spacing-md;
+    font-size: v.$font-size-xxl;
     position: relative;
     display: inline-block;
     
@@ -45,29 +45,29 @@
       transform: translateX(-50%);
       width: 80px;
       height: 3px;
-      background: linear-gradient(to right, $primary-green, $accent-green);
+      background: linear-gradient(to right, v.$primary-green, v.$accent-green);
     }
   }
   
   p {
-    font-size: $font-size-lg;
-    color: $secondary-green;
+    font-size: v.$font-size-lg;
+    color: v.$secondary-green;
     max-width: 600px;
     margin: 0 auto;
-    padding-top: $spacing-md;
+    padding-top: v.$spacing-md;
   }
 }
 
 .contact-content {
   display: grid;
   grid-template-columns: 1fr;
-  gap: $spacing-xl;
+  gap: v.$spacing-xl;
   max-width: 1200px;
   margin: 0 auto;
   position: relative;
   z-index: 5;
   
-  @include respond-to(lg) {
+  @include m.respond-to(lg) {
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -75,42 +75,42 @@
 .contact-info {
   display: flex;
   flex-direction: column;
-  gap: $spacing-lg;
-  background-color: $white;
-  padding: $spacing-lg;
-  border-radius: $border-radius-lg;
-  box-shadow: $shadow;
+  gap: v.$spacing-lg;
+  background-color: v.$white;
+  padding: v.$spacing-lg;
+  border-radius: v.$border-radius-lg;
+  box-shadow: v.$shadow;
 }
 
 .contact-item {
   display: flex;
   align-items: flex-start;
-  gap: $spacing-md;
+  gap: v.$spacing-md;
   
   .contact-icon {
     width: 50px;
     height: 50px;
-    background: linear-gradient(135deg, $primary-green, $accent-green);
+    background: linear-gradient(135deg, v.$primary-green, v.$accent-green);
     border-radius: 50%;
-    @include flex-center;
+    @include m.flex-center;
     flex-shrink: 0;
     
     i {
-      color: $gold;
-      font-size: $font-size-lg;
+      color: v.$gold;
+      font-size: v.$font-size-lg;
     }
   }
   
   .contact-details {
     h3 {
-      color: $primary-green;
-      margin-bottom: $spacing-xs;
-      font-size: $font-size-lg;
+      color: v.$primary-green;
+      margin-bottom: v.$spacing-xs;
+      font-size: v.$font-size-lg;
     }
     
     p {
-      color: $secondary-green;
-      margin-bottom: $spacing-xs;
+      color: v.$secondary-green;
+      margin-bottom: v.$spacing-xs;
       
       &:last-child {
         margin-bottom: 0;
@@ -142,42 +142,42 @@
 }
 
 .contact-form {
-  background-color: $white;
-  padding: $spacing-xl;
-  border-radius: $border-radius-lg;
-  box-shadow: $shadow-lg;
+  background-color: v.$white;
+  padding: v.$spacing-xl;
+  border-radius: v.$border-radius-lg;
+  box-shadow: v.$shadow-lg;
   
   h3 {
-    color: $primary-green;
-    margin-bottom: $spacing-lg;
+    color: v.$primary-green;
+    margin-bottom: v.$spacing-lg;
     text-align: center;
   }
   
   .form-group {
-    margin-bottom: $spacing-md;
+    margin-bottom: v.$spacing-md;
     
     label {
       display: block;
-      margin-bottom: $spacing-xs;
-      color: $primary-green;
+      margin-bottom: v.$spacing-xs;
+      color: v.$primary-green;
       font-weight: 500;
     }
     
     input,
     textarea {
       width: 100%;
-      padding: $spacing-sm;
-      border: 1px solid $medium-gray;
-      border-radius: $border-radius-sm;
-      font-family: $font-family-primary;
-      font-size: $font-size-base;
-      color: $black;
-      transition: $transition-base;
+      padding: v.$spacing-sm;
+      border: 1px solid v.$medium-gray;
+      border-radius: v.$border-radius-sm;
+      font-family: v.$font-family-primary;
+      font-size: v.$font-size-base;
+      color: v.$black;
+      transition: v.$transition-base;
       
       &:focus {
         outline: none;
-        border-color: $primary-green;
-        box-shadow: 0 0 0 3px rgba($primary-green, 0.2);
+        border-color: v.$primary-green;
+        box-shadow: 0 0 0 3px rgba(v.$primary-green, 0.2);
       }
       
       &.is-invalid {
@@ -191,14 +191,14 @@
     
     .error-message {
       color: #dc3545;
-      font-size: $font-size-sm;
-      margin-top: $spacing-xs;
+      font-size: v.$font-size-sm;
+      margin-top: v.$spacing-xs;
     }
   }
   
   button {
     width: 100%;
-    margin-top: $spacing-lg;
+    margin-top: v.$spacing-lg;
   }
 }
 
