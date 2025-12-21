@@ -349,37 +349,37 @@ export const translations: Record<string, Record<Language, string>> = {
     'ar': 'ما يقوله ضيوفنا عن إقامتهم'
   },
   'review_1_text': {
-    'en': 'The apartment exceeded our expectations! The lake view was breathtaking, and the amenities were top-notch. We especially loved the morning coffee on the terrace.',
+    'en': 'The room is modern with Ac. Beds are comfortable and ensuite spacious. Definitely recommend this place. The host is helpful and welcoming. The breakfast was freshly made with fresh fruit and dry meat.',
     'bs': 'Apartman je premašio naša očekivanja! Pogled na jezero je bio nevjerovatan, a sadržaji prvoklasni. Posebno smo uživali u jutarnjoj kafi na terasi.',
     'ar': 'تجاوزت الشقة توقعاتنا! كان المنظر على البحيرة خلاباً، والمرافق من الدرجة الأولى. استمتعنا بشكل خاص بقهوة الصباح على الشرفة.'
   },
   'review_2_text': {
-    'en': 'Perfect location for a peaceful getaway. The staff was incredibly helpful, and the apartment was immaculate. The lake activities made our stay even more special.',
+    'en': 'The view of the lake was gorgeous. The staff were all friendly and helpful. We did not hear any train noise or noise from the bridge as the windows are insulated very well.',
     'bs': 'Savršena lokacija za miran odmor. Osoblje je bilo izuzetno ljubazno, a apartman besprijekoran. Aktivnosti na jezeru učinile su naš boravak još posebnijim.',
     'ar': 'موقع مثالي للاسترخاء والهدوء. كان الموظفون متعاونين للغاية، والشقة نظيفة تماماً. جعلت الأنشطة على البحيرة إقامتنا أكثر تميزاً.'
   },
   'review_3_text': {
-    'en': 'An unforgettable experience! The apartment was beautifully designed, and the lakeside café served delicious local cuisine. We will definitely return!',
+    'en': 'Property is great, breakfast was great, and the host, Ajdin, was exceptional. If you want a place to stay, with no trouble at all, this is the one. Our stay here made the trip to Jablanica even more memorable.',
     'bs': 'Nezaboravno iskustvo! Apartman je prelijepo uređen, a kafić pored jezera služi ukusnu lokalnu kuhinju. Sigurno ćemo se vratiti!',
     'ar': 'تجربة لا تُنسى! الشقة مصممة بشكل جميل، والمقهى بجانب البحيرة يقدم مأكولات محلية لذيذة. سنعود بالتأكيد!'
   },
   'review_4_text': {
-    'en': 'The raft rental experience was amazing! We spent a whole day exploring the lake, finding quiet spots for swimming and picnicking. The staff was very professional and helpful.',
+    'en': 'I absolutely loved this place – from the room to everything else. I rented a room with a lake view and wow, just amazing! It was such a beautiful spot to sit outside and enjoy the view. The service was excellent, with friendly and welcoming staff. The building is new, and although the room was basic, it was clean and had a comfortable bed. The blackout blinds made it easy to sleep through the night. Breakfast was also very good. Highly recommended!',
     'bs': 'Iskustvo iznajmljivanja splavi je bilo nevjerovatno! Proveli smo cijeli dan istražujući jezero, pronalazeći mirna mjesta za kupanje i piknik. Osoblje je bilo vrlo profesionalno i od pomoći.',
     'ar': 'كانت تجربة استئجار الطوافة مذهلة! قضينا يوماً كاملاً في استكشاف البحيرة، ووجدنا أماكن هادئة للسباحة والنزهات. كان الموظفون محترفين جداً ومتعاونين.'
   },
   'review_5_text': {
-    'en': 'Exceptional hospitality! From the moment we arrived, we felt like VIP guests. The attention to detail in the apartment and the stunning sunrise views made our honeymoon perfect.',
+    'en': 'I would like to thank the owner Ajdin, he was very helpful and kind, i felt home as his family welcomed me and treat my children as if they were their own. The apartment was very clean and it’s new. The location of the apartment and the view were amazing. Ajdin took us on a trip on early morning with a great breakfast during the trip to enjoy the lake and the breakfast. After that he took us to a great beach to swim in the river. This experience is unforgettable and made my visit to Bosnia great already.',
     'bs': 'Izuzetno gostoprimstvo! Od trenutka kada smo stigli, osjećali smo se kao VIP gosti. Pažnja posvećena detaljima u apartmanu i prekrasan pogled na izlazak sunca učinili su naš medeni mjesec savršenim.',
     'ar': 'ضيافة استثنائية! منذ لحظة وصولنا، شعرنا كأننا ضيوف مميزون. الاهتمام بالتفاصيل في الشقة ومناظر شروق الشمس الخلابة جعلت شهر عسلنا مثالياً.'
   },
   'review_6_text': {
-    'en': 'A perfect family vacation spot! The kids loved the lake activities, and we enjoyed the spacious apartment. The cafés family-friendly menu was a big plus.',
+    'en': 'The room was very confortable, the bed and the pillows too. At morning we got up with a wonderful lake view, drinked a coffe at the cafè and took a nice lake tour with Ajdan the owner. He was very nice and patience with out kids too. We spend a very nice day by the lake, sure we will be back next time in summer.',
     'bs': 'Savršeno mjesto za porodični odmor! Djeca su voljela aktivnosti na jezeru, a mi smo uživali u prostranom apartmanu. Meni kafića prilagođen porodici bio je veliki plus.',
     'ar': 'مكان مثالي لقضاء عطلة عائلية! أحب الأطفال الأنشطة على البحيرة، واستمتعنا بالشقة الواسعة. كانت قائمة الطعام المناسبة للعائلة في المقهى ميزة كبيرة.'
   },
   'review_7_text': {
-    'en': 'The tranquility of this place is unmatched! We spent evenings on the terrace watching the sunset over the lake. The apartments modern amenities combined with the natural setting created a perfect balance.',
+    'en': 'Beautiful natural environment, easy access, hospitality. They cook very tasty in the kitchen, the room was new and clean. The lake is simply fantastic, crystal clear and not cold. They rent a boat at their own jetty at a fair price - it is a great experience. We will be back!',
     'bs': 'Mir ovog mjesta je nenadmašan! Provodili smo večeri na terasi gledajući zalazak sunca nad jezerom. Moderni sadržaji apartmana u kombinaciji s prirodnim okruženjem stvorili su savršenu ravnotežu.',
     'ar': 'هدوء هذا المكان لا مثيل له! قضينا الأمسيات في الشرفة نشاهد غروب الشمس فوق البحيرة. المرافق الحديثة للشقة مع الموقع الطبيعي خلقت توازناً مثالياً.'
   },
