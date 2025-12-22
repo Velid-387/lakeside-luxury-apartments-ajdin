@@ -18,9 +18,11 @@
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  
+  padding: 0 v.$spacing-md;
+
   @include m.respond-to(md) {
     grid-template-columns: 1fr 2fr;
+    padding: 0 v.$spacing-lg;
   }
 }
 
@@ -54,9 +56,13 @@
 
 .footer-links {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: v.$spacing-lg;
-  
+
+  @include m.respond-to(sm) {
+    grid-template-columns: 1fr 1fr;
+  }
+
   @include m.respond-to(md) {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -111,6 +117,11 @@
       display: flex;
       align-items: center;
       color: rgba(white, 0.8);
+      word-break: break-word;
+
+      i {
+        flex-shrink: 0;
+      }
     }
   }
   
@@ -143,35 +154,46 @@
   align-items: center;
   text-align: center;
   padding-top: v.$spacing-lg;
+  padding-left: v.$spacing-md;
+  padding-right: v.$spacing-md;
   border-top: 1px solid rgba(white, 0.1);
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  
+
   @include m.respond-to(md) {
     flex-direction: row;
     justify-content: space-between;
     text-align: left;
+    padding-left: v.$spacing-lg;
+    padding-right: v.$spacing-lg;
   }
-  
+
   p {
     color: rgba(white, 0.6);
     margin-bottom: v.$spacing-md;
-    
+
     @include m.respond-to(md) {
       margin-bottom: 0;
     }
   }
-  
+
   .footer-bottom-links {
     display: flex;
-    gap: v.$spacing-lg;
-    
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: v.$spacing-md;
+
+    @include m.respond-to(md) {
+      gap: v.$spacing-lg;
+    }
+
     a {
       color: rgba(white, 0.6);
       text-decoration: none;
       transition: v.$transition-base;
-      
+      white-space: nowrap;
+
       &:hover {
         color: v.$terracotta;
       }
