@@ -67,15 +67,27 @@ export class HeaderComponent implements OnInit, OnDestroy {
     if (isPlatformBrowser(this.platformId)) {
       const html = this.document.documentElement as HTMLElement;
       const body = this.document.body;
-      
+
+      // Temporarily disable smooth scrolling for instant position restoration
+      const currentScrollBehavior = html.style.scrollBehavior;
+      this.renderer.setStyle(html, 'scroll-behavior', 'auto');
+
       this.renderer.removeStyle(body, 'top');
       this.renderer.removeStyle(body, 'position');
       this.renderer.removeStyle(body, 'width');
       this.renderer.removeStyle(html, 'overflow');
       this.renderer.removeClass(html, this.scrollLockClass);
       this.renderer.removeClass(body, this.scrollLockClass);
-      
+
+      // Restore scroll position instantly without animation
       window.scrollTo(0, this.scrollPosition);
+
+      // Restore smooth scrolling after position is set
+      if (currentScrollBehavior) {
+        this.renderer.setStyle(html, 'scroll-behavior', currentScrollBehavior);
+      } else {
+        this.renderer.removeStyle(html, 'scroll-behavior');
+      }
     }
   }
 
