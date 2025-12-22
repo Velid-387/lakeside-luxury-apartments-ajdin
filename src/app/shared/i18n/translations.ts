@@ -350,37 +350,37 @@ export const translations: Record<string, Record<Language, string>> = {
   },
   'review_1_text': {
     'en': 'The room is modern with Ac. Beds are comfortable and ensuite spacious. Definitely recommend this place. The host is helpful and welcoming. The breakfast was freshly made with fresh fruit and dry meat.',
-    'bs': 'Apartman je premašio naša očekivanja! Pogled na jezero je bio nevjerovatan, a sadržaji prvoklasni. Posebno smo uživali u jutarnjoj kafi na terasi.',
-    'ar': 'تجاوزت الشقة توقعاتنا! كان المنظر على البحيرة خلاباً، والمرافق من الدرجة الأولى. استمتعنا بشكل خاص بقهوة الصباح على الشرفة.'
+    'bs': 'Soba je moderna sa klimom. Kreveti su udobni, a kupatilo prostrano. Definitivno preporučujem ovo mjesto. Domaćin je uslužan i ljubazan. Doručak je bio svježe pripremljen sa svježim voćem i suhim mesom.',
+    'ar': 'الغرفة حديثة ومكيفة. الأسرة مريحة والحمام واسع. أوصي بهذا المكان بالتأكيد. المضيف مفيد ومرحب. كان الإفطار طازجًا مع فواكه طازجة ولحوم مجففة.'
   },
   'review_2_text': {
     'en': 'The view of the lake was gorgeous. The staff were all friendly and helpful. We did not hear any train noise or noise from the bridge as the windows are insulated very well.',
-    'bs': 'Savršena lokacija za miran odmor. Osoblje je bilo izuzetno ljubazno, a apartman besprijekoran. Aktivnosti na jezeru učinile su naš boravak još posebnijim.',
-    'ar': 'موقع مثالي للاسترخاء والهدوء. كان الموظفون متعاونين للغاية، والشقة نظيفة تماماً. جعلت الأنشطة على البحيرة إقامتنا أكثر تميزاً.'
+    'bs': 'Pogled na jezero je bio prekrasan. Osoblje je bilo ljubazno i uslužno. Nismo čuli nikakvu buku od voza ili mosta jer su prozori vrlo dobro izolovani.',
+    'ar': 'كان منظر البحيرة رائعًا. كان جميع الموظفين ودودين ومتعاونين. لم نسمع أي ضوضاء من القطار أو الجسر لأن النوافذ معزولة جيدًا.'
   },
   'review_3_text': {
     'en': 'Property is great, breakfast was great, and the host, Ajdin, was exceptional. If you want a place to stay, with no trouble at all, this is the one. Our stay here made the trip to Jablanica even more memorable.',
-    'bs': 'Nezaboravno iskustvo! Apartman je prelijepo uređen, a kafić pored jezera služi ukusnu lokalnu kuhinju. Sigurno ćemo se vratiti!',
-    'ar': 'تجربة لا تُنسى! الشقة مصممة بشكل جميل، والمقهى بجانب البحيرة يقدم مأكولات محلية لذيذة. سنعود بالتأكيد!'
+    'bs': 'Imanje je odlično, doručak je bio odličan, a domaćin Ajdin je bio izuzetan. Ako želite mjesto za boravak, bez ikakvih problema, ovo je pravo. Naš boravak ovdje učinio je putovanje u Jablanicu još pametnijim.',
+    'ar': 'العقار رائع، والإفطار كان رائعًا، والمضيف أجدين كان استثنائيًا. إذا كنت تريد مكانًا للإقامة بدون أي مشاكل على الإطلاق، فهذا هو المكان. جعلت إقامتنا هنا الرحلة إلى يابلانيتسا أكثر لا تُنسى.'
   },
   'review_4_text': {
     'en': 'I absolutely loved this place – from the room to everything else. I rented a room with a lake view and wow, just amazing! It was such a beautiful spot to sit outside and enjoy the view. The service was excellent, with friendly and welcoming staff. The building is new, and although the room was basic, it was clean and had a comfortable bed. The blackout blinds made it easy to sleep through the night. Breakfast was also very good. Highly recommended!',
-    'bs': 'Iskustvo iznajmljivanja splavi je bilo nevjerovatno! Proveli smo cijeli dan istražujući jezero, pronalazeći mirna mjesta za kupanje i piknik. Osoblje je bilo vrlo profesionalno i od pomoći.',
-    'ar': 'كانت تجربة استئجار الطوافة مذهلة! قضينا يوماً كاملاً في استكشاف البحيرة، ووجدنا أماكن هادئة للسباحة والنزهات. كان الموظفون محترفين جداً ومتعاونين.'
+    'bs': 'Apsolutno sam volio ovo mjesto - od sobe do svega ostalog. Iznajmio sam sobu sa pogledom na jezero i vau, jednostavno nevjerovatno! Bilo je to tako lijepo mjesto da sjedim napolju i uživam u pogledu. Usluga je bila odlična, sa ljubaznim i ljubaznim osobljem. Zgrada je nova i iako je soba bila osnovna, bila je čista i imala je udoban krevet. Zavjese za zamračivanje olakšale su spavanje tokom noći. Doručak je takođe bio vrlo dobar. Toplo preporučujem!',
+    'ar': 'أحببت هذا المكان تمامًا - من الغرفة إلى كل شيء آخر. استأجرت غرفة بإطلالة على البحيرة ورائع، مذهل فقط! كانت بقعة جميلة للجلوس في الخارج والاستمتاع بالمنظر. كانت الخدمة ممتازة، مع موظفين ودودين ومرحبين. المبنى جديد، وعلى الرغم من أن الغرفة كانت بسيطة، إلا أنها كانت نظيفة وبها سرير مريح. جعلت الستائر المعتمة النوم طوال الليل سهلاً. كان الإفطار جيدًا جدًا أيضًا. أوصي به بشدة!'
   },
   'review_5_text': {
-    'en': 'I would like to thank the owner Ajdin, he was very helpful and kind, i felt home as his family welcomed me and treat my children as if they were their own. The apartment was very clean and it’s new. The location of the apartment and the view were amazing. Ajdin took us on a trip on early morning with a great breakfast during the trip to enjoy the lake and the breakfast. After that he took us to a great beach to swim in the river. This experience is unforgettable and made my visit to Bosnia great already.',
-    'bs': 'Izuzetno gostoprimstvo! Od trenutka kada smo stigli, osjećali smo se kao VIP gosti. Pažnja posvećena detaljima u apartmanu i prekrasan pogled na izlazak sunca učinili su naš medeni mjesec savršenim.',
-    'ar': 'ضيافة استثنائية! منذ لحظة وصولنا، شعرنا كأننا ضيوف مميزون. الاهتمام بالتفاصيل في الشقة ومناظر شروق الشمس الخلابة جعلت شهر عسلنا مثالياً.'
+    'en': 'I would like to thank the owner Ajdin, he was very helpful and kind, i felt home as his family welcomed me and treat my children as if they were their own. The apartment was very clean and it is new. The location of the apartment and the view were amazing. Ajdin took us on a trip on early morning with a great breakfast during the trip to enjoy the lake and the breakfast. After that he took us to a great beach to swim in the river. This experience is unforgettable and made my visit to Bosnia great already.',
+    'bs': 'Želio bih zahvaliti vlasniku Ajdinu, bio je vrlo uslužan i ljubazan, osjećao sam se kao kod kuće jer me je njegova porodica dočekala i tretirala moju djecu kao da su njihova vlastita. Apartman je bio vrlo čist i nov. Lokacija apartmana i pogled su bili nevjerovatni. Ajdin nas je poveo na izlet rano ujutro sa odličnim doručkom tokom puta da uživamo u jezeru i doručku. Nakon toga nas je odveo na odličnu plažu da se kupamo u rijeci. Ovo iskustvo je nezaboravno i već je učinilo moju posjetu Bosni odličnom.',
+    'ar': 'أود أن أشكر المالك أجدين، كان مفيدًا جدًا ولطيفًا، شعرت بأنني في المنزل حيث رحبت بي عائلته وعاملت أطفالي كما لو كانوا أطفالهم. كانت الشقة نظيفة جدًا وجديدة. كان موقع الشقة والمنظر مذهلين. أخذنا أجدين في رحلة في الصباح الباكر مع إفطار رائع خلال الرحلة للاستمتاع بالبحيرة والإفطار. بعد ذلك أخذنا إلى شاطئ رائع للسباحة في النهر. هذه التجربة لا تُنسى وجعلت زيارتي للبوسنة رائعة بالفعل.'
   },
   'review_6_text': {
     'en': 'The room was very confortable, the bed and the pillows too. At morning we got up with a wonderful lake view, drinked a coffe at the cafè and took a nice lake tour with Ajdan the owner. He was very nice and patience with out kids too. We spend a very nice day by the lake, sure we will be back next time in summer.',
-    'bs': 'Savršeno mjesto za porodični odmor! Djeca su voljela aktivnosti na jezeru, a mi smo uživali u prostranom apartmanu. Meni kafića prilagođen porodici bio je veliki plus.',
-    'ar': 'مكان مثالي لقضاء عطلة عائلية! أحب الأطفال الأنشطة على البحيرة، واستمتعنا بالشقة الواسعة. كانت قائمة الطعام المناسبة للعائلة في المقهى ميزة كبيرة.'
+    'bs': 'Soba je bila vrlo udobna, krevet i jastuci takođe. Ujutro smo ustali sa prekrasnim pogledom na jezero, popili kafu u kafiću i otišli na lijepu turu jezerom sa vlasnikom Ajdinom. Bio je vrlo ljubazan i strpljiv i sa našom djecom. Proveli smo vrlo lijep dan pored jezera, sigurno ćemo se vratiti sljedeći put ljeti.',
+    'ar': 'كانت الغرفة مريحة جدًا، والسرير والوسائد أيضًا. في الصباح استيقظنا بمنظر رائع للبحيرة، وشربنا القهوة في المقهى وقمنا بجولة جميلة في البحيرة مع المالك أجدان. كان لطيفًا جدًا وصبورًا مع أطفالنا أيضًا. قضينا يومًا جميلًا جدًا بجانب البحيرة، بالتأكيد سنعود في المرة القادمة في الصيف.'
   },
   'review_7_text': {
     'en': 'Beautiful natural environment, easy access, hospitality. They cook very tasty in the kitchen, the room was new and clean. The lake is simply fantastic, crystal clear and not cold. They rent a boat at their own jetty at a fair price - it is a great experience. We will be back!',
-    'bs': 'Mir ovog mjesta je nenadmašan! Provodili smo večeri na terasi gledajući zalazak sunca nad jezerom. Moderni sadržaji apartmana u kombinaciji s prirodnim okruženjem stvorili su savršenu ravnotežu.',
-    'ar': 'هدوء هذا المكان لا مثيل له! قضينا الأمسيات في الشرفة نشاهد غروب الشمس فوق البحيرة. المرافق الحديثة للشقة مع الموقع الطبيعي خلقت توازناً مثالياً.'
+    'bs': 'Prekrasno prirodno okruženje, lak pristup, gostoprimstvo. Kuvaju vrlo ukusno u kuhinji, soba je bila nova i čista. Jezero je jednostavno fantastično, kristalno čisto i nije hladno. Iznajmljuju čamac na svom sopstvenom pristaništu po fer cijeni - to je odlično iskustvo. Vratićemo se!',
+    'ar': 'بيئة طبيعية جميلة، وصول سهل، ضيافة. يطبخون طعامًا لذيذًا جدًا في المطبخ، والغرفة كانت جديدة ونظيفة. البحيرة رائعة ببساطة، صافية كالكريستال وليست باردة. يؤجرون قاربًا في رصيفهم الخاص بسعر عادل - إنها تجربة رائعة. سنعود!'
   },
 }; 
