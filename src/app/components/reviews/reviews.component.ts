@@ -27,59 +27,59 @@ export class ReviewsComponent implements OnInit, OnDestroy {
   reviews: Review[] = [
     {
       id: '1',
-      text: 'The apartment exceeded our expectations! The lake view was breathtaking, and the amenities were top-notch. We especially loved the morning coffee on the terrace.',
+      text: 'The room is modern with Ac. Beds are comfortable and ensuite spacious. Definitely recommend this place. The host is helpful and welcoming. The breakfast was freshly made with fresh fruit and dry meat.',
       textTranslateKey: 'review_1_text',
-      guestName: 'Sarah & John',
-      country: 'United Kingdom',
-      countryFlag: '🇬🇧'
+      guestName: 'Anne',
+      country: 'Malta',
+      countryFlag: '🇲🇹'
     },
     {
       id: '2',
-      text: 'Perfect location for a peaceful getaway. The staff was incredibly helpful, and the apartment was immaculate. The lake activities made our stay even more special.',
+      text: 'The view of the lake was gorgeous. The staff were all friendly and helpful. We did not hear any train noise or noise from the bridge as the windows are insulated very well.',
       textTranslateKey: 'review_2_text',
-      guestName: 'Hans & Maria',
+      guestName: 'Nicola',
       country: 'Germany',
       countryFlag: '🇩🇪'
     },
     {
       id: '3',
-      text: 'An unforgettable experience! The apartment was beautifully designed, and the lakeside café served delicious local cuisine. We will definitely return!',
+      text: 'Property is great, breakfast was great, and the host, Ajdin, was exceptional. If you want a place to stay, with no trouble at all, this is the one. Our stay here made the trip to Jablanica even more memorable.',
       textTranslateKey: 'review_3_text',
-      guestName: 'Ahmed & Fatima',
-      country: 'UAE',
-      countryFlag: '🇦🇪'
+      guestName: 'Nikola',
+      country: 'Bosnia and Herzegovina',
+      countryFlag: '🇧🇦'
     },
     {
       id: '4',
-      text: 'The raft rental experience was amazing! We spent a whole day exploring the lake, finding quiet spots for swimming and picnicking. The staff was very professional and helpful.',
+      text: 'I absolutely loved this place – from the room to everything else. I rented a room with a lake view and wow, just amazing! It was such a beautiful spot to sit outside and enjoy the view. The service was excellent, with friendly and welcoming staff. The building is new, and although the room was basic, it was clean and had a comfortable bed. The blackout blinds made it easy to sleep through the night. Breakfast was also very good. Highly recommended!',
       textTranslateKey: 'review_4_text',
-      guestName: 'Marco & Sofia',
-      country: 'Italy',
-      countryFlag: '🇮🇹'
-    },
-    {
-      id: '5',
-      text: 'Exceptional hospitality! From the moment we arrived, we felt like VIP guests. The attention to detail in the apartment and the stunning sunrise views made our honeymoon perfect.',
-      textTranslateKey: 'review_5_text',
-      guestName: 'Pierre & Marie',
-      country: 'France',
-      countryFlag: '🇫🇷'
-    },
-    {
-      id: '6',
-      text: 'A perfect family vacation spot! The kids loved the lake activities, and we enjoyed the spacious apartment. The café\'s family-friendly menu was a big plus.',
-      textTranslateKey: 'review_6_text',
-      guestName: 'Lars & Anna',
+      guestName: 'Zinab',
       country: 'Sweden',
       countryFlag: '🇸🇪'
     },
     {
+      id: '5',
+      text: 'I would like to thank the owner Ajdin, he was very helpful and kind, i felt home as his family welcomed me and treat my children as if they were their own. The apartment was very clean and it’s new. The location of the apartment and the view were amazing. Ajdin took us on a trip on early morning with a great breakfast during the trip to enjoy the lake and the breakfast. After that he took us to a great beach to swim in the river. This experience is unforgettable and made my visit to Bosnia great already.',
+      textTranslateKey: 'review_5_text',
+      guestName: 'Abdulaziz',
+      country: 'Saudi Arabia',
+      countryFlag: '🇸🇦'
+    },
+    {
+      id: '6',
+      text: 'The room was very confortable, the bed and the pillows too. At morning we got up with a wonderful lake view, drinked a coffe at the cafè and took a nice lake tour with Ajdan the owner. He was very nice and patience with out kids too. We spend a very nice day by the lake, sure we will be back next time in summer.',
+      textTranslateKey: 'review_6_text',
+      guestName: 'Valentina',
+      country: 'Italy',
+      countryFlag: '🇮🇹'
+    },
+    {
       id: '7',
-      text: 'The tranquility of this place is unmatched! We spent evenings on the terrace watching the sunset over the lake. The apartment\'s modern amenities combined with the natural setting created a perfect balance.',
+      text: 'Beautiful natural environment, easy access, hospitality. They cook very tasty in the kitchen, the room was new and clean. The lake is simply fantastic, crystal clear and not cold. They rent a boat at their own jetty at a fair price - it is a great experience. We will be back!',
       textTranslateKey: 'review_7_text',
-      guestName: 'Yuki & Akiko',
-      country: 'Japan',
-      countryFlag: '🇯🇵'
+      guestName: 'Bujáki',
+      country: 'Hungary',
+      countryFlag: '🇭🇺'
     }
   ];
 

@@ -77,9 +77,9 @@ export const translations: Record<string, Record<Language, string>> = {
     'ar': 'تقع على ضفاف بحيرة نقية، توفر شققنا الفاخرة ونزلنا مزيجًا مثاليًا من الراحة والاسترخاء والمغامرة. سواء كنت تبحث عن عطلة نهاية أسبوع، أو إجازة عائلية، أو مكان للاسترخاء، فإن عقارنا يوفر كل ما تحتاجه لتجربة لا تُنسى بجانب البحيرة.'
   },
   'about_text_2': {
-    'en': 'Our apartments feature modern amenities, comfortable furnishings, and breathtaking views, ensuring your stay is as relaxing as it is rejuvenating. Each unit has been thoughtfully designed to maximize comfort while showcasing the natural beauty of our lakeside setting.',
-    'bs': 'Naši apartmani sadrže moderne sadržaje, udoban namještaj i zadivljujuće poglede, osiguravajući da vaš boravak bude jednako opuštajući koliko i osvježavajući. Svaka jedinica je pažljivo dizajnirana za maksimalnu udobnost uz isticanje prirodne ljepote našeg okruženja pored jezera.',
-    'ar': 'تتميز شققنا بوسائل راحة حديثة، وأثاث مريح، وإطلالات خلابة، مما يضمن أن إقامتك ستكون مريحة ومنعشة. تم تصميم كل وحدة بعناية لتحقيق أقصى قدر من الراحة مع إبراز الجمال الطبيعي لموقعنا بجانب البحيرة.'
+    'en': 'Our apartments come with all the necessary equipment, comfortable furnishings, and stunning views, making your stay relaxing and enjoyable. Each space has been carefully designed to provide maximum comfort while highlighting the natural beauty of our lakeside surroundings.',
+    'bs': 'Naši apartmani imaju potrebnu opremu, udoban namještaj i zadivljujući pogled, čineći vaš boravak i opuštajućim i ugodnim. Svaki prostor je pažljivo dizajniran kako bi pružio maksimalnu udobnost, istovremeno ističući prirodnu ljepotu našeg okruženja uz jezero.',
+    'ar': 'تأتي شققنا مع جميع المعدات اللازمة والأثاث المريح والإطلالات الخلابة، مما يجعل إقامتك مريحة وممتعة. تم تصميم كل مساحة بعناية لتوفير أقصى قدر من الراحة مع إبراز الجمال الطبيعي لمحيطنا بجانب البحيرة.'
   },
   'luxury_apartments': {
     'en': 'Luxury Apartments',
@@ -270,9 +270,9 @@ export const translations: Record<string, Record<Language, string>> = {
     'ar': 'شقق فاخرة'
   },
   'service_apartments_desc': {
-    'en': "Experience ultimate comfort in our modern, well-appointed apartments. Each unit features floor-to-ceiling windows with breathtaking lake views, fully equipped kitchens, luxurious bedding, and spacious living areas. Whether you're booking a cozy studio or a spacious family suite, you'll enjoy the perfect blend of luxury and comfort. All apartments include high-speed WiFi, smart TVs, and premium amenities to ensure your stay is as convenient as it is relaxing.",
-    'bs': "Doživite vrhunsku udobnost u našim modernim, dobro opremljenim apartmanima. Svaka jedinica ima prozore od poda do stropa s prekrasnim pogledom na jezero, potpuno opremljene kuhinje, luksuzan namještaj i prostrane dnevne boravke. Bez obzira rezervirate li udoban studio ili prostranu porodičnu sobu, uživat ćete u savršenom spoju luksuza i udobnosti. Svi apartmani uključuju brzi WiFi, pametne televizore i premium sadržaje kako bi vaš boravak bio podjednako praktičan koliko i opuštajući.",
-    'ar': "استمتع بالراحة المطلقة في شققنا الحديثة والمجهزة جيدًا. تتميز كل وحدة بنوافذ من الأرض إلى السقف مع إطلالات خلابة على البحيرة، ومطابخ مجهزة بالكامل، وأسرّة فاخرة، ومناطق معيشة واسعة. سواء كنت تحجز استوديو مريح أو جناح عائلي واسع، ستستمتع بمزيج مثالي من الفخامة والراحة. تشمل جميع الشقق خدمة الواي فاي عالية السرعة، وأجهزة تلفزيون ذكية، ومرافق فاخرة لضمان أن تكون إقامتك مريحة بقدر ما هي مريحة."
+    'en': "Experience ultimate comfort in our modern, fully equipped apartments. Each apartment features large windows, with two offering stunning lake views. The apartments do not have kitchens but are equipped with one double bed and one bunk bed, perfect for families. All apartments include Wi-Fi and a TV, providing a comfortable and convenient stay.",
+    'bs': "Doživite vrhunsku udobnost u našim modernim i dobro opremljenim apartmanima. Svaki apartman ima velike prozore, od kojih dva nude prekrasan pogled na jezero. Apartmani nemaju kuhinju, ali su opremljeni jednim bračnim krevetom i jednim krevetom na sprat, idealnim za porodice. Svi apartmani uključuju Wi-Fi i televizor, pružajući vam udoban i praktičan boravak.",
+    'ar': "استمتع بالراحة القصوى في شققنا الحديثة والمجهزة بالكامل. تتميز كل شقة بنوافذ كبيرة، مع اثنين منها توفر إطلالات خلابة على البحيرة. لا تحتوي الشقق على مطابخ ولكنها مجهزة بسرير مزدوج واحد وسرير بطابقين، مثالية للعائلات. تشمل جميع الشقق خدمة الواي فاي وتلفزيون، مما يوفر إقامة مريحة ومناسبة."
   },
   'service_cafe_title': {
     'en': 'Lakeside Café & Garden',
@@ -290,9 +290,9 @@ export const translations: Record<string, Record<Language, string>> = {
     'ar': 'مغامرات الإبحار بالطوافات'
   },
   'service_rafts_desc': {
-    'en': "Explore the crystal-clear waters of the lake at your own pace with our comfortable raft rentals. Our easy-to-navigate rafts are perfect for families, couples, or solo adventurers looking to experience the beauty of the lake from a different perspective. Pack a picnic, find a secluded cove, or simply drift and enjoy the stunning surroundings. All necessary safety equipment is provided, and our staff will ensure you're comfortable before setting out on your aquatic adventure.",
-    'bs': "Istražite kristalno čiste vode jezera svojim tempom s našim udobnim iznajmljenim splavima. Naši jednostavni za navigaciju splavi savršeni su za porodice, parove ili samostalne avanturiste koji žele doživjeti ljepotu jezera iz druge perspektive. Spakirajte piknik, pronađite skrivenu uvalu ili jednostavno plutajte i uživajte u zadivljujućem okruženju. Sva potrebna sigurnosna oprema je osigurana, a naše osoblje će se pobrinuti da se osjećate ugodno prije nego što krenete na svoju vodenu avanturu.",
-    'ar': "استكشف المياه البلورية للبحيرة بوتيرتك الخاصة مع قواربنا المريحة للإيجار. طوافاتنا سهلة التنقل مثالية للعائلات، والأزواج، أو المغامرين المنفردين الذين يتطلعون إلى تجربة جمال البحيرة من منظور مختلف. قم بتجهيز نزهة، واعثر على خليج منعزل، أو ببساطة انجرف واستمتع بالمناظر المذهلة المحيطة بك. يتم توفير جميع معدات السلامة اللازمة، وسيتأكد فريق العمل لدينا من راحتك قبل الانطلاق في مغامرتك المائية."
+    'en': "Explore the crystal-clear waters of the lake at your own pace or relax while a driver navigates the comfortable raft for you. The rafts are easy to handle and can be rented as needed, without any time restrictions, making them ideal for individuals, families, couples, or groups. We have a larger number of rafts in various sizes, capable of accommodating more people, so the experience is suitable for all kinds of visitors. The rental includes a driver with the necessary license and all safety equipment, ensuring a safe and enjoyable adventure. You can bring snacks or find a secluded cove to fully enjoy the beautiful lakeside surroundings.",
+    'bs': "Istražite kristalno čistu vodu jezera vlastitim tempom ili se opustite dok vozač upravlja udobnim splavom. Splavovi su laki za upravljanje i mogu se iznajmiti po potrebi, bez vremenskog ograničenja, a idealni su za pojedince, porodice, parove ili grupe. Imamo veći broj splavova različitih veličina, koji mogu primiti veći broj ljudi, tako da je iskustvo pogodno za sve vrste posjetilaca. Uz iznajmljivanje dobijate vozača s potrebnom dozvolom i svu zaštitnu opremu, što osigurava sigurnu i ugodnu avanturu. Možete ponijeti užinu, pronaći osamljenu uvalu ili jednostavno uživati u prelijepom jezerskom okruženju.",
+    'ar': "استكشف المياه الصافية البلورية للبحيرة بوتيرتك الخاصة أو استرخِ بينما يقود السائق الطوافة المريحة لك. الطوافات سهلة التعامل ويمكن استئجارها حسب الحاجة، دون أي قيود زمنية، مما يجعلها مثالية للأفراد والعائلات والأزواج والمجموعات. لدينا عدد كبير من الطوافات بأحجام مختلفة، قادرة على استيعاب المزيد من الأشخاص، لذا فإن التجربة مناسبة لجميع أنواع الزوار. يشمل الإيجار سائقًا حاصل على الترخيص اللازم وجميع معدات السلامة، مما يضمن مغامرة آمنة وممتعة. يمكنك إحضار الوجبات الخفيفة أو العثور على خليج منعزل للاستمتاع الكامل بالمناطق المحيطة الجميلة بجانب البحيرة."
   },
   
   // Footer sections
@@ -349,38 +349,38 @@ export const translations: Record<string, Record<Language, string>> = {
     'ar': 'ما يقوله ضيوفنا عن إقامتهم'
   },
   'review_1_text': {
-    'en': 'The apartment exceeded our expectations! The lake view was breathtaking, and the amenities were top-notch. We especially loved the morning coffee on the terrace.',
-    'bs': 'Apartman je premašio naša očekivanja! Pogled na jezero je bio nevjerovatan, a sadržaji prvoklasni. Posebno smo uživali u jutarnjoj kafi na terasi.',
-    'ar': 'تجاوزت الشقة توقعاتنا! كان المنظر على البحيرة خلاباً، والمرافق من الدرجة الأولى. استمتعنا بشكل خاص بقهوة الصباح على الشرفة.'
+    'en': 'The room is modern with Ac. Beds are comfortable and ensuite spacious. Definitely recommend this place. The host is helpful and welcoming. The breakfast was freshly made with fresh fruit and dry meat.',
+    'bs': 'Soba je moderna sa klimom. Kreveti su udobni, a kupatilo prostrano. Definitivno preporučujem ovo mjesto. Domaćin je uslužan i ljubazan. Doručak je bio svježe pripremljen sa svježim voćem i suhim mesom.',
+    'ar': 'الغرفة حديثة ومكيفة. الأسرة مريحة والحمام واسع. أوصي بهذا المكان بالتأكيد. المضيف مفيد ومرحب. كان الإفطار طازجًا مع فواكه طازجة ولحوم مجففة.'
   },
   'review_2_text': {
-    'en': 'Perfect location for a peaceful getaway. The staff was incredibly helpful, and the apartment was immaculate. The lake activities made our stay even more special.',
-    'bs': 'Savršena lokacija za miran odmor. Osoblje je bilo izuzetno ljubazno, a apartman besprijekoran. Aktivnosti na jezeru učinile su naš boravak još posebnijim.',
-    'ar': 'موقع مثالي للاسترخاء والهدوء. كان الموظفون متعاونين للغاية، والشقة نظيفة تماماً. جعلت الأنشطة على البحيرة إقامتنا أكثر تميزاً.'
+    'en': 'The view of the lake was gorgeous. The staff were all friendly and helpful. We did not hear any train noise or noise from the bridge as the windows are insulated very well.',
+    'bs': 'Pogled na jezero je bio prekrasan. Osoblje je bilo ljubazno i uslužno. Nismo čuli nikakvu buku od voza ili mosta jer su prozori vrlo dobro izolovani.',
+    'ar': 'كان منظر البحيرة رائعًا. كان جميع الموظفين ودودين ومتعاونين. لم نسمع أي ضوضاء من القطار أو الجسر لأن النوافذ معزولة جيدًا.'
   },
   'review_3_text': {
-    'en': 'An unforgettable experience! The apartment was beautifully designed, and the lakeside café served delicious local cuisine. We will definitely return!',
-    'bs': 'Nezaboravno iskustvo! Apartman je prelijepo uređen, a kafić pored jezera služi ukusnu lokalnu kuhinju. Sigurno ćemo se vratiti!',
-    'ar': 'تجربة لا تُنسى! الشقة مصممة بشكل جميل، والمقهى بجانب البحيرة يقدم مأكولات محلية لذيذة. سنعود بالتأكيد!'
+    'en': 'Property is great, breakfast was great, and the host, Ajdin, was exceptional. If you want a place to stay, with no trouble at all, this is the one. Our stay here made the trip to Jablanica even more memorable.',
+    'bs': 'Imanje je odlično, doručak je bio odličan, a domaćin Ajdin je bio izuzetan. Ako želite mjesto za boravak, bez ikakvih problema, ovo je pravo. Naš boravak ovdje učinio je putovanje u Jablanicu još pametnijim.',
+    'ar': 'العقار رائع، والإفطار كان رائعًا، والمضيف أجدين كان استثنائيًا. إذا كنت تريد مكانًا للإقامة بدون أي مشاكل على الإطلاق، فهذا هو المكان. جعلت إقامتنا هنا الرحلة إلى يابلانيتسا أكثر لا تُنسى.'
   },
   'review_4_text': {
-    'en': 'The raft rental experience was amazing! We spent a whole day exploring the lake, finding quiet spots for swimming and picnicking. The staff was very professional and helpful.',
-    'bs': 'Iskustvo iznajmljivanja splavi je bilo nevjerovatno! Proveli smo cijeli dan istražujući jezero, pronalazeći mirna mjesta za kupanje i piknik. Osoblje je bilo vrlo profesionalno i od pomoći.',
-    'ar': 'كانت تجربة استئجار الطوافة مذهلة! قضينا يوماً كاملاً في استكشاف البحيرة، ووجدنا أماكن هادئة للسباحة والنزهات. كان الموظفون محترفين جداً ومتعاونين.'
+    'en': 'I absolutely loved this place – from the room to everything else. I rented a room with a lake view and wow, just amazing! It was such a beautiful spot to sit outside and enjoy the view. The service was excellent, with friendly and welcoming staff. The building is new, and although the room was basic, it was clean and had a comfortable bed. The blackout blinds made it easy to sleep through the night. Breakfast was also very good. Highly recommended!',
+    'bs': 'Apsolutno sam volio ovo mjesto - od sobe do svega ostalog. Iznajmio sam sobu sa pogledom na jezero i vau, jednostavno nevjerovatno! Bilo je to tako lijepo mjesto da sjedim napolju i uživam u pogledu. Usluga je bila odlična, sa ljubaznim osobljem. Zgrada je nova i iako je soba bila osnovna, bila je čista i imala je udoban krevet. Zavjese za zamračivanje olakšale su spavanje tokom noći. Doručak je takođe bio vrlo dobar. Toplo preporučujem!',
+    'ar': 'أحببت هذا المكان تمامًا - من الغرفة إلى كل شيء آخر. استأجرت غرفة بإطلالة على البحيرة ورائع، مذهل فقط! كانت بقعة جميلة للجلوس في الخارج والاستمتاع بالمنظر. كانت الخدمة ممتازة، مع موظفين ودودين ومرحبين. المبنى جديد، وعلى الرغم من أن الغرفة كانت بسيطة، إلا أنها كانت نظيفة وبها سرير مريح. جعلت الستائر المعتمة النوم طوال الليل سهلاً. كان الإفطار جيدًا جدًا أيضًا. أوصي به بشدة!'
   },
   'review_5_text': {
-    'en': 'Exceptional hospitality! From the moment we arrived, we felt like VIP guests. The attention to detail in the apartment and the stunning sunrise views made our honeymoon perfect.',
-    'bs': 'Izuzetno gostoprimstvo! Od trenutka kada smo stigli, osjećali smo se kao VIP gosti. Pažnja posvećena detaljima u apartmanu i prekrasan pogled na izlazak sunca učinili su naš medeni mjesec savršenim.',
-    'ar': 'ضيافة استثنائية! منذ لحظة وصولنا، شعرنا كأننا ضيوف مميزون. الاهتمام بالتفاصيل في الشقة ومناظر شروق الشمس الخلابة جعلت شهر عسلنا مثالياً.'
+    'en': 'I would like to thank the owner Ajdin, he was very helpful and kind, i felt home as his family welcomed me and treat my children as if they were their own. The apartment was very clean and it is new. The location of the apartment and the view were amazing. Ajdin took us on a trip on early morning with a great breakfast during the trip to enjoy the lake and the breakfast. After that he took us to a great beach to swim in the river. This experience is unforgettable and made my visit to Bosnia great already.',
+    'bs': 'Želio bih zahvaliti vlasniku Ajdinu, bio je vrlo uslužan i ljubazan, osjećao sam se kao kod kuće jer me je njegova porodica dočekala i tretirala moju djecu kao da su njihova vlastita. Apartman je bio vrlo čist i nov. Lokacija apartmana i pogled su bili nevjerovatni. Ajdin nas je poveo na izlet rano ujutro sa odličnim doručkom tokom puta da uživamo u jezeru i doručku. Nakon toga nas je odveo na odličnu plažu da se kupamo u rijeci. Ovo iskustvo je nezaboravno i već je učinilo moju posjetu Bosni odličnom.',
+    'ar': 'أود أن أشكر المالك أجدين، كان مفيدًا جدًا ولطيفًا، شعرت بأنني في المنزل حيث رحبت بي عائلته وعاملت أطفالي كما لو كانوا أطفالهم. كانت الشقة نظيفة جدًا وجديدة. كان موقع الشقة والمنظر مذهلين. أخذنا أجدين في رحلة في الصباح الباكر مع إفطار رائع خلال الرحلة للاستمتاع بالبحيرة والإفطار. بعد ذلك أخذنا إلى شاطئ رائع للسباحة في النهر. هذه التجربة لا تُنسى وجعلت زيارتي للبوسنة رائعة بالفعل.'
   },
   'review_6_text': {
-    'en': 'A perfect family vacation spot! The kids loved the lake activities, and we enjoyed the spacious apartment. The cafés family-friendly menu was a big plus.',
-    'bs': 'Savršeno mjesto za porodični odmor! Djeca su voljela aktivnosti na jezeru, a mi smo uživali u prostranom apartmanu. Meni kafića prilagođen porodici bio je veliki plus.',
-    'ar': 'مكان مثالي لقضاء عطلة عائلية! أحب الأطفال الأنشطة على البحيرة، واستمتعنا بالشقة الواسعة. كانت قائمة الطعام المناسبة للعائلة في المقهى ميزة كبيرة.'
+    'en': 'The room was very confortable, the bed and the pillows too. At morning we got up with a wonderful lake view, drinked a coffe at the cafè and took a nice lake tour with Ajdan the owner. He was very nice and patience with out kids too. We spend a very nice day by the lake, sure we will be back next time in summer.',
+    'bs': 'Soba je bila vrlo udobna, krevet i jastuci takođe. Ujutro smo ustali sa prekrasnim pogledom na jezero, popili kafu u kafiću i otišli na lijepu turu jezerom sa vlasnikom Ajdinom. Bio je vrlo ljubazan i strpljiv i sa našom djecom. Proveli smo vrlo lijep dan pored jezera, sigurno ćemo se vratiti sljedeći put ljeti.',
+    'ar': 'كانت الغرفة مريحة جدًا، والسرير والوسائد أيضًا. في الصباح استيقظنا بمنظر رائع للبحيرة، وشربنا القهوة في المقهى وقمنا بجولة جميلة في البحيرة مع المالك أجدان. كان لطيفًا جدًا وصبورًا مع أطفالنا أيضًا. قضينا يومًا جميلًا جدًا بجانب البحيرة، بالتأكيد سنعود في المرة القادمة في الصيف.'
   },
   'review_7_text': {
-    'en': 'The tranquility of this place is unmatched! We spent evenings on the terrace watching the sunset over the lake. The apartments modern amenities combined with the natural setting created a perfect balance.',
-    'bs': 'Mir ovog mjesta je nenadmašan! Provodili smo večeri na terasi gledajući zalazak sunca nad jezerom. Moderni sadržaji apartmana u kombinaciji s prirodnim okruženjem stvorili su savršenu ravnotežu.',
-    'ar': 'هدوء هذا المكان لا مثيل له! قضينا الأمسيات في الشرفة نشاهد غروب الشمس فوق البحيرة. المرافق الحديثة للشقة مع الموقع الطبيعي خلقت توازناً مثالياً.'
+    'en': 'Beautiful natural environment, easy access, hospitality. They cook very tasty in the kitchen, the room was new and clean. The lake is simply fantastic, crystal clear and not cold. They rent a boat at their own jetty at a fair price - it is a great experience. We will be back!',
+    'bs': 'Prekrasno prirodno okruženje, lak pristup, gostoprimstvo. Kuvhju vrlo ukusno u kuhinji, soba je bila nova i čista. Jezero je jednostavno fantastično, kristalno čisto i nije hladno. Iznajmljuju splav na svom sopstvenom pristaništu po fer cijeni - to je odlično iskustvo. Vratićemo se!',
+    'ar': 'بيئة طبيعية جميلة، وصول سهل، ضيافة. يطبخون طعامًا لذيذًا جدًا في المطبخ، والغرفة كانت جديدة ونظيفة. البحيرة رائعة ببساطة، صافية كالكريستال وليست باردة. يؤجرون قاربًا في رصيفهم الخاص بسعر عادل - إنها تجربة رائعة. سنعود!'
   },
 }; 
