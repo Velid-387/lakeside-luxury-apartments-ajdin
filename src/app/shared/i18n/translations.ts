@@ -365,7 +365,7 @@ export const translations: Record<string, Record<Language, string>> = {
   },
   'review_4_text': {
     'en': 'I absolutely loved this place – from the room to everything else. I rented a room with a lake view and wow, just amazing! It was such a beautiful spot to sit outside and enjoy the view. The service was excellent, with friendly and welcoming staff. The building is new, and although the room was basic, it was clean and had a comfortable bed. The blackout blinds made it easy to sleep through the night. Breakfast was also very good. Highly recommended!',
-    'bs': 'Apsolutno sam volio ovo mjesto - od sobe do svega ostalog. Iznajmio sam sobu sa pogledom na jezero i vau, jednostavno nevjerovatno! Bilo je to tako lijepo mjesto da sjedim napolju i uživam u pogledu. Usluga je bila odlična, sa ljubaznim i ljubaznim osobljem. Zgrada je nova i iako je soba bila osnovna, bila je čista i imala je udoban krevet. Zavjese za zamračivanje olakšale su spavanje tokom noći. Doručak je takođe bio vrlo dobar. Toplo preporučujem!',
+    'bs': 'Apsolutno sam volio ovo mjesto - od sobe do svega ostalog. Iznajmio sam sobu sa pogledom na jezero i vau, jednostavno nevjerovatno! Bilo je to tako lijepo mjesto da sjedim napolju i uživam u pogledu. Usluga je bila odlična, sa ljubaznim osobljem. Zgrada je nova i iako je soba bila osnovna, bila je čista i imala je udoban krevet. Zavjese za zamračivanje olakšale su spavanje tokom noći. Doručak je takođe bio vrlo dobar. Toplo preporučujem!',
     'ar': 'أحببت هذا المكان تمامًا - من الغرفة إلى كل شيء آخر. استأجرت غرفة بإطلالة على البحيرة ورائع، مذهل فقط! كانت بقعة جميلة للجلوس في الخارج والاستمتاع بالمنظر. كانت الخدمة ممتازة، مع موظفين ودودين ومرحبين. المبنى جديد، وعلى الرغم من أن الغرفة كانت بسيطة، إلا أنها كانت نظيفة وبها سرير مريح. جعلت الستائر المعتمة النوم طوال الليل سهلاً. كان الإفطار جيدًا جدًا أيضًا. أوصي به بشدة!'
   },
   'review_5_text': {
@@ -380,7 +380,7 @@ export const translations: Record<string, Record<Language, string>> = {
   },
   'review_7_text': {
     'en': 'Beautiful natural environment, easy access, hospitality. They cook very tasty in the kitchen, the room was new and clean. The lake is simply fantastic, crystal clear and not cold. They rent a boat at their own jetty at a fair price - it is a great experience. We will be back!',
-    'bs': 'Prekrasno prirodno okruženje, lak pristup, gostoprimstvo. Kuvaju vrlo ukusno u kuhinji, soba je bila nova i čista. Jezero je jednostavno fantastično, kristalno čisto i nije hladno. Iznajmljuju čamac na svom sopstvenom pristaništu po fer cijeni - to je odlično iskustvo. Vratićemo se!',
+    'bs': 'Prekrasno prirodno okruženje, lak pristup, gostoprimstvo. Kuvhju vrlo ukusno u kuhinji, soba je bila nova i čista. Jezero je jednostavno fantastično, kristalno čisto i nije hladno. Iznajmljuju splav na svom sopstvenom pristaništu po fer cijeni - to je odlično iskustvo. Vratićemo se!',
     'ar': 'بيئة طبيعية جميلة، وصول سهل، ضيافة. يطبخون طعامًا لذيذًا جدًا في المطبخ، والغرفة كانت جديدة ونظيفة. البحيرة رائعة ببساطة، صافية كالكريستال وليست باردة. يؤجرون قاربًا في رصيفهم الخاص بسعر عادل - إنها تجربة رائعة. سنعود!'
   },
 }; 
