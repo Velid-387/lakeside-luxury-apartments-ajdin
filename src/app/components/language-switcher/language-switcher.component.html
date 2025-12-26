@@ -1,0 +1,50 @@
+<div class="language-switcher">
+  <!-- Desktop view -->
+  <div class="desktop-switcher">
+    <button
+      class="lang-btn"
+      [class.active]="isActive('en')"
+      (click)="setLanguage('en')"
+      aria-label="Switch to English">
+      EN
+    </button>
+    <button
+      class="lang-btn"
+      [class.active]="isActive('bs')"
+      (click)="setLanguage('bs')"
+      aria-label="Switch to Bosnian">
+      BS
+    </button>
+    <button
+      class="lang-btn"
+      [class.active]="isActive('ar')"
+      (click)="setLanguage('ar')"
+      aria-label="Switch to Arabic">
+      AR
+    </button>
+  </div>
+
+  <!-- Mobile view -->
+  <div class="mobile-switcher" #mobileSwitcher>
+    <button
+      class="current-lang"
+      #langButton
+      (click)="toggleDropdown($event)"
+      [attr.aria-expanded]="isDropdownOpen"
+      aria-label="Toggle language menu">
+      {{ getCurrentLangDisplay() }}
+      <i class="fas" [class]="isDropdownOpen ? 'fa-chevron-up' : 'fa-chevron-down'"></i>
+    </button>
+    <div class="lang-dropdown" [class.show]="isDropdownOpen" [style.top.px]="dropdownTop">
+      <button
+        *ngFor="let lang of availableLanguages"
+        class="dropdown-item"
+        [class.active]="isActive(lang.code)"
+        (click)="setLanguageAndClose(lang.code)"
+        [attr.aria-label]="'Switch to ' + lang.name">
+        <span class="flag" [innerHTML]="lang.flag"></span>
+        <span class="lang-code">{{ lang.display }}</span>
+      </button>
+    </div>
+  </div>
+</div>

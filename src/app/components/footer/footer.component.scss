@@ -69,13 +69,15 @@
 }
 
 .footer-section {
+  min-width: 0;
+
   h3 {
     font-size: v.$font-size-lg;
     margin-bottom: v.$spacing-md;
     color: white;
     position: relative;
     padding-bottom: v.$spacing-xs;
-    
+
     &::after {
       content: '';
       position: absolute;
@@ -86,25 +88,26 @@
       background-color: v.$terracotta;
     }
   }
-  
+
   ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    
+
     li {
       margin-bottom: v.$spacing-sm;
-      
+
       a {
         color: rgba(white, 0.8);
         text-decoration: none;
         transition: v.$transition-base;
-        
+        word-break: break-word;
+
         &:hover {
           color: v.$terracotta;
         }
       }
-      
+
       i {
         margin-right: v.$spacing-sm;
         color: v.$terracotta;
@@ -115,12 +118,20 @@
   .contact-list {
     li {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       color: rgba(white, 0.8);
       word-break: break-word;
+      overflow-wrap: break-word;
+      gap: v.$spacing-xs;
 
       i {
         flex-shrink: 0;
+        margin-top: 2px;
+      }
+
+      span {
+        word-break: break-word;
+        overflow-wrap: break-word;
       }
     }
   }
