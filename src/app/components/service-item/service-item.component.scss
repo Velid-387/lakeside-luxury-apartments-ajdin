@@ -10,18 +10,19 @@
   border-radius: v.$border-radius-lg;
   overflow: hidden;
   box-shadow: v.$shadow;
-  min-height: 100vh;
-  height: 100vh;
-  
+  min-height: auto;
+
   @include m.respond-to(md) {
     grid-template-columns: 1fr 1fr;
     align-items: stretch;
+    min-height: 100vh;
+    height: 100vh;
   }
-  
+
   &.reverse {
     @include m.respond-to(md) {
       direction: rtl;
-      
+
       .service-content {
         direction: ltr;
       }
@@ -31,20 +32,21 @@
 
 .service-image {
   position: relative;
-  height: 50vh;
+  height: 40vh;
+  min-height: 300px;
   overflow: hidden;
-  
+
   @include m.respond-to(md) {
     height: 100vh;
   }
-  
+
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: v.$transition-slow;
     display: block;
-    
+
     &:hover {
       transform: scale(1.05);
     }
@@ -55,22 +57,30 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: v.$spacing-xl;
+  padding: v.$spacing-lg v.$spacing-md;
   background-color: v.$white;
-  height: 50vh;
-  
+  min-height: auto;
+  overflow-y: auto;
+
+  @include m.respond-to(sm) {
+    padding: v.$spacing-xl;
+  }
+
   @include m.respond-to(md) {
     height: 100vh;
     padding: v.$spacing-xxl;
+    overflow-y: auto;
   }
-  
+
   h3 {
     color: v.$gold;
     margin-bottom: v.$spacing-md;
     position: relative;
     padding-bottom: v.$spacing-sm;
-    font-size: v.$font-size-xl;
-    
+    font-size: clamp(1.25rem, 4vw, v.$font-size-xl);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+
     &::after {
       content: '';
       position: absolute;
@@ -81,13 +91,15 @@
       background: linear-gradient(to right, v.$primary-green, v.$accent-green);
     }
   }
-  
+
   p {
     color: v.$secondary-green;
     margin-bottom: 0;
     line-height: 1.8;
-    font-size: v.$font-size-base;
+    font-size: clamp(0.875rem, 3vw, v.$font-size-base);
     max-width: 600px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 }
 

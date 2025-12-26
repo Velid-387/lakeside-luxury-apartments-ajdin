@@ -27,18 +27,24 @@
 
 .section-header {
   text-align: center;
-  padding: v.$spacing-xxl 0;
+  padding: v.$spacing-xl v.$spacing-md;
   position: relative;
   z-index: 1;
   background-color: rgba(v.$white, 0.9);
-  
+
+  @include m.respond-to(md) {
+    padding: v.$spacing-xxl v.$spacing-md;
+  }
+
   h2 {
     color: v.$primary-green;
     margin-bottom: v.$spacing-md;
-    font-size: v.$font-size-xxl;
+    font-size: clamp(1.5rem, 5vw, v.$font-size-xxl);
     position: relative;
     display: inline-block;
-    
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+
     &::after {
       content: '';
       position: absolute;
@@ -50,13 +56,19 @@
       background: linear-gradient(to right, v.$primary-green, v.$accent-green);
     }
   }
-  
+
   p {
-    font-size: v.$font-size-lg;
+    font-size: clamp(1rem, 3.5vw, v.$font-size-lg);
     color: v.$secondary-green;
     max-width: 600px;
     margin: 0 auto;
-    padding-top: v.$spacing-md;
+    padding: v.$spacing-md v.$spacing-sm 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+
+    @include m.respond-to(md) {
+      padding-top: v.$spacing-md;
+    }
   }
 }
 
@@ -72,22 +84,22 @@
 
 .services-cta {
   background: linear-gradient(135deg, v.$primary-green, v.$secondary-green);
-  padding: v.$spacing-xxl v.$spacing-xl;
+  padding: v.$spacing-xl v.$spacing-md;
   border-radius: v.$border-radius-lg;
   box-shadow: v.$shadow-lg;
   max-width: 900px;
-  margin: v.$spacing-xxl auto;
+  margin: v.$spacing-xl auto;
   position: relative;
   z-index: 1;
   text-align: center;
   transform: translateY(20px);
   animation: float 3s ease-in-out infinite;
-  
+
   @include m.respond-to(md) {
     margin: (v.$spacing-xxl * 2) auto;
     padding: v.$spacing-xxl;
   }
-  
+
   &::before {
     content: '';
     position: absolute;
@@ -100,23 +112,35 @@
     z-index: -1;
     filter: blur(10px);
   }
-  
+
   h3 {
     color: v.$gold;
     margin-bottom: v.$spacing-lg;
-    font-size: v.$font-size-xxl;
+    font-size: clamp(1.25rem, 5vw, v.$font-size-xxl);
     font-weight: 600;
     text-shadow: 0 2px 4px rgba(v.$black, 0.2);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    padding: 0 v.$spacing-sm;
   }
-  
+
   .btn {
-    font-size: v.$font-size-lg;
-    padding: v.$spacing-md v.$spacing-xl;
+    font-size: clamp(0.875rem, 3.5vw, v.$font-size-lg);
+    padding: v.$spacing-sm v.$spacing-md;
     background-color: v.$white;
     border: none;
     transform: translateY(0);
     transition: all 0.3s ease;
-    
+    word-wrap: break-word;
+    white-space: normal;
+    display: inline-flex;
+    align-items: center;
+    gap: v.$spacing-xs;
+
+    @include m.respond-to(md) {
+      padding: v.$spacing-md v.$spacing-xl;
+    }
+
     &:hover {
       transform: translateY(-3px);
       box-shadow: v.$shadow-lg;
