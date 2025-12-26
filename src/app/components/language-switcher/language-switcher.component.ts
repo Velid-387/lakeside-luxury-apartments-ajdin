@@ -1,4 +1,4 @@
-import { Component, inject, HostListener } from '@angular/core';
+import { Component, inject, HostListener, ViewChild, ElementRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslationService, Language } from '../../shared/services/translation.service';
 
@@ -34,17 +34,18 @@ import { TranslationService, Language } from '../../shared/services/translation.
       </div>
 
       <!-- Mobile view -->
-      <div class="mobile-switcher">
-        <button 
-          class="current-lang" 
+      <div class="mobile-switcher" #mobileSwitcher>
+        <button
+          class="current-lang"
+          #langButton
           (click)="toggleDropdown($event)"
           [attr.aria-expanded]="isDropdownOpen"
           aria-label="Toggle language menu">
           {{ getCurrentLangDisplay() }}
           <i class="fas" [class]="isDropdownOpen ? 'fa-chevron-up' : 'fa-chevron-down'"></i>
         </button>
-        <div class="lang-dropdown" [class.show]="isDropdownOpen">
-          <button 
+        <div class="lang-dropdown" [class.show]="isDropdownOpen" [style.top.px]="dropdownTop">
+          <button
             *ngFor="let lang of availableLanguages"
             class="dropdown-item"
             [class.active]="isActive(lang.code)"
@@ -64,6 +65,7 @@ import { TranslationService, Language } from '../../shared/services/translation.
     :host {
       display: block;
       position: relative;
+      z-index: 1;
     }
 
     .language-switcher {
@@ -120,6 +122,7 @@ import { TranslationService, Language } from '../../shared/services/translation.
 
     .current-lang {
       @include m.button-small;
+      background-color: transparent;
       background: transparent;
       border: 1px solid v.$medium-gray;
       padding: 0.5rem 1rem;
@@ -130,13 +133,18 @@ import { TranslationService, Language } from '../../shared/services/translation.
       gap: 0.5rem;
       min-width: 80px;
       justify-content: space-between;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
 
       i {
         font-size: 0.75rem;
         transition: transform 0.3s ease;
+        -webkit-transition: transform 0.3s ease;
       }
 
       &:hover {
+        background-color: rgba(v.$primary-green, 0.05);
         background: rgba(v.$primary-green, 0.05);
       }
     }
@@ -144,37 +152,43 @@ import { TranslationService, Language } from '../../shared/services/translation.
     .lang-dropdown {
       position: fixed;
       top: auto;
-      left: 50%;
-      transform: translateX(-50%) translateY(10px);
+      right: 16px;
+      left: auto;
       width: 200px;
-      background: v.$white;
+      max-width: calc(100vw - 32px);
+      background-color: #ffffff !important;
+      background: #ffffff !important;
       border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-      z-index: 2000;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.05);
+      overflow: visible;
+      z-index: 9999;
       opacity: 0;
       visibility: hidden;
-      transition: all 0.3s ease;
-      margin-top: 8px;
+      transform: translateY(-10px);
+      transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+      pointer-events: none;
+      -webkit-transform: translateY(-10px);
+      -webkit-transition: opacity 0.3s ease, visibility 0.3s ease, -webkit-transform 0.3s ease;
+      will-change: opacity, visibility, transform;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      isolation: isolate;
 
       @include m.respond-to(lg) {
         position: absolute;
-        top: 100%;
-        left: auto;
+        top: calc(100% + 8px);
         right: 0;
-        transform: translateY(10px);
         width: auto;
         min-width: 160px;
+        max-width: 200px;
       }
 
       &.show {
         opacity: 1;
         visibility: visible;
-        transform: translateX(-50%) translateY(0);
-
-        @include m.respond-to(lg) {
-          transform: translateY(0);
-        }
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        pointer-events: auto;
       }
     }
 
@@ -185,28 +199,37 @@ import { TranslationService, Language } from '../../shared/services/translation.
       width: 100%;
       padding: 12px 16px;
       border: none;
-      background: none;
+      background-color: transparent;
+      background: transparent;
       cursor: pointer;
-      transition: all 0.3s ease;
+      transition: background-color 0.3s ease;
       color: v.$primary-green;
       font-size: 0.875rem;
       text-align: left;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      -webkit-tap-highlight-color: transparent;
 
       &:hover {
+        background-color: rgba(v.$primary-green, 0.05);
         background: rgba(v.$primary-green, 0.05);
       }
 
       &.active {
         background: linear-gradient(135deg, v.$primary-green, v.$secondary-green);
+        background-color: v.$primary-green;
         color: v.$white;
       }
 
       .flag {
         font-size: 1.25rem;
+        flex-shrink: 0;
       }
 
       .lang-code {
         font-weight: 500;
+        flex-shrink: 0;
       }
     }
 
@@ -221,11 +244,9 @@ import { TranslationService, Language } from '../../shared/services/translation.
         flex-direction: row-reverse;
       }
 
-      @include m.respond-to(lg) {
-        .lang-dropdown {
-          left: 0;
-          right: auto;
-        }
+      .lang-dropdown {
+        left: 0;
+        right: auto;
       }
     }
   `]
@@ -233,6 +254,9 @@ import { TranslationService, Language } from '../../shared/services/translation.
 export class LanguageSwitcherComponent {
   private translationService = inject(TranslationService);
   isDropdownOpen = false;
+  dropdownTop: number | null = null;
+
+  @ViewChild('langButton') langButton?: ElementRef<HTMLButtonElement>;
 
   // Using Regional Indicator Symbols for better compatibility
   availableLanguages = [
@@ -259,7 +283,8 @@ export class LanguageSwitcherComponent {
   @HostListener('document:click', ['$event'])
   onDocumentClick(event: MouseEvent) {
     const target = event.target as HTMLElement;
-    if (!target.closest('.mobile-switcher')) {
+    // Check if click is outside both the mobile-switcher and the dropdown
+    if (!target.closest('.mobile-switcher') && !target.closest('.lang-dropdown')) {
       this.isDropdownOpen = false;
     }
   }
@@ -280,6 +305,11 @@ export class LanguageSwitcherComponent {
   toggleDropdown(event: MouseEvent): void {
     event.stopPropagation();
     this.isDropdownOpen = !this.isDropdownOpen;
+
+    if (this.isDropdownOpen && this.langButton) {
+      const buttonRect = this.langButton.nativeElement.getBoundingClientRect();
+      this.dropdownTop = buttonRect.bottom + 8;
+    }
   }
 
   getCurrentLangDisplay(): string {
