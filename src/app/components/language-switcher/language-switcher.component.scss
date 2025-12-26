@@ -1,91 +1,190 @@
 @use '../../../app/shared/styles/variables' as v;
 @use '../../../app/shared/styles/mixins' as m;
 
+:host {
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
 .language-switcher {
   position: relative;
   display: inline-block;
-  
-  .current-language {
+}
+
+// Desktop styles
+.desktop-switcher {
+  display: none;
+  gap: 0.5rem;
+  align-items: center;
+
+  @include m.respond-to(lg) {
     display: flex;
-    align-items: center;
-    gap: v.$spacing-sm;
-    cursor: pointer;
-    padding: v.$spacing-xs v.$spacing-sm;
-    border-radius: v.$border-radius;
-    transition: v.$transition-base;
-    
-    &:hover {
-      background-color: rgba(v.$primary-green, 0.1);
-    }
-    
-    .flag {
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-      object-fit: cover;
-    }
-    
-    .language-code {
-      font-size: v.$font-size-sm;
-      font-weight: 500;
-      color: v.$primary-green;
-      text-transform: uppercase;
-    }
   }
 }
 
-.language-dropdown {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  background: linear-gradient(135deg, v.$primary-green, v.$secondary-green);
-  border-radius: v.$border-radius;
-  padding: v.$spacing-xs;
-  min-width: 120px;
-  box-shadow: v.$shadow-lg;
-  z-index: v.$z-index-dropdown;
+.lang-btn {
+  @include m.button-small;
+  background: transparent;
+  border: 1px solid v.$medium-gray;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  position: relative;
+  transition: all 0.3s ease;
+  transform-origin: center;
+
+  &.active {
+    background: linear-gradient(135deg, v.$primary-green, v.$secondary-green);
+    color: v.$white;
+    border-color: transparent;
+    transform: none;
+  }
+
+  &:hover:not(.active) {
+    background: linear-gradient(135deg, rgba(v.$light-green, 0.1), rgba(v.$primary-green, 0.1));
+    border-color: v.$light-green;
+    color: v.$primary-green;
+    transform: none;
+  }
+}
+
+// Mobile styles
+.mobile-switcher {
+  display: block;
+  position: relative;
+
+  @include m.respond-to(lg) {
+    display: none;
+  }
+}
+
+.current-lang {
+  @include m.button-small;
+  background-color: transparent;
+  background: transparent;
+  border: 1px solid v.$medium-gray;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 80px;
+  justify-content: space-between;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  i {
+    font-size: 0.75rem;
+    transition: transform 0.3s ease;
+    -webkit-transition: transform 0.3s ease;
+  }
+
+  &:hover {
+    background-color: rgba(v.$primary-green, 0.05);
+    background: rgba(v.$primary-green, 0.05);
+  }
+}
+
+.lang-dropdown {
+  position: fixed;
+  top: auto;
+  right: 16px;
+  left: auto;
+  width: 200px;
+  max-width: calc(100vw - 32px);
+  background-color: #ffffff !important;
+  background: #ffffff !important;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.05);
+  overflow: visible;
+  z-index: 9999;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(10px);
-  transition: all 0.3s ease;
-  
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+  -webkit-transform: translateY(-10px);
+  -webkit-transition: opacity 0.3s ease, visibility 0.3s ease, -webkit-transform 0.3s ease;
+  will-change: opacity, visibility, transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  isolation: isolate;
+
+  @include m.respond-to(lg) {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    width: auto;
+    min-width: 160px;
+    max-width: 200px;
+  }
+
   &.show {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
-  }
-  
-  .language-option {
-    display: flex;
-    align-items: center;
-    gap: v.$spacing-sm;
-    padding: v.$spacing-sm;
-    cursor: pointer;
-    border-radius: v.$border-radius-sm;
-    transition: v.$transition-base;
-    color: v.$gold;
-    
-    &:hover {
-      background-color: rgba(v.$white, 0.1);
-    }
-    
-    .flag {
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      object-fit: cover;
-    }
-    
-    .language-name {
-      font-size: v.$font-size-sm;
-    }
+    -webkit-transform: translateY(0);
+    pointer-events: auto;
   }
 }
 
-// RTL support
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px 16px;
+  border: none;
+  background-color: transparent;
+  background: transparent;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: v.$primary-green;
+  font-size: 0.875rem;
+  text-align: left;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
+
+  &:hover {
+    background-color: rgba(v.$primary-green, 0.05);
+    background: rgba(v.$primary-green, 0.05);
+  }
+
+  &.active {
+    background: linear-gradient(135deg, v.$primary-green, v.$secondary-green);
+    background-color: v.$primary-green;
+    color: v.$white;
+  }
+
+  .flag {
+    font-size: 1.25rem;
+    flex-shrink: 0;
+  }
+
+  .lang-code {
+    font-weight: 500;
+    flex-shrink: 0;
+  }
+}
+
+// RTL Support
 :host-context(html[dir="rtl"]) {
-  .language-dropdown {
-    right: auto;
+  .dropdown-item {
+    text-align: right;
+    flex-direction: row-reverse;
+  }
+
+  .current-lang {
+    flex-direction: row-reverse;
+  }
+
+  .lang-dropdown {
     left: 0;
+    right: auto;
   }
 } 
